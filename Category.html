@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>หมวดแผนประกัน AIA — PraganEasy</title>
+<meta name="description" content="เลือกดูแผนประกัน AIA ตามหมวดที่สนใจ พร้อมแผนแนะนำและเบี้ยเริ่มต้นของแต่ละแผน">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#053c5e"/><circle cx="100" cy="100" r="45" fill="#EB5951"/><text x="100" y="108" font-family="sans-serif" font-size="34" font-weight="700" fill="#fff" text-anchor="middle">PE</text></svg></template></head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&family=Inter:wght@500;600;700&display=swap" rel="stylesheet"><script src="image-slot.js"></script><style>
+body{margin:0;background:#F8FBFC;color:#374151}
+a{color:#EB5951;text-decoration:none}
+a:hover{color:#1f7a8c}
+*{box-sizing:border-box}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.font-b{font-family:'Sarabun',sans-serif}
+.logo{font-family:'Prompt',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.02em}
+.logo .e{color:#EB5951}
+.btn{font-family:'Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.03em;text-transform:uppercase;border-radius:12px;padding:13px 26px;border:none;cursor:pointer;display:inline-block}
+.btn-primary{background:#EB5951;color:#fff}
+.btn-primary:hover{background:#c94039;color:#F8D877}
+.icon{width:20px;height:20px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.midbar{padding:10px 0}
+.midbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.midbar-contact{display:flex;gap:28px;flex-wrap:wrap}
+.midbar-contact-item{display:flex;align-items:center;gap:10px}
+.midbar-contact-item .mi-ico{width:34px;height:34px;border-radius:100px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.midbar-contact-item .mi-ico svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.midbar-contact-item .mi-label{font-family:'Sarabun',sans-serif;font-size:11px;color:#D8E4EA}
+.midbar-contact-item .mi-value{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;color:#fff}
+.midbar-contact-item .mi-value a{color:#fff}
+@media(max-width:900px){.midbar-contact{display:none}}
+@media(max-width:700px){.head-cta{display:none}}
+.navbar{border-bottom:1px solid rgba(255,255,255,0.18)}
+.navrow{height:52px}
+.navbar .links a{color:#fff;font-family:'Sarabun',sans-serif;font-size:14px;font-weight:500;padding:16px 0;border-bottom:2px solid transparent}
+.navbar .links a:hover{color:#F8D877}
+.navbar .links a.active{color:#EB5951;font-weight:700;border-bottom-color:#EB5951}
+@media(max-width:920px){.navbar .links{display:none}.menu-btn{display:flex;color:#fff}}
+.nav-drop{position:relative}
+.nav-drop-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.1);padding:8px;min-width:200px;z-index:60}
+.nav-drop:hover .nav-drop-menu{display:block}
+.nav-drop-menu a{display:block;padding:10px 12px;font-size:13px;border-radius:8px;white-space:nowrap;color:#374151}
+.nav-drop-menu a:hover{background:#EAF5F8}
+.navbar .links .nav-drop-menu a{color:#374151;border-bottom:none;font-weight:500}
+.navbar .links .nav-drop-menu a:hover{color:#EB5951;background:#EAF5F8}
+.hero-photo-nav .navbar .links .nav-drop-menu a{color:#374151}
+.hero-photo-nav .navbar .links .nav-drop-menu a:hover{color:#EB5951}
+.fav-link{position:relative;display:flex;align-items:center;color:#fff}
+.fav-link svg{width:22px;height:22px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fav-badge{position:absolute;top:-6px;right:-8px;background:#EB5951;color:#fff;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;min-width:16px;height:16px;border-radius:100px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+.mobile-menu{position:fixed;inset:0;background:#053c5e;z-index:70;display:flex;flex-direction:column;padding:24px;overflow:auto}
+.mobile-menu a{font-family:'Prompt',sans-serif;font-size:20px;color:#F8F8F6;font-weight:600;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1)}
+.hero-photo-section{position:relative;overflow:hidden;min-height:380px}
+.hero-photo-bg{position:absolute;top:0;left:0;right:0;bottom:0;z-index:0}
+.hero-photo-overlay{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;background:linear-gradient(100deg,rgba(5,60,94,0.92) 0%,rgba(5,60,94,0.68) 45%,rgba(5,60,94,0.3) 75%)}
+.hero-photo-nav{position:relative;z-index:3}
+.hero-photo-content{position:relative;z-index:2;padding:48px 0;pointer-events:none}
+.hero-photo-content a{pointer-events:auto}
+.hero-photo-text h1{font-family:'Prompt',sans-serif;font-weight:700;font-size:42px;color:#fff;line-height:1.2;margin:0 0 14px;max-width:600px}
+@media(max-width:700px){.hero-photo-text h1{font-size:28px}}
+.hero-photo-text p{font-family:'Sarabun',sans-serif;font-size:17px;color:#D8E4EA;margin:0;max-width:560px;line-height:1.7}
+section{padding:56px 0}
+h2.section-title{font-family:'Prompt',sans-serif;font-weight:700;font-size:28px;color:#053c5e;margin:0}
+.lead{font-family:'Sarabun',sans-serif;font-size:16px;line-height:1.7;color:#6B7280;max-width:620px}
+.feat-card{background:#053c5e;border-radius:24px;padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;color:#F8F8F6}
+@media(max-width:800px){.feat-card{grid-template-columns:1fr;padding:28px}}
+.feat-tag{font-family:'Inter',sans-serif;font-size:12px;font-weight:700;color:#F8D877;text-transform:uppercase;letter-spacing:0.06em}
+.feat-card h3{font-family:'Prompt',sans-serif;font-weight:700;font-size:26px;margin:10px 0 8px}
+.feat-card .tagline{font-family:'Sarabun',sans-serif;font-size:15px;color:#C9D8E0;line-height:1.7;margin:0 0 18px}
+.feat-list{display:flex;flex-direction:column;gap:10px;margin:0 0 24px;padding:0;list-style:none}
+.feat-list li{font-family:'Sarabun',sans-serif;font-size:14px;display:flex;gap:10px;align-items:flex-start}
+.feat-list svg{width:16px;height:16px;stroke:#F8D877;flex-shrink:0;margin-top:3px;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.feat-price-box{background:rgba(255,255,255,0.08);border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.feat-price-box .pl{font-family:'Sarabun',sans-serif;font-size:13px;color:#C9D8E0}
+.feat-price-box .pv{font-family:'Prompt',sans-serif;font-weight:700;font-size:32px;color:#F8D877}
+.feat-price-box .pu{font-family:'Sarabun',sans-serif;font-size:14px;color:#C9D8E0}
+.item-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+@media(max-width:900px){.item-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.item-grid{grid-template-columns:1fr}}
+.item-card{background:#fff;border:1px solid #E5E7EB;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.ph-box{height:170px;background:#EAF5F8}
+.item-card-body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.item-card h4{font-family:'Prompt',sans-serif;font-weight:600;font-size:17px;color:#053c5e;margin:0}
+.item-card .desc{font-family:'Sarabun',sans-serif;font-size:13.5px;color:#6B7280;line-height:1.6;margin:0;flex:1}
+.item-card .price{font-family:'Sarabun',sans-serif;font-size:14px;color:#374151}
+.item-card .price b{color:#EB5951;font-family:'Prompt',sans-serif}
+.item-cta{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:#EB5951}
+.heart-btn{position:absolute;top:12px;right:12px;z-index:2;width:38px;height:38px;border-radius:100px;background:rgba(255,255,255,0.92);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.12)}
+.heart-btn svg{width:19px;height:19px;stroke:#EB5951;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.heart-btn.on svg{fill:#EB5951}
+.other-cats{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.cat-chip{font-family:'Sarabun',sans-serif;font-size:13.5px;font-weight:600;color:#1f7a8c;background:#fff;border:1px solid #D6E6EB;border-radius:100px;padding:9px 18px}
+.cat-chip:hover{border-color:#1f7a8c}
+.cat-chip.on{background:#053c5e;color:#fff;border-color:#053c5e}
+footer.site{background:#053c5e;color:#F8F8F6}
+.disclaimer{font-family:'Sarabun',sans-serif;font-size:12px;color:#c3d3e0;line-height:1.7}
+
+.foot-navy{background:#053c5e;color:#F8F8F6}
+.foot-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:32px 24px;border-bottom:1px solid rgba(255,255,255,0.12)}
+.foot-top h2{font-family:'Prompt',sans-serif;font-weight:700;font-size:26px;margin:0;color:#fff}
+.foot-top h2 span{color:#EB5951}
+@media(max-width:600px){.foot-top{flex-direction:column;align-items:flex-start}.foot-top h2{font-size:20px}}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px;padding:40px 24px}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+.foot-h{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#F8D877;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px}
+.foot-links a{display:block;font-family:'Sarabun',sans-serif;font-size:14px;margin-bottom:10px;color:#EAF5F8}
+.foot-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-family:'Sarabun',sans-serif;font-size:14px;color:#EAF5F8;line-height:1.5}
+.foot-contact-item svg{width:16px;height:16px;stroke:#EB5951;flex-shrink:0;margin-top:2px}
+.foot-social{display:flex;gap:10px;margin-top:16px}
+.foot-social a{width:34px;height:34px;border-radius:100px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.foot-social a:hover{background:#F8D877}
+.foot-social a:hover svg{stroke:#EB5951}
+.foot-social svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+</style></helmet>
+<div class="hero-photo-section"><div class="hero-photo-bg"><image-slot id="{{ heroSlotId }}" shape="rect" placeholder="ลากรูปภาพหมวดนี้มาวางที่นี่" src="{{ heroSrc }}"></image-slot></div><div class="hero-photo-overlay"></div>
+<header class="site hero-photo-nav"><div class="midbar"><div class="wrap midbar-inner"><div class="logo" style="color:#fff"><span>pragan</span><span class="e">easy</span></div><div class="midbar-contact"><div class="midbar-contact-item"><div class="mi-ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></div><div><div class="mi-label">LINE</div><div class="mi-value"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank">@praganeasy</a></div></div></div></div><a class="btn btn-primary head-cta" href="Build-My-Plan.html">สร้างแผนฟรี</a></div></div><div class="navbar"><div class="wrap fx ac jb navrow"><nav class="links fx ac gap24"><a href="index.html">หน้าแรก</a><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><div class="nav-drop"><a href="Plans.html" class="active">แผนประกัน ▾</a><div class="nav-drop-menu"><a href="Plans.html">ดูแผนทั้งหมด</a><a href="Plans.html#popular">แผนยอดนิยม</a><a href="Compare-Plans.html">เปรียบเทียบแผนประกัน</a><a href="Category.html#ci">แผนประกันโรคร้ายแรง</a></div></div><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></nav><div class="fx ac gap16"><a href="Favorites.html" class="fav-link" title="แผนที่ฉันถูกใจ"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg><sc-if value="{{ favCount }}"><span class="fav-badge">{{ favCount }}</span></sc-if></a><button class="menu-btn" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div></div></div></header>
+<sc-if value="{{ menuOpen }}"><div class="mobile-menu"><div class="fx jb ac mb16"><div class="logo" style="color:#fff"><span>pragan</span><span style="color:#EB5951">easy</span></div><button class="menu-btn" style="display:flex;color:#fff" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div><a href="index.html">หน้าแรก</a><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Plans.html#popular" style="padding-left:16px;font-size:16px">แผนยอดนิยม</a><a href="Compare-Plans.html" style="padding-left:16px;font-size:16px">เปรียบเทียบแผนประกัน</a><a href="Category.html#ci" style="padding-left:16px;font-size:16px">แผนประกันโรคร้ายแรง</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="Favorites.html">แผนที่ฉันถูกใจ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></div></sc-if>
+<div class="hero-photo-content"><div class="wrap"><div class="hero-photo-text"><h1>{{ cat.title }}</h1><p>{{ cat.desc }}</p></div></div></div>
+</div>
+<section style="padding-top:40px;padding-bottom:0"><div class="wrap"><div class="other-cats"><sc-for list="{{ catChips }}" as="ch" hint-placeholder-count="6"><a href="{{ ch.href }}" onClick="{{ ch.go }}" class="cat-chip {{ ch.cls }}">{{ ch.label }}</a></sc-for></div></div></section>
+<section><div class="wrap"><div class="feat-card"><div><div class="feat-tag">แผนแนะนำในหมวดนี้</div><h3>{{ feat.name }}</h3><p class="tagline">{{ feat.tagline }}</p><ul class="feat-list"><sc-for list="{{ feat.bullets }}" as="b" hint-placeholder-count="3"><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>{{ b }}</li></sc-for></ul><a href="{{ feat.link }}" class="btn btn-primary">ดูรายละเอียดแผนนี้ →</a></div><div class="feat-price-box"><span class="pl">เบี้ยประกันเริ่มต้น</span><span class="pv">{{ feat.priceMain }}</span><span class="pu">{{ feat.priceMainUnit }}</span><sc-if value="{{ feat.priceSub }}"><span class="pu" style="opacity:.9;font-weight:600">{{ feat.priceSub }}</span></sc-if><span class="pl" style="margin-top:8px">{{ feat.priceNote }}</span></div></div></div></section>
+<section style="padding-top:0"><div class="wrap"><h2 class="section-title">แผนทั้งหมดในหมวด{{ cat.short }}</h2><p class="lead" style="margin-top:8px">กดหัวใจเพื่อบันทึกแผนที่สนใจ แล้วดูรวมกันได้ที่ไอคอนหัวใจด้านบน</p><div class="item-grid"><sc-for list="{{ catPlans }}" as="p" hint-placeholder-count="3"><div class="item-card"><button class="heart-btn {{ p.favCls }}" onClick="{{ p.toggleFav }}" title="บันทึกแผนนี้"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></button><div class="ph-box"><image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.name }}" src="{{ p.imgSrc }}"></image-slot></div><a href="{{ p.link }}" class="item-card-body"><h4>{{ p.name }}</h4><p class="desc">{{ p.desc }}</p><div class="price">{{ p.priceLabel }}<b>{{ p.price }}</b><sc-if value="{{ p.priceSub }}"><span style="display:block;font-family:'Sarabun',sans-serif;font-size:12px;color:#6B7280;margin-top:2px">{{ p.priceSub }}</span></sc-if></div><div class="item-cta">ดูแผนนี้ →</div></a></div></sc-for></div></div></section>
+<section style="background:#EAF5F8"><div class="wrap fx jb ac gap24" style="flex-wrap:wrap"><div><h2 class="section-title">ไม่แน่ใจว่าแผนไหนเหมาะ?</h2><p class="lead" style="margin-top:8px">ตอบคำถามสั้นๆ ให้เราช่วยแนะนำแผนที่พอดีกับชีวิตและงบของคุณ</p></div><div class="fx gap12" style="flex-wrap:wrap"><a href="Fact-Finding.html" class="btn btn-primary">ให้เราช่วยแนะนำ</a><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" class="btn" style="background:#06C755;color:#fff">ทัก LINE @praganeasy</a></div></div></section>
+<footer class="site foot-navy"><div class="foot-top wrap"><h2>พร้อม<span>คุย</span>กับเราหรือยัง?</h2><a href="Contact.html" class="btn btn-primary">ติดต่อเรา</a></div><div class="wrap"><div class="foot-grid"><div><div class="logo mb16" style="color:#fff"><span style="color:#fff">pragan</span><span style="color:#EB5951">easy</span></div><p class="disclaimer" style="max-width:320px">ประกันเข้าใจง่าย สร้างเองได้ — เครื่องมือช่วยวางแผนความคุ้มครองจากตัวแทน AIA</p><div class="foot-social"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a><a href="#" aria-label="LINE"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="4"/><path d="M8 19l2-3"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div></div><div><div class="foot-h">เมนู</div><div class="foot-links"><a href="Why-Protection.html">ทำไมต้องมีประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="Build-My-Plan.html">สร้างแผนของคุณ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a><a href="Terms.html">เงื่อนไขการใช้งาน</a><a href="Privacy.html">นโยบายความเป็นส่วนตัว</a></div></div><div><div class="foot-h">ติดต่อ</div><div class="foot-contact-item"><svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="color:inherit">LINE: @praganeasy</a></div><div class="foot-contact-item"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="display:block"><img src="public/logos/praganeasy-line-chat-button-mascot.png" alt="น้องอีซี่พร้อมดูแล ทักไลน์ได้เลย @praganeasy" style="width:240px;max-width:100%;height:auto;display:block"></a></div></div></div><div class="disclaimer wrap" style="border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px"><a href="Terms.html" style="color:#F8D877;text-decoration:underline">เงื่อนไขการใช้งาน</a> · <a href="Privacy.html" style="color:#F8D877;text-decoration:underline">นโยบายความเป็นส่วนตัว</a><br>© 2026 PraganEasy. All Rights Reserved.<br>เว็บไซต์นี้ดำเนินการโดยทีมตัวแทนประกันชีวิตของ บริษัท เอไอเอ จำกัด (ประเทศไทย) เพื่อให้ข้อมูลเกี่ยวกับผลิตภัณฑ์และบริการ<br>สำหรับข้อมูลอย่างเป็นทางการ โปรดเยี่ยมชม <a href="https://www.aia.co.th" target="_blank" style="color:inherit;text-decoration:underline">www.aia.co.th</a></div></div></footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { catId: 'life', menuOpen: false, favs: [] };
+  componentDidMount() {
+    const apply = () => {
+      const h = (window.location.hash || '#life').slice(1);
+      this.setState({ catId: this.catalog[h] ? h : 'life' });
+    };
+    apply();
+    window.addEventListener('hashchange', apply);
+    try { this.setState({ favs: JSON.parse(localStorage.getItem('pe-favs') || '[]') }); } catch (e) {}
+  }
+  get catalog() {
+    const pd = 'Plan-Detail.html#';
+    return {
+      life: { title: 'ประกันชีวิต', short: 'ประกันชีวิต', desc: 'คุ้มครองระยะยาว มอบหลักประกันทางการเงินให้คนที่คุณรัก แม้วันที่คุณไม่อยู่',
+        feat: { id: '20paylife', name: 'AIA 20 Pay Life (Non Par)', tagline: 'คุ้มครองชีวิตตลอดชีพ ชำระเบี้ยเพียง 20 ปี เบี้ยคงที่ไม่ปรับขึ้นตามอายุ', bullets: ['คุ้มครองตลอดชีพถึงอายุ 99 ปี', 'ชำระเบี้ยสั้นเพียง 20 ปี', 'เบี้ยคงที่ วางแผนการเงินง่าย'], price: '372', priceUnit: 'บาท/เดือน', priceNote: 'ตัวอย่าง: ชาย 35 ปี ทุน 1 ล้าน = 22,300 บาท/ปี', link: pd + '20paylife' },
+        plans: [
+          { id: '20paylife', name: 'AIA 20 Pay Life (Non Par)', desc: 'คุ้มครองตลอดชีพ ชำระเบี้ย 20 ปี เบี้ยคงที่', price: '372 บาท/เดือน', link: pd + '20paylife' },
+          { id: 'paylifeplus', name: 'AIA Pay Life Plus (Non Par)', desc: 'เลือกชำระเบี้ย 10/15/20 ปี ทุนคุ้มครองสูง เบี้ยประหยัด', price: '742 บาท/เดือน', link: pd + 'paylifeplus' }
+        ] },
+      health: { title: 'ประกันสุขภาพ', short: 'ประกันสุขภาพ', desc: 'ดูแลค่ารักษาพยาบาล ค่าห้อง และค่าผ่าตัด ไม่ให้ค่ารักษากระทบเงินเก็บของคุณ',
+        feat: { id: 'healthhappy', name: 'AIA Health Happy', tagline: 'ความคุ้มครองสุขภาพเหมาจ่าย ครอบคลุมค่าห้อง ค่าผ่าตัด และค่ารักษาต่อเนื่อง', bullets: ['เหมาจ่ายสูงสุด 25 ล้านบาท/ปี', 'ครอบคลุม IPD และ OPD ต่อเนื่อง', 'อายุรับประกัน 6-75 ปี คุ้มครองถึงอายุ 85 ปี'], price: '9,821', priceUnit: 'บาท/ปี', priceNote: 'ขึ้นอยู่กับอายุและแผนที่เลือก', link: pd + 'healthhappy' },
+        plans: [
+          { id: 'healthstarter', name: 'AIA Health Starter', desc: 'เหมาจ่ายเบี้ยเข้าถึงง่าย เลือกได้แบบ BEGIN หรือ BALANCED', price: '3,890 บาท/ปี', link: pd + 'healthstarter' },
+          { id: 'healthsaver', name: 'AIA Health Saver', desc: 'เหมาจ่ายคุ้มค่า พร้อมเบิ้ลความคุ้มครองโรคร้ายแรง', price: '7,500 บาท/ปี', link: pd + 'healthsaver' },
+          { id: 'healthhappy', name: 'AIA Health Happy', desc: 'เหมาจ่ายวงเงินสูง คุ้มครองถึงอายุ 85 ปี', price: '9,821 บาท/ปี', link: pd + 'healthhappy' },
+          { id: 'healthhappykids', name: 'AIA Health Happy Kids', desc: 'สุขภาพสำหรับเด็กแรกเกิดถึง 10 ปี เลือกได้ 4 แผน', price: '4,200 บาท/ปี', link: pd + 'healthhappykids' },
+          { id: 'hbextra', name: 'AIA HB Extra', desc: 'ชดเชยรายได้รายวันระหว่างนอนโรงพยาบาล', price: 'สอบถามเบี้ยกับที่ปรึกษา', link: pd + 'hbextra' }
+        ] },
+      ci: { title: 'ประกันโรคร้ายแรง', short: 'โรคร้ายแรง', desc: 'รับเงินก้อนทันทีเมื่อตรวจพบโรคร้ายแรง ช่วยลดภาระค่าใช้จ่ายก้อนใหญ่',
+        feat: { id: 'multipayci', name: 'AIA Multi-Pay CI Plus', tagline: 'คุ้มครองโรคร้ายแรงตั้งแต่ระดับต้นถึงรุนแรง เคลมได้หลายครั้ง', bullets: ['เคลมได้หลายครั้ง สูงสุด 800% ของทุน', 'ครอบคลุมทั้งระดับต้นและระดับรุนแรง', 'คุ้มครองยาวถึงอายุ 99 ปี'], price: '1,860', priceUnit: 'บาท/ปี', priceNote: 'ตัวอย่าง: ทุน 200,000 บาท', link: pd + 'multipayci' },
+        plans: [
+          { id: 'jerjaijob', name: 'แผนเจอจ่ายจบ (S / M / L)', desc: 'เจอโรคร้าย รับเงินก้อนทันที พร้อมคุ้มครองมรดก เริ่มต้น 18 บาท/วัน', price: '553 บาท/เดือน', link: pd + 'jerjaijob' },
+          { id: 'multipayci', name: 'AIA Multi-Pay CI Plus', desc: 'เคลมได้หลายครั้ง ครอบคลุมทุกระดับความรุนแรง', price: '1,860 บาท/ปี', link: pd + 'multipayci' },
+          { id: 'cisupercare', name: 'AIA CI Supercare', desc: 'ชำระเบี้ยสั้น 10/99 หรือ 20/99 คุ้มครองตลอดชีพ', price: '1,571 บาท/ปี', link: pd + 'cisupercare' },
+          { id: 'ciplus', name: 'AIA CI Plus', desc: 'สัญญาเพิ่มเติมคุ้มครอง 44 โรค จ่าย 100% ของทุน', price: '1,030 บาท/ปี', link: pd + 'ciplus' },
+          { id: 'ciprocare', name: 'AIA CI ProCare', desc: 'ชีวิต + โรคร้ายแรงตลอดชีพ สูงสุด 800% ของทุน', price: '95,440 บาท/ปี (ทุน 1 ล้าน)', link: pd + 'ciprocare' },
+          { id: 'tpd', name: 'สัญญาเพิ่มเติม TPD', desc: 'รับ 100% ของทุนเมื่อทุพพลภาพถาวรสิ้นเชิง', price: 'เบี้ยเข้าถึงง่าย', link: pd + 'tpd' },
+          { id: 'careforcancer', name: 'AIA Care for Cancer', desc: 'เงินก้อนเมื่อพบมะเร็ง ทุกระยะ ทุกอวัยวะ', price: 'เบี้ยเข้าถึงง่าย', link: pd + 'careforcancer' }
+        ] },
+      pa: { title: 'ประกันอุบัติเหตุ (PA)', short: 'อุบัติเหตุ', desc: 'ชดเชยค่ารักษาและความสูญเสียจากอุบัติเหตุที่ไม่คาดคิด เบี้ยคงที่ทุกวัย',
+        feat: { id: 'pa3000', name: 'AIA PA — AIANPA3000', tagline: 'แผนอุบัติเหตุเบี้ยประหยัด คุ้มครองพื้นฐานครบ เบี้ยคงที่ไม่ขึ้นกับอายุ', bullets: ['ทุนคุ้มครองอุบัติเหตุ 600,000 บาท', 'ค่ารักษาพยาบาลจากอุบัติเหตุ 35,000 บาท/ครั้ง', 'สมัครง่าย รับอายุ 15 วัน – 74 ปี ต่ออายุถึง 75 ปี'], price: '3,000', priceUnit: 'บาท/ปี', priceNote: 'เบี้ยเริ่มต้น ขั้นอาชีพ 1', link: 'Plans.html#pa' },
+        plans: [
+          { id: 'pa2500', name: 'AIANPA2500', desc: 'แผนเริ่มต้น ทุน 500,000 บาท ค่ารักษาพยาบาล 20,000 บาท/ครั้ง', price: '2,500 บาท/ปี', link: 'Plans.html#pa' },
+          { id: 'pa3000', name: 'AIANPA3000', desc: 'ทุน 600,000 บาท ค่ารักษาพยาบาล 35,000 บาท/ครั้ง', price: '3,000 บาท/ปี', link: 'Plans.html#pa' },
+          { id: 'pa3800', name: 'AIANPA3800', desc: 'ทุน 500,000 บาท ค่ารักษา 50,000 บาท/ครั้ง พร้อมชดเชยรายวันและค่าเลี้ยงดูครอบครัว', price: '3,800 บาท/ปี', link: 'Plans.html#pa' },
+          { id: 'pa4600', name: 'AIANPA4600', desc: 'ทุน 600,000 บาท ค่ารักษาพยาบาล 100,000 บาท/ครั้ง', price: '4,600 บาท/ปี', link: 'Plans.html#pa' },
+          { id: 'pa5500', name: 'AIANPA5500', desc: 'ทุน 1,100,000 บาท ค่ารักษาพยาบาล 100,000 บาท/ครั้ง', price: '5,500 บาท/ปี', link: 'Plans.html#pa' },
+          { id: 'pa7900', name: 'AIANPA7900', desc: 'ทุน 2,200,000 บาท ค่ารักษาพยาบาล 100,000 บาท/ครั้ง (เฉพาะผู้มีรายได้)', price: '7,900 บาท/ปี', link: 'Plans.html#pa' }
+        ] },
+      savings: { title: 'ประกันออมทรัพย์', short: 'ออมทรัพย์', desc: 'ออมเงินอย่างมีวินัย พร้อมความคุ้มครองชีวิต และเงินคืนตามกำหนด',
+        feat: { id: 'lifetimeincome', name: 'AIA Lifetime Income 9/99 (PAR)', tagline: 'ชำระเบี้ยเพียง 9 ปี รับเงินคืนรายงวดตลอดชีพ พร้อมโอกาสรับเงินปันผล', bullets: ['ชำระเบี้ยสั้น 9 ปี รับเงินคืนถึงอายุ 99', 'เงินคืนรายงวดสม่ำเสมอ (Guarantee)', 'โอกาสรับเงินปันผลเพิ่ม (Non-Guarantee)'], price: '90,000', priceUnit: 'บาท/ปี', priceNote: 'ขึ้นอยู่กับทุนที่เลือก', link: pd + 'lifetimeincome' },
+        plans: [
+          { id: 'savingsure', name: 'AIA Saving Sure (Non Par)', desc: 'เงินคืนระหว่างสัญญารวม 720% ของทุน', price: '101,508 บาท/ปี (ทุน 400,000)', link: pd + 'savingsure' },
+          { id: 'endowment1525', name: 'AIA Endowment 15/25 (Non Par)', desc: 'ชำระเบี้ย 15 ปี คุ้มครอง 25 ปี เป้าหมายออมชัดเจน', price: '18,500 บาท/ปี', link: pd + 'endowment1525' },
+          { id: 'lifetimeincome', name: 'AIA Lifetime Income 9/99', desc: 'เบี้ย 9 ปี เงินคืนรายงวดตลอดชีพ', price: '90,000 บาท/ปี', link: pd + 'lifetimeincome' }
+        ] },
+      investment: { title: 'ประกันควบการลงทุน (Unit Link)', short: 'ควบการลงทุน', desc: 'คุ้มครองชีวิตพร้อมโอกาสให้เงินเติบโตผ่านกองทุนที่คุณเลือกเอง ปรับได้ตามช่วงชีวิต',
+        feat: { id: 'smartwealth', name: 'AIA Smart Wealth (Unit Link)', tagline: 'คุ้มครองชีวิตพร้อมโอกาสเติบโตของเงินลงทุน เลือกกองทุนได้เอง', bullets: ['เลือกกองทุนตามระดับความเสี่ยงที่รับได้', 'ปรับเบี้ยและความคุ้มครองได้ทุกปี', 'ถอนเงินบางส่วนได้เมื่อจำเป็น'], price: 'ยืดหยุ่น', priceUnit: 'กำหนดเบี้ยเองได้', priceNote: 'ปรึกษาเราเพื่อออกแบบแผน', link: 'Contact.html' },
+        plans: [
+          { id: 'smartwealth', name: 'AIA Smart Wealth', desc: 'Unit Link เน้นการเติบโตของเงินลงทุน', price: 'ยืดหยุ่น', link: 'Contact.html' },
+          { id: 'issara', name: 'AIA Issara Plus', desc: 'Unit Link เบี้ยเริ่มต้นเข้าถึงง่าย ปรับได้ตามชีวิต', price: 'ยืดหยุ่น', link: 'Contact.html' }
+        ] },
+      tax: { title: 'ประกันลดหย่อนภาษี', short: 'ลดหย่อนภาษี', desc: 'เบี้ยประกันชีวิต สุขภาพ และบำนาญ นำไปลดหย่อนภาษีได้ตามเงื่อนไขกรมสรรพากร',
+        feat: { id: 'annuitysure', name: 'AIA Annuity Sure', tagline: 'วางแผนเงินบำนาญหลังเกษียณ พร้อมสิทธิลดหย่อนภาษีหมวดบำนาญสูงสุด 200,000 บาท/ปี', bullets: ['เงินบำนาญสม่ำเสมอหลังเกษียณ', 'ลดหย่อนหมวดบำนาญเพิ่มได้สูงสุด 200,000 บาท', 'รวมสิทธิประกันชีวิตทั่วไปได้สูงสุด 300,000 บาท'], price: '5,000', priceUnit: 'บาท/เดือน (ประมาณการ)', priceNote: 'ขึ้นอยู่กับอายุและทุน', link: pd + 'annuitysure' },
+        plans: [
+          { id: 'annuitysure', name: 'AIA Annuity Sure', desc: 'บำนาญสม่ำเสมอ ลดหย่อนหมวดบำนาญ', price: '5,000 บาท/เดือน', link: pd + 'annuitysure' },
+          { id: 'savingsure', name: 'AIA Saving Sure (Non Par)', desc: 'ออมทรัพย์ ลดหย่อนหมวดประกันชีวิตได้', price: '101,508 บาท/ปี (ทุน 400,000)', link: pd + 'savingsure' },
+          { id: '20paylife', name: 'AIA 20 Pay Life (Non Par)', desc: 'ประกันชีวิต ลดหย่อนได้สูงสุด 100,000 บาท', price: '372 บาท/เดือน', link: pd + '20paylife' }
+        ] },
+      kids: { title: 'ประกันเด็ก', short: 'ประกันเด็ก', desc: 'ออมเงินเพื่อการศึกษา พร้อมความคุ้มครองสุขภาพให้ลูกน้อยตั้งแต่แรกเกิด',
+        feat: { id: 'healthhappykids', name: 'AIA Health Happy Kids', tagline: 'สัญญาเพิ่มเติมสุขภาพสำหรับเด็กแรกเกิดถึง 10 ปี ยิ่งคิด(ส) ยิ่งคุ้ม', bullets: ['สำหรับเด็ก 15 วัน - 10 ปี เลือกได้ 4 แผน', 'ต่ออายุถึง 98 ปี คุ้มครองถึง 99 ปี', 'คุ้มครองต่อเนื่องเมื่ออายุครบ 11 ปี'], price: '4,200', priceUnit: 'บาท/ปี', priceNote: 'ขึ้นอยู่กับแผนและความรับผิดส่วนแรก', link: pd + 'healthhappykids' },
+        plans: [
+          { id: 'healthhappykids', name: 'AIA Health Happy Kids', desc: 'สุขภาพเด็กแรกเกิดถึง 10 ปี เลือกได้ 4 แผน', price: '4,200 บาท/ปี', link: pd + 'healthhappykids' },
+          { id: 'endowment1525', name: 'AIA Endowment 15/25', desc: 'ออมเพื่อทุนการศึกษา เป้าหมายชัดเจน', price: '18,500 บาท/ปี', link: pd + 'endowment1525' }
+        ] },
+      legacy: { title: 'วางแผนมรดก', short: 'วางแผนมรดก', desc: 'ส่งต่อทรัพย์สินและความมั่นคงให้ลูกหลานอย่างเป็นระบบ ด้วยทุนประกันสูง',
+        feat: { id: 'legacyprestigeplus', name: 'AIA Legacy Prestige Plus (New)', tagline: 'ดูแลความมั่งคั่งอย่างยั่งยืน เลือกระยะเวลาชำระเบี้ยได้ 10 15 หรือ 20 ปี', bullets: ['ทุนประกันสูงเพื่อส่งต่อมรดก', 'เลือกระยะชำระเบี้ยได้ยืดหยุ่น', 'วางแผนภาษีมรดกอย่างมีประสิทธิภาพ'], price: '280,000', priceUnit: 'บาท/ปี', priceNote: 'ตัวอย่าง: ทุน 15 ล้านบาท', link: pd + 'legacyprestigeplus' },
+        plans: [
+          { id: 'legacyprestige', name: 'AIA Legacy Prestige (Non Par)', desc: 'ทุนสูง ส่งต่อทรัพย์สินให้ลูกหลาน', price: '450,000 บาท/ปี', link: pd + 'legacyprestige' },
+          { id: 'legacyprestigeplus', name: 'AIA Legacy Prestige Plus (New)', desc: 'ยืดหยุ่นระยะชำระเบี้ย 10/15/20 ปี', price: '280,000 บาท/ปี', link: pd + 'legacyprestigeplus' },
+          { id: 'legacyprestigeprotection', name: 'AIA Legacy Prestige Protection (New)', desc: 'ชำระเบี้ยเพียง 5 ปี ทุนคุ้มครองสูง', price: '620,000 บาท/ปี', link: pd + 'legacyprestigeprotection' }
+        ] },
+      hnw: { title: 'ลูกค้าสินทรัพย์สูง', short: 'ลูกค้าสินทรัพย์สูง', desc: 'โซลูชันบริหารความมั่งคั่ง ส่งต่อมรดก และคุ้มครองทรัพย์สิน สำหรับลูกค้า High Net Worth',
+        feat: { id: 'legacyprestigeprotection', name: 'AIA Legacy Prestige Protection (New)', tagline: 'โพรเทคความมั่งคั่งอย่างยั่งยืน ชำระเบี้ยประกันภัยเพียง 5 ปี', bullets: ['ชำระเบี้ยสั้นเพียง 5 ปี', 'ทุนประกัน 20 ล้านบาทขึ้นไป', 'ที่ปรึกษาส่วนตัวดูแลตลอดสัญญา'], price: '620,000', priceUnit: 'บาท/ปี', priceNote: 'ตัวอย่าง: ทุน 20 ล้านบาท', link: pd + 'legacyprestigeprotection' },
+        plans: [
+          { id: 'legacyprestigeprotection', name: 'AIA Legacy Prestige Protection', desc: 'เบี้ย 5 ปี ทุนสูง เพื่อความมั่งคั่งยั่งยืน', price: '620,000 บาท/ปี', link: pd + 'legacyprestigeprotection' },
+          { id: 'legacyprestige', name: 'AIA Legacy Prestige (Non Par)', desc: 'ทุนสูง ส่งต่อทรัพย์สินอย่างเป็นระบบ', price: '450,000 บาท/ปี', link: pd + 'legacyprestige' },
+          { id: 'smartwealth', name: 'AIA Smart Wealth (Unit Link)', desc: 'บริหารความมั่งคั่งผ่านกองทุนชั้นนำ', price: 'ยืดหยุ่น', link: 'Contact.html' }
+        ] }
+    };
+  }
+  dual(str) {
+    const m = String(str).match(/([\d,]+)\s*บาท\/(ปี|เดือน)/);
+    if (!m) return null;
+    const n = parseInt(m[1].replace(/,/g, ''), 10);
+    const fmt = x => x.toLocaleString('en-US');
+    const extra = String(str).replace(m[0], '').trim();
+    const mo = m[2] === 'เดือน' ? n : Math.round(n / 12);
+    const yr = m[2] === 'ปี' ? n : n * 12;
+    return { mo: (m[2] === 'ปี' ? '≈' : '') + fmt(mo), yr: fmt(yr) + ' บาท/ปี' + (extra ? ' ' + extra : '') };
+  }
+  toggleFav(id) {
+    const favs = this.state.favs.includes(id) ? this.state.favs.filter(f => f !== id) : [...this.state.favs, id];
+    this.setState({ favs });
+    try { localStorage.setItem('pe-favs', JSON.stringify(favs)); } catch (e) {}
+  }
+  renderVals() {
+    const s = this.state;
+    const cat = this.catalog[s.catId];
+    const chips = [
+      ['life', 'ประกันชีวิต'], ['health', 'ประกันสุขภาพ'], ['ci', 'โรคร้ายแรง'], ['pa', 'อุบัติเหตุ (PA)'], ['savings', 'ออมทรัพย์'], ['investment', 'Unit Link'], ['tax', 'ลดหย่อนภาษี'], ['kids', 'ประกันเด็ก'], ['legacy', 'วางแผนมรดก'], ['hnw', 'ลูกค้าสินทรัพย์สูง']
+    ];
+    return {
+      menuOpen: s.menuOpen, toggleMenu: () => this.setState(x => ({ menuOpen: !x.menuOpen })),
+      favCount: s.favs.length || null,
+      cat, feat: (() => {
+        const f = cat.feat;
+        const d = this.dual(f.price + ' ' + f.priceUnit);
+        return d ? { ...f, priceMain: d.mo, priceMainUnit: 'บาท/เดือน', priceSub: '(' + d.yr + ')' } : { ...f, priceMain: f.price, priceMainUnit: f.priceUnit, priceSub: null };
+      })(),
+      heroSlotId: 'cat-hero-' + s.catId,
+      heroSrc: 'public/images/' + ({
+        life: 'hero/praganeasy-life-insurance-family-tree-planting-beach.jpg',
+        health: 'hospitals/praganeasy-health-happy-family-hospital-entrance.jpg',
+        ci: 'health/praganeasy-mpci-critical-illness-family-doctor-protection.jpg',
+        pa: 'health/praganeasy-personal-accident-hiking-first-aid.jpg',
+        savings: 'retirement/praganeasy-retirement-beach-sunset-senior-couple.jpg',
+        investment: 'unit-linked/praganeasy-unit-linked-wealth-growth-couple-city.jpg',
+        tax: 'private-wealth/praganeasy-private-wealth-portfolio-review-couple.jpg',
+        kids: 'kids/praganeasy-kids-education-savings-international-school.jpg',
+        legacy: 'legacy/praganeasy-legacy-heirloom-three-generations.jpg',
+        hnw: 'private-wealth/praganeasy-wealth-planning-couple-luxury-home.jpg'
+      }[s.catId] || 'hero/praganeasy-happy-family-park-life-insurance.jpg'),
+      catChips: chips.map(([id, label]) => ({ label, href: '#' + id, cls: id === s.catId ? 'on' : '', go: () => this.setState({ catId: id }) })),
+      catPlans: cat.plans.map((p, pi) => {
+        const d = this.dual(p.price);
+        const pools = {
+          life: ['hero/praganeasy-couple-insurance-planning-home.jpg', 'hero/praganeasy-family-picnic-garden-protection.jpg'],
+          health: ['health/praganeasy-health-insurance-hospital-patient-thumbs-up.jpg', 'health/praganeasy-health-insurance-hospital-recovery-happy.jpg', 'health/praganeasy-health-insurance-family-hospital-visit.jpg', 'kids/praganeasy-kids-insurance-child-hospital-nurse.jpg', 'health/praganeasy-health-insurance-patient-recovery-man.jpg'],
+          ci: ['health/praganeasy-healthy-lifestyle-beach-yoga-couple.jpg', 'health/praganeasy-critical-illness-cancer-recovery-seaview.jpg', 'health/praganeasy-critical-illness-home-nursing-cancer-care.jpg', 'hospitals/praganeasy-hospital-doctor-checkup-health-insurance.jpg'],
+          pa: ['health/praganeasy-pa-motorbike-bangkok-commute-safety.jpg', 'health/praganeasy-accident-insurance-recovery-hospital-lobby.jpg'],
+          savings: ['retirement/praganeasy-savings-cash-payout-happy-woman.jpg', 'retirement/praganeasy-retirement-senior-couple-garden-travel.jpg'],
+          investment: ['unit-linked/praganeasy-unit-linked-investment-planning-couple.jpg', 'private-wealth/praganeasy-private-wealth-woman-portfolio-tablet.jpg'],
+          tax: ['private-wealth/praganeasy-private-wealth-portfolio-review-couple.jpg', 'retirement/praganeasy-retirement-senior-couple-beach-sunset.jpg', 'hero/praganeasy-couple-insurance-planning-home.jpg'],
+          kids: ['kids/praganeasy-kids-education-learning-family-home.jpg', 'kids/praganeasy-father-daughter-child-insurance.jpg', 'kids/praganeasy-kids-education-savings-international-school.jpg'],
+          legacy: ['legacy/praganeasy-family-three-generations-legacy-planning.jpg', 'private-wealth/praganeasy-wealth-planning-couple-luxury-home.jpg', 'retirement/praganeasy-retirement-senior-couple-garden-travel.jpg'],
+          hnw: ['private-wealth/praganeasy-wealth-planning-couple-luxury-home.jpg', 'private-wealth/praganeasy-private-wealth-woman-portfolio-tablet.jpg', 'unit-linked/praganeasy-unit-linked-investment-planning-couple.jpg']
+        };
+        const PLAN_IMG = { '20paylife': 'hero/praganeasy-life-insurance-family-beach-sunset-thailand.jpg', paylifeplus: 'hero/praganeasy-couple-insurance-planning-home.jpg', healthstarter: 'hospitals/praganeasy-health-insurance-couple-doctor-hospital-lobby.jpg', healthsaver: 'health/praganeasy-health-insurance-hospital-patient-thumbs-up.jpg', healthhappy: 'health/praganeasy-health-insurance-private-room-sea-view-recovery.jpg', healthhappykids: 'kids/praganeasy-child-insurance-family-park-bicycle-lesson.jpg', hbextra: 'hospitals/praganeasy-health-insurance-doctor-patient-bedside-tablet.jpg', multipayci: 'health/praganeasy-critical-illness-recovery-bell-hospital-celebration.jpg', cisupercare: 'health/praganeasy-critical-illness-cancer-recovery-seaview.jpg', jerjaijob: 'health/praganeasy-critical-illness-prevention-couple-beach-yoga.jpg', ciplus: 'hospitals/praganeasy-hospital-doctor-checkup-health-insurance.jpg', ciprocare: 'health/praganeasy-critical-illness-home-nursing-cancer-care.jpg', tpd: 'legacy/praganeasy-elder-care-insurance-family-nurse-home-visit.jpg', careforcancer: 'health/praganeasy-health-insurance-hospital-recovery-happy.jpg', pa2500: 'health/praganeasy-accident-insurance-couple-cycling-beach-thailand.jpg', pa3000: 'health/praganeasy-accident-insurance-woman-hiking-forest-bridge.jpg', pa3800: 'health/praganeasy-travel-accident-insurance-jungle-bridge-adventure.jpg', pa4600: 'health/praganeasy-personal-accident-insurance-couple-airport-travel.jpg', pa5500: 'health/praganeasy-accident-insurance-recovery-hospital-lobby.jpg', pa7900: 'health/praganeasy-healthy-lifestyle-beach-yoga-couple.jpg', savingsure: 'retirement/praganeasy-savings-insurance-woman-financial-planning-home.jpg', endowment1525: 'kids/praganeasy-family-savings-plan-child-coin-jar-home.jpg', lifetimeincome: 'retirement/praganeasy-savings-cash-payout-happy-woman.jpg', smartwealth: 'unit-linked/praganeasy-unit-linked-investment-couple-financial-review.jpg', issara: 'unit-linked/praganeasy-unit-linked-investment-planning-couple.jpg', annuitysure: 'retirement/praganeasy-retirement-annuity-couple-beach-sunset.jpg', annuityfix: 'retirement/praganeasy-retirement-senior-couple-beach-sunset.jpg', legacyprestige: 'legacy/praganeasy-family-three-generations-legacy-planning.jpg', legacyprestigeplus: 'legacy/praganeasy-legacy-planning-three-generations-family-garden.jpg', legacyprestigeprotection: 'private-wealth/praganeasy-wealth-planning-couple-luxury-home.jpg' };
+        const pool = pools[s.catId] || [];
+        const imgSrc = PLAN_IMG[p.id] ? 'public/images/' + PLAN_IMG[p.id] : (pool.length ? 'public/images/' + pool[pi % pool.length] : null);
+        return { ...p, slotId: 'cat-plan-' + p.id, imgSrc, favCls: s.favs.includes(p.id) ? 'on' : '', toggleFav: e => { e.preventDefault(); this.toggleFav(p.id); },
+          price: d ? d.mo + ' บาท/เดือน' : p.price, priceSub: d ? '(' + d.yr + ')' : null,
+          priceLabel: p.price === 'สอบถามเบี้ยกับที่ปรึกษา' ? '' : 'เบี้ยเริ่มต้น ' };
+      })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

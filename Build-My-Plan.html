@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>สร้างแผนประกันของคุณเอง — PraganEasy</title>
+<meta name="description" content="ออกแบบแผนประกัน AIA ของคุณเอง ปรับความคุ้มครองและเห็นเบี้ยประมาณการทันที">
+<script src="./support.js"></script>
+<script src="./image-slot.js"></script>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#053c5e"/><circle cx="100" cy="100" r="45" fill="#EB5951"/><text x="100" y="108" font-family="sans-serif" font-size="34" font-weight="700" fill="#fff" text-anchor="middle">PE</text></svg></template></head>
+<body>
+<x-dc>
+<helmet data-dc-atomics=""><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&amp;family=Sarabun:wght@400;500;600&amp;family=Inter:wght@500;600;700&amp;display=swap" rel="stylesheet"><style>
+body{margin:0;background:#EAF5F8;color:#374151}
+a{color:#E8B923;text-decoration:none}
+a:hover{color:#053c5e}
+*{box-sizing:border-box}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.font-d{font-family:'Prompt',sans-serif}
+.font-b{font-family:'Sarabun',sans-serif}
+.font-n{font-family:'Inter',sans-serif}
+header.site{background:#EAF5F8}
+.navrow{height:52px}
+.logo{font-family:'Prompt',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.02em}
+.logo .e{color:#EB5951}
+nav.links a{font-family:'Sarabun',sans-serif;font-size:15px;font-weight:500;color:#053c5e;padding:8px 0}
+nav.links a.active{color:#E8B923;font-weight:600}
+.btn{font-family:'Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.03em;text-transform:uppercase;border-radius:12px;padding:13px 26px;border:none;cursor:pointer}
+.btn-primary{background:#EB5951;color:#fff}
+.btn-primary:hover{background:#c94039;color:#F8D877}
+.icon{width:20px;height:20px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+@media(max-width:920px){nav.links{display:none}.menu-btn{display:flex}.mobile-cta{display:none}}
+.pagehero{background:#053c5e;color:#F8F8F6;padding:48px 0 32px}
+.pagehero h1{font-family:'Prompt',sans-serif;font-weight:700;font-size:34px}
+.profile-bar{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:76px;z-index:40}
+.profile-row{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.profile-field{display:flex;flex-direction:column;gap:4px}
+.profile-field label{font-family:'Sarabun',sans-serif;font-size:14px;font-weight:600;color:#053c5e;letter-spacing:0.02em}
+.profile-field .val{font-family:'Inter',sans-serif;font-size:15px;font-weight:600;color:#053c5e}
+.seg{display:flex;background:#EAF5F8;border-radius:12px;padding:3px;gap:3px}
+.seg button{border:none;background:transparent;padding:12px 22px;border-radius:10px;font-family:'Sarabun',sans-serif;font-size:17px;font-weight:600;cursor:pointer;color:#6B7280;display:inline-flex;align-items:center;gap:8px}
+.seg button svg{width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.seg button.sel{background:#fff;color:#EB5951;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.age-mini{border:1.5px solid #D1D5DB;border-radius:12px;padding:11px 14px;font-family:'Prompt',sans-serif;font-weight:600;font-size:18px;width:96px;color:#053c5e}
+main{padding:32px 0 140px}
+.main-card{background:#fff;border:1px solid #E5E7EB;border-radius:20px;padding:28px;margin-bottom:24px}
+.main-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.main-card-head h3{font-family:'Prompt',sans-serif;font-size:20px;font-weight:700;margin:0}
+.plan-banner{display:flex;align-items:center;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+.plan-code{background:#E8B923;color:#fff;font-family:'Prompt',sans-serif;font-weight:700;font-size:15px;padding:13px 22px;border-radius:12px}
+.plan-select-row{display:flex;align-items:center;gap:14px;margin-bottom:24px;flex-wrap:wrap;background:#EAF5F8;border-radius:16px;padding:16px 18px}
+.plan-select-icon{width:44px;height:44px;border-radius:100px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.plan-select-info{flex:1;min-width:180px}
+.plan-select-name{font-family:'Prompt',sans-serif;font-weight:700;font-size:16px;color:#053c5e;margin-bottom:6px}
+.plan-change-btn{background:#053c5e;color:#fff;border:none;border-radius:12px;padding:11px 18px;font-family:'Sarabun',sans-serif;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.plan-modal-overlay{position:fixed;inset:0;background:rgba(31,122,140,0.55);z-index:80;display:flex;align-items:center;justify-content:center;padding:24px}
+.plan-modal{background:#fff;border-radius:20px;max-width:940px;width:100%;max-height:85vh;display:flex;flex-direction:column;overflow:hidden}
+.plan-modal-head{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:#EAF5F8;flex-shrink:0}
+.plan-modal-head h3{font-family:'Prompt',sans-serif;font-size:18px;font-weight:700;margin:0}
+.plan-modal-close{background:transparent;border:none;color:#053c5e;font-family:'Sarabun',sans-serif;font-size:14px;font-weight:600;cursor:pointer}
+.plan-cat-tabs{display:flex;gap:8px;padding:16px 24px;flex-shrink:0;flex-wrap:wrap}
+.plan-cat-tab{border:1px solid #E5E7EB;border-radius:12px;padding:9px 16px;font-family:'Sarabun',sans-serif;font-size:13px;cursor:pointer;background:#fff}
+.plan-cat-tab.sel{background:#053c5e;color:#fff;border-color:#053c5e;font-weight:600}
+.plan-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;overflow-y:auto;padding:0 24px 24px;flex:1;min-height:0}
+@media(max-width:760px){.plan-card-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.plan-card-grid{grid-template-columns:1fr}}
+.plan-card-item{border:1px solid #E5E7EB;border-radius:16px;padding:18px;cursor:pointer;display:flex;flex-direction:column;gap:10px;background:#fff;transition:box-shadow .15s,border-color .15s}
+.plan-card-item:hover{border-color:#E8B923;box-shadow:0 4px 14px rgba(0,0,0,0.08)}
+.plan-card-swatch{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.plan-card-name{font-family:'Prompt',sans-serif;font-weight:700;font-size:14px;color:#053c5e;line-height:1.3}
+.plan-card-nums{display:flex;flex-direction:column;gap:4px;margin-top:auto;padding-top:10px;border-top:1px solid #F0F0F0}
+.plan-card-num{display:flex;justify-content:space-between;align-items:baseline;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#053c5e}
+.plan-card-num .lbl{font-family:'Sarabun',sans-serif;font-size:11px;color:#6B7280;font-weight:400}
+.plan-card-num .v.premium{color:#EB5951}
+.plan-tier-chip{border:1px solid #E5E7EB;border-radius:12px;padding:9px 16px;font-family:'Sarabun',sans-serif;font-size:13px;cursor:pointer;background:#fff}
+.plan-tier-chip.sel{border-color:#EB5951;color:#EB5951;background:rgba(235,89,81,0.05);font-weight:600}
+.slider-block2{margin-bottom:26px}
+.slider-block2-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:16px}
+.slider-block2-label{font-family:'Sarabun',sans-serif;font-size:14px;color:#6B7280}
+.slider-block2-value{font-family:'Prompt',sans-serif;font-weight:700;font-size:26px;color:#053c5e}
+.slider-ticks{display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:11px;color:#9CA3AF;margin-top:6px}
+input[type=range].big{width:100%;accent-color:#EB5951;height:6px}
+.rider-row{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:22px;margin-bottom:14px}
+.rider-row.off{opacity:0.55}
+.rider-head{display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.rider-icon{width:42px;height:42px;border-radius:100px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rider-name{font-family:'Prompt',sans-serif;font-size:16px;font-weight:700;flex:1;min-width:180px}
+.rider-tags{display:flex;gap:6px;flex-wrap:wrap}
+.rider-tag-mini{border:1px solid #E5E7EB;border-radius:100px;padding:3px 10px;font-family:'Sarabun',sans-serif;font-size:11px;color:#6B7280}
+.switch{width:44px;height:24px;border-radius:100px;background:#D1D5DB;position:relative;flex-shrink:0;cursor:pointer}
+.switch.on{background:#EB5951}
+.switch i{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:100px;background:#fff;transition:transform .15s}
+.switch.on i{transform:translateX(20px)}
+.rider-body{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.tier-chip-row{display:flex;gap:8px;flex-wrap:wrap}
+.rider-slider-wrap{flex:1;min-width:200px}
+.rider-premium{font-family:'Prompt',sans-serif;font-weight:700;font-size:30px;color:#EB5951;text-align:right;white-space:nowrap}
+.rider-premium span{display:block;font-family:'Sarabun',sans-serif;font-size:14px;color:#6B7280;font-weight:600}
+.detail-link{background:transparent;border:none;color:#EB5951;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}
+.benefit-detail{margin-top:18px;padding-top:18px;border-top:1px solid #F0F0F0}
+.benefit-max{background:#EAF5F8;border-radius:14px;padding:14px 18px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.benefit-max .lbl{font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280}
+.benefit-max .val{font-family:'Prompt',sans-serif;font-weight:700;font-size:20px;color:#053c5e}
+.benefit-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:800px){.benefit-cols{grid-template-columns:1fr}}
+.benefit-col-head{display:flex;align-items:center;gap:8px;font-family:'Prompt',sans-serif;font-weight:700;font-size:14px;margin-bottom:10px}
+.benefit-item{background:#FBEAEE;border-radius:12px;padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;gap:12px}
+.benefit-item.alt{background:#F5F1EA}
+.benefit-item .txt{font-family:'Sarabun',sans-serif;font-size:13px;color:#374151;line-height:1.5}
+.benefit-item .txt i{font-style:italic;color:#9CA3AF;display:block;font-size:12px;margin-top:2px}
+.benefit-item .amt{font-family:'Inter',sans-serif;font-weight:700;font-size:13px;white-space:nowrap}
+.benefit-block{background:#FBEAEE;border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.benefit-block h4{font-family:'Prompt',sans-serif;font-size:14px;margin:0 0 6px}
+.benefit-block p{font-family:'Sarabun',sans-serif;font-size:13px;color:#374151;line-height:1.6;margin:0}
+.summary-table{width:100%;background:#fff;border:1px solid #E5E7EB;border-radius:18px;overflow:hidden;margin-top:16px}
+.summary-table table{width:100%;border-collapse:collapse}
+.summary-table th{background:#EAF5F8;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:12px 18px;text-align:left}
+.summary-table th:last-child,.summary-table td:last-child{text-align:right}
+.summary-table td{font-family:'Sarabun',sans-serif;font-size:14px;padding:12px 18px;border-top:1px solid #F0F0F0}
+.summary-table td.name{font-weight:600;color:#053c5e}
+.summary-table tr.total td{font-family:'Prompt',sans-serif;font-weight:700;font-size:16px;border-top:2px solid #053c5e;color:#EB5951}
+.summary-table tr.total td.name{color:#053c5e}
+.summary-bar2{background:#EAF5F8;border-radius:18px;padding:22px 24px;display:flex;gap:32px;flex-wrap:wrap;align-items:center}
+.summary-stat{display:flex;flex-direction:column;gap:2px}
+.summary-stat .lbl{font-family:'Sarabun',sans-serif;font-size:12px;color:#6B7280}
+.summary-stat .val{font-family:'Prompt',sans-serif;font-weight:700;font-size:18px;color:#053c5e}
+.summary-cta-row{margin-left:auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.link-btn{background:transparent;border:none;color:#EB5951;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer}
+.detail-panel{background:#fff;border:1px solid #E5E7EB;border-radius:18px;padding:24px;margin-top:20px}
+.detail-toggle{display:flex;background:#EAF5F8;border-radius:12px;padding:4px;gap:4px;width:fit-content;margin-bottom:18px}
+.detail-toggle button{padding:9px 18px;border:none;background:transparent;border-radius:10px;font-family:'Sarabun',sans-serif;font-size:13px;cursor:pointer;color:#6B7280}
+.detail-toggle button.sel{background:#053c5e;color:#fff;font-weight:600}
+.detail-table{width:100%;border-collapse:collapse}
+.detail-table th{background:#EAF5F8;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:10px 14px;text-align:left}
+.detail-table td{font-family:'Sarabun',sans-serif;font-size:13px;padding:10px 14px;border-top:1px solid #F0F0F0;color:#374151}
+.detail-note{font-family:'Sarabun',sans-serif;font-size:12px;color:#9CA3AF;margin-top:12px}
+.est-disclaimer{font-family:'Prompt',sans-serif;font-weight:600;font-size:16px;line-height:1.6;color:#8a6f10;background:rgba(248,216,119,0.25);border-radius:12px;padding:14px 18px;margin-top:18px}
+.benefit-cards{display:flex;flex-direction:column;gap:16px}
+.benefit-card{border:1px solid #E5E7EB;border-radius:16px;padding:20px}
+.benefit-card-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.bc-icon{width:40px;height:40px;border-radius:100px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bc-name{font-family:'Prompt',sans-serif;font-weight:700;font-size:16px;color:#053c5e}
+.bc-row{display:flex;align-items:baseline;gap:8px;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid #F0F0F0;flex-wrap:wrap}
+.bc-lbl{font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280}
+.bc-val{font-family:'Prompt',sans-serif;font-weight:700;font-size:18px;color:#053c5e}
+.bc-lbl2{font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;margin-left:auto}
+.bc-val2{font-family:'Prompt',sans-serif;font-weight:700;font-size:18px;color:#EB5951}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#053c5e;padding:0;box-shadow:0 -4px 16px rgba(0,0,0,0.15)}
+footer.site{background:#053c5e;color:#F8F8F6}
+.disclaimer{font-family:'Sarabun',sans-serif;font-size:12px;color:#c3d3e0;line-height:1.7}
+.mobile-menu{position:fixed;inset:0;background:#053c5e;z-index:70;display:flex;flex-direction:column;padding:24px}
+.mobile-menu a{font-family:'Prompt',sans-serif;font-size:22px;color:#F8F8F6;font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1)}
+.topbar{background:#fff;color:#053c5e;font-family:'Sarabun',sans-serif;font-size:12px;border-bottom:1px solid #E5E7EB}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;height:34px}
+.topbar-social{display:flex;gap:12px}
+.topbar-social a{color:#EB5951;opacity:.75;display:flex}
+.topbar-social a:hover{opacity:1;color:#EB5951}
+.topbar-social svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.topbar-links{display:flex;gap:20px}
+.topbar-links a{color:#053c5e;opacity:.75}
+.topbar-links a:hover{opacity:1;color:#EB5951}
+@media(max-width:800px){.topbar{display:none}}
+.midbar{background:#fff;padding:10px 0}
+.midbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.midbar-contact{display:flex;gap:28px;flex-wrap:wrap}
+.midbar-contact-item{display:flex;align-items:center;gap:10px}
+.midbar-contact-item .mi-ico{width:34px;height:34px;border-radius:100px;background:#EAF5F8;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.midbar-contact-item .mi-ico svg{width:16px;height:16px;stroke:#EB5951;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.midbar-contact-item .mi-label{font-family:'Sarabun',sans-serif;font-size:11px;color:#6B7280}
+.midbar-contact-item .mi-value{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;color:#053c5e}
+@media(max-width:900px){.midbar-contact{display:none}}
+@media(max-width:700px){.head-cta{display:none}}
+.navbar{background:#fff;border-bottom:1px solid #E5E7EB;position:sticky;top:0;z-index:50}
+.navbar-inner{display:flex;align-items:center;justify-content:space-between;height:52px}
+.navbar .links a{color:#053c5e;font-family:'Sarabun',sans-serif;font-size:14px;font-weight:500;padding:16px 0;border-bottom:2px solid transparent}
+.navbar .links a:hover{color:#EB5951}
+.navbar .links a.active{color:#EB5951;font-weight:700;border-bottom-color:#EB5951}
+@media(max-width:920px){.navbar .links{display:none}}
+.navbar .menu-btn{color:#EB5951}
+.nav-drop{position:relative}
+.nav-drop-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.1);padding:8px;min-width:200px;z-index:60}
+.nav-drop:hover .nav-drop-menu{display:block}
+.nav-drop-menu a{display:block;padding:10px 12px;font-size:13px;border-radius:8px;white-space:nowrap}
+.nav-drop-menu a:hover{background:#EAF5F8}
+.navbar .links .nav-drop-menu a{color:#374151;border-bottom:none;font-weight:500}
+.navbar .links .nav-drop-menu a:hover{color:#EB5951;background:#EAF5F8}
+.hero-photo-nav .navbar .links .nav-drop-menu a{color:#374151}
+.hero-photo-nav .navbar .links .nav-drop-menu a:hover{color:#EB5951}
+
+header.site.hero-photo-nav{background:transparent}
+.hero-photo-nav .midbar{background:transparent}
+.hero-photo-nav .midbar .logo{color:#fff}
+.hero-photo-nav .midbar .mi-ico{background:rgba(255,255,255,0.15)}
+.hero-photo-nav .midbar .mi-ico svg{stroke:#fff}
+.hero-photo-nav .midbar .mi-label{color:#D8E4EA}
+.hero-photo-nav .midbar .mi-value{color:#fff}
+.hero-photo-nav .midbar .mi-value a{color:#fff}
+.hero-photo-nav .navbar{background:transparent;border-bottom:1px solid rgba(255,255,255,0.18);position:relative;z-index:5}
+.hero-photo-nav .navbar .links a{color:#fff}
+.hero-photo-nav .navbar .links a:hover{color:#F8D877}
+.hero-photo-nav .navbar .links a.active{color:#EB5951;border-bottom-color:#EB5951}
+.hero-photo-nav .navbar .menu-btn{color:#fff}
+.hero-photo-nav .nav-drop-menu a{color:#374151}
+.hero-photo-section{position:relative;overflow:hidden;min-height:360px}
+.hero-photo-bg{position:absolute;top:0;left:0;right:0;bottom:0;z-index:0}
+.hero-photo-overlay{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none;background:linear-gradient(100deg,rgba(5,60,94,0.92) 0%,rgba(5,60,94,0.68) 45%,rgba(5,60,94,0.3) 75%)}
+.hero-photo-nav{position:relative;z-index:3}
+.hero-photo-content{position:relative;z-index:2;padding:48px 0 64px;pointer-events:none}
+.hero-photo-content a,.hero-photo-content button,.hero-photo-content input,.hero-photo-content select{pointer-events:auto}
+.hero-photo-content h1{font-family:'Prompt',sans-serif;font-weight:700;font-size:40px;color:#fff;line-height:1.2;margin:0 0 14px;max-width:620px}
+@media(max-width:700px){.hero-photo-content h1{font-size:28px}}
+.hero-photo-content p{font-family:'Sarabun',sans-serif;font-size:16px;color:#D8E4EA;max-width:580px;line-height:1.7}
+.hero-feat-strip{position:relative;margin-top:-24px;z-index:5}
+@media(max-width:700px){.hero-feat-strip{margin-top:-16px}}
+.hero-feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#E5E7EB;border-radius:14px;overflow:hidden;box-shadow:0 8px 20px rgba(31,122,140,0.08)}
+@media(max-width:800px){.hero-feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.hero-feat-grid{grid-template-columns:1fr}}
+.hero-feat-card{background:#fff;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.hero-feat-icon{width:34px;height:34px;border-radius:8px;background:#FDEDEE;display:flex;align-items:center;justify-content:center}
+.hero-feat-card h4{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;margin:0;color:#053c5e}
+.hero-feat-card p{font-family:'Sarabun',sans-serif;font-size:12.5px;color:#6B7280;line-height:1.5;margin:0}
+
+@media(max-width:760px){.summary-table{overflow-x:auto}.detail-table{display:block;overflow-x:auto;white-space:nowrap}}
+
+.foot-navy{background:#053c5e;color:#F8F8F6}
+.foot-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:32px 24px;border-bottom:1px solid rgba(255,255,255,0.12)}
+.foot-top h2{font-family:'Prompt',sans-serif;font-weight:700;font-size:26px;margin:0;color:#fff}
+.foot-top h2 span{color:#EB5951}
+@media(max-width:600px){.foot-top{flex-direction:column;align-items:flex-start}.foot-top h2{font-size:20px}}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px;padding:40px 24px}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+.foot-h{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#F8D877;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px}
+.foot-links a{display:block;font-family:'Sarabun',sans-serif;font-size:14px;margin-bottom:10px;color:#EAF5F8}
+.foot-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-family:'Sarabun',sans-serif;font-size:14px;color:#EAF5F8;line-height:1.5}
+.foot-contact-item svg{width:16px;height:16px;stroke:#EB5951;flex-shrink:0;margin-top:2px}
+.foot-social{display:flex;gap:10px;margin-top:16px}
+.foot-social a{width:34px;height:34px;border-radius:100px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.foot-social a:hover{background:#F8D877}
+.foot-social a:hover svg{stroke:#EB5951}
+.foot-social svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+</style></helmet>
+<div class="hero-photo-section"><div class="hero-photo-bg"><image-slot id="build-hero-photo" shape="rect" placeholder="ลากรูปภาพหลักของหน้านี้มาวางที่นี่" src="public/images/hero/praganeasy-build-my-plan-coverage-puzzle.jpg"></image-slot></div><div class="hero-photo-overlay"></div>
+<header class="site hero-photo-nav"><div class="midbar"><div class="wrap midbar-inner"><div class="logo"><span style="color:#fff">pragan</span><span class="e" style="color:#EB5951">easy</span></div><div class="midbar-contact"><div class="midbar-contact-item"><div class="mi-ico"><svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></div><div><div class="mi-label">LINE</div><div class="mi-value"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="color:inherit">@praganeasy</a></div></div></div></div><a class="btn btn-primary head-cta" href="Build-My-Plan.html">สร้างแผนฟรี</a></div></div><div class="navbar"><div class="wrap fx ac jb navrow"><nav class="links fx ac gap24"><a href="index.html">หน้าแรก</a><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><div class="nav-drop"><a href="Plans.html">แผนประกัน ▾</a><div class="nav-drop-menu"><a href="Plans.html">ดูแผนทั้งหมด</a><a href="Plans.html#popular">แผนยอดนิยม</a><a href="Compare-Plans.html">เปรียบเทียบแผนประกัน</a><a href="Category.html#ci">แผนประกันโรคร้ายแรง</a></div></div><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></nav><button class="menu-btn" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div></div></header>
+<sc-if value="{{ menuOpen }}"><div class="mobile-menu"><div class="fx jb ac mb16"><div class="logo" style="color:#fff"><span>pragan</span><span style="color:#EB5951">easy</span></div><button class="menu-btn" style="display:flex;color:#fff" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div><a href="index.html">หน้าแรก</a><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Plans.html#popular" style="padding-left:16px;font-size:17px">แผนยอดนิยม</a><a href="Compare-Plans.html" style="padding-left:16px;font-size:17px">เปรียบเทียบแผนประกัน</a><a href="Category.html#ci" style="padding-left:16px;font-size:17px">แผนประกันโรคร้ายแรง</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="Build-My-Plan.html">สร้างแผนของคุณ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></div></sc-if>
+<div class="hero-photo-content"><div class="wrap" style="max-width:680px"><h1>สร้างแผนของคุณ</h1><p class="font-b" style="font-size:15px;color:#C9D0D8;line-height:1.7;margin-top:10px">ปรับความคุ้มครองหลักและสัญญาเพิ่มเติมได้ตามใจ ดูเบี้ยประกันแบบเรียลไทม์</p></div></div>
+</div>
+<div class="wrap"><div class="hero-feat-strip"><div class="hero-feat-grid"><div class="hero-feat-card"><div class="hero-feat-icon"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h4>ปรับได้เอง</h4><p>เลือกความคุ้มครองที่ต้องการเอง</p></div><div class="hero-feat-card"><div class="hero-feat-icon"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg></div><h4>เห็นเบี้ยทันที</h4><p>เบี้ยประมาณการอัปเดตตามที่ปรับ</p></div><div class="hero-feat-card"><div class="hero-feat-icon"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></div><h4>ครบทุกสัญญา</h4><p>แผนหลักและสัญญาเพิ่มเติมในที่เดียว</p></div><div class="hero-feat-card"><div class="hero-feat-icon"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></div><h4>ส่งให้เราดูได้</h4><p>ส่งแผนที่สร้างให้เราช่วยเช็กได้</p></div></div></div></div>
+<div class="profile-bar"><div class="wrap profile-row"><div class="profile-field"><label>เพศ</label><div class="seg"><button class="{{ genderMaleSel }}" onClick="{{ setMale }}"><svg viewBox="0 0 24 24"><circle cx="10" cy="14" r="6"/><path d="M14.5 9.5L21 3M21 3h-6M21 3v6"/></svg>ชาย</button><button class="{{ genderFemaleSel }}" onClick="{{ setFemale }}"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M8.5 17.5h7"/></svg>หญิง</button></div></div><div class="profile-field"><label>อายุ</label><input class="age-mini" type="number" min="18" max="65" value="{{ age }}" onChange="{{ setAge }}"></div></div></div>
+<main><div class="wrap">
+<div class="main-card"><div class="main-card-head"><h3>1. เลือกแผนประกันชีวิตหลัก</h3></div><div class="plan-select-row"><div class="plan-select-icon" style="background:{{ selPlanIconBg }}"><svg class="icon" style="stroke:{{ selPlanIconColor }};width:22px;height:22px" viewBox="0 0 24 24"><path d="{{ selPlanIconPath }}"></path></svg></div><div class="plan-select-info"><div class="plan-select-name">{{ selPlanName }}</div><div class="rider-tags"><sc-for list="{{ selPlanTags }}" as="tg" hint-placeholder-count="3"><span class="rider-tag-mini">{{ tg }}</span></sc-for></div></div><button class="plan-change-btn" onClick="{{ openPlanModal }}">เปลี่ยนแผน →</button></div>
+<div class="slider-block2"><div class="slider-block2-head"><span class="slider-block2-label">ความคุ้มครอง</span><span class="slider-block2-value" style="display:inline-flex;align-items:center;gap:8px"><input type="text" inputMode="numeric" value="{{ coverageInputVal }}" onChange="{{ typeCoverage }}" onBlur="{{ commitCoverage }}" style="width:170px;text-align:right;font-family:'Prompt',sans-serif;font-weight:700;font-size:22px;color:#053c5e;border:1.5px solid #E5E7EB;border-radius:10px;padding:4px 10px;background:#fff"> บาท</span></div><input class="big" type="range" min="100000" max="10000000" step="100000" value="{{ coverage }}" onChange="{{ setCoverage }}"><div class="slider-ticks"><span>100,000</span><span>1 ล้าน</span><span>3 ล้าน</span><span>5 ล้าน</span><span>10 ล้าน</span></div><p style="font-family:'Sarabun',sans-serif;font-size:12.5px;color:#9CA8B4;margin:8px 0 0">พิมพ์ตัวเลขความคุ้มครองที่ต้องการได้เอง หรือเลื่อนปรับทีละ 100,000 บาท</p></div>
+<div class="slider-block2"><div class="slider-block2-head"><span class="slider-block2-label">เบี้ยประกันหลัก (ต่อปี)</span><span class="slider-block2-value" style="color:#EB5951">{{ mainPremiumLabel }}</span></div><div class="slider-ticks"><span>คำนวณจากความคุ้มครอง อายุ และเพศของคุณ</span></div></div>
+</div>
+<sc-if value="{{ planModalOpen }}"><div class="plan-modal-overlay" onClick="{{ closePlanModal }}"><div class="plan-modal" onClick="{{ stopClick }}"><div class="plan-modal-head"><h3>เลือกแผนความคุ้มครองหลัก</h3><button class="plan-modal-close" onClick="{{ closePlanModal }}">ปิด ✕</button></div><div class="plan-cat-tabs"><button class="plan-cat-tab {{ catAllSel }}" onClick="{{ setCatAll }}">ทั้งหมด</button><button class="plan-cat-tab {{ catSavingSel }}" onClick="{{ setCatSaving }}">สะสมทรัพย์</button><button class="plan-cat-tab {{ catLifeSel }}" onClick="{{ setCatLife }}">คุ้มครองชีวิต</button><button class="plan-cat-tab {{ catAnnuitySel }}" onClick="{{ setCatAnnuity }}">บำนาญ</button></div><div class="plan-card-grid"><sc-for list="{{ filteredPlans }}" as="p" hint-placeholder-count="6"><div class="plan-card-item" onClick="{{ p.select }}"><div class="plan-card-swatch" style="background:{{ p.iconBg }}"><svg class="icon" style="stroke:{{ p.iconColor }};width:26px;height:26px" viewBox="0 0 24 24"><path d="{{ p.iconPath }}"></path></svg></div><div class="plan-card-name">{{ p.name }}</div><div class="rider-tags"><sc-for list="{{ p.tags }}" as="tg" hint-placeholder-count="3"><span class="rider-tag-mini">{{ tg }}</span></sc-for></div><div class="plan-card-nums"><div class="plan-card-num"><span class="lbl">ความคุ้มครอง</span><span class="v">{{ p.coverageLabel }}</span></div><div class="plan-card-num"><span class="lbl">เบี้ยฯ</span><span class="v premium">{{ p.premiumLabel }}</span></div></div></div></sc-for></div></div></div></sc-if>
+<div class="main-card"><div class="main-card-head"><h3>2. เพิ่มสัญญาเพิ่มเติม (Rider) ตามที่ต้องการ</h3></div><p class="lead" style="margin-bottom:20px">เลือกเปิด/ปิดแต่ละสัญญาเพิ่มเติมได้ตามความต้องการ — สุขภาพ, ชดเชยรายวัน (HB) และโรคร้ายแรง (CI) คือความคุ้มครองหลักที่แนะนำให้พิจารณาคู่กับแผนชีวิต</p>
+<div class="rider-row {{ healthOffClass }}"><div class="rider-head"><div class="rider-icon" style="background-color: #EB595114"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg></div><div class="rider-name">AIA Health Happy</div><div class="rider-tags"><span class="rider-tag-mini">รักษาพยาบาลในรพ.</span><span class="rider-tag-mini">เหมาจ่าย</span></div><div class="switch {{ healthOnClass }}" onClick="{{ toggleHealth }}"><i></i></div></div><sc-if value="{{ healthOn }}"><div class="rider-body"><div class="tier-chip-row"><div class="plan-tier-chip {{ healthT0 }}" onClick="{{ setHealthTier0 }}">1,000,000</div><div class="plan-tier-chip {{ healthT1 }}" onClick="{{ setHealthTier1 }}">5,000,000</div><div class="plan-tier-chip {{ healthT2 }}" onClick="{{ setHealthTier2 }}">15,000,000</div><div class="plan-tier-chip {{ healthT3 }}" onClick="{{ setHealthTier3 }}">25,000,000</div></div><div class="rider-premium">{{ healthPremiumLabel }}<span>เบี้ยฯ/ปี</span></div></div>
+<button class="detail-link" onClick="{{ toggleHealthDetail }}">{{ healthDetailLabel }}</button>
+<sc-if value="{{ healthDetailOpen }}"><div class="benefit-detail"><div class="benefit-max"><span class="lbl">ผลประโยชน์สูงสุดต่อรอบปีกรมธรรม์</span><span class="val">{{ healthAmountLabel }}</span></div><div class="benefit-cols"><div><div class="benefit-col-head">🛏 ผู้ป่วยใน</div><div class="benefit-item"><span class="txt">ค่าห้อง ค่าอาหาร ค่าบริการในโรงพยาบาล (ต่อวัน)<i>ห้อง ICU จ่ายตามจริง — รวมแล้วไม่เกิน 365 วัน ต่อการเข้าพักรักษาครั้งใดครั้งหนึ่ง</i></span><span class="amt">{{ hhRoomLabel }}</span></div><div class="benefit-item alt"><span class="txt">ค่าห้อง ICU</span><span class="amt">จ่ายตามจริง</span></div><div class="benefit-item"><span class="txt">ค่าแพทย์ตรวจรักษา (Doctor fee ต่อวัน)<i>ค่าผ่าตัด ศัลยกรรม และหัตถการ เหมาจ่ายตามจริง</i></span><span class="amt">{{ hhDoctorLabel }}</span></div><div class="benefit-item alt"><span class="txt">ค่ายาและเวชภัณฑ์กลับบ้าน<i>ปริมาณไม่เกิน 7 วัน ต่อครั้ง</i></span><span class="amt">ไม่เกิน 20,000 บาท/ครั้ง</span></div></div><div><div class="benefit-col-head">💊 ผู้ป่วยนอก</div><div class="benefit-item"><span class="txt">ค่าตรวจก่อนและหลังนอนโรงพยาบาล<i>ภายใน 30 วัน ก่อน/หลังการเข้าพักรักษาตัว</i></span><span class="amt">จ่ายตามจริง</span></div><div class="benefit-item alt"><span class="txt">อุบัติเหตุฉุกเฉินภายใน 24 ชั่วโมง<i>ของการเกิดอุบัติเหตุต่อครั้ง</i></span><span class="amt">จ่ายตามจริง</span></div><div class="benefit-item"><span class="txt">ผ่าตัดเล็กไม่ต้องนอนโรงพยาบาล (Day surgery)</span><span class="amt">จ่ายตามจริง</span></div></div></div><div class="benefit-block mt16" style="margin-top:16px"><h4>ผลประโยชน์อื่นๆ</h4><p>เงินช่วยเหลือกรณีเสียชีวิตจากอุบัติเหตุ — 10,000 บาท</p></div><p class="detail-note">ตัวเลขและเงื่อนไขข้างต้นเป็นตัวอย่างสรุปโดยย่อ รายละเอียดความคุ้มครองฉบับเต็มระบุในกรมธรรม์ AIA Health Happy</p></div></sc-if>
+</sc-if>
+</div>
+<div class="rider-row {{ ciOffClass }}"><div class="rider-head"><div class="rider-icon" style="background-color: #EB595126"><svg class="icon" style="stroke: #EB5951; width: 22px; height: 22px" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg></div><div class="rider-name">AIA Multi-Pay CI Plus</div><div class="rider-tags"><span class="rider-tag-mini">โรคร้ายแรงระดับต้นถึงรุนแรง</span><span class="rider-tag-mini">จ่ายได้หลายครั้ง</span></div><div class="switch {{ ciOnClass }}" onClick="{{ toggleCi }}"><i></i></div></div><sc-if value="{{ ciOn }}"><div class="rider-body"><div class="rider-slider-wrap"><input class="big" type="range" min="200000" max="5000000" step="100000" value="{{ ciAmount }}" onChange="{{ setCiAmount }}"><div class="slider-ticks"><span>200,000</span><span style="display:inline-flex;align-items:center;gap:6px">ความคุ้มครอง <input type="text" inputMode="numeric" value="{{ ciInputVal }}" onChange="{{ typeCiAmount }}" onBlur="{{ commitCiAmount }}" style="width:120px;text-align:right;font-family:'Prompt',sans-serif;font-weight:700;font-size:15px;color:#053c5e;border:1.5px solid #E5E7EB;border-radius:8px;padding:3px 8px;background:#fff"> บาท</span><span>5,000,000</span></div></div><div class="rider-premium">{{ ciPremiumLabel }}<span>เบี้ยฯ/ปี</span></div></div>
+<button class="detail-link" onClick="{{ toggleCiDetail }}">{{ ciDetailLabel }}</button>
+<sc-if value="{{ ciDetailOpen }}"><div class="benefit-detail"><div class="benefit-max"><span class="lbl">จำนวนเงินเอาประกันภัย</span><span class="val">{{ ciAmountLabel }}</span></div><div class="benefit-block"><h4>โรคร้ายแรงระดับรุนแรง</h4><p>รับ 100% ของจำนวนเงินเอาประกันภัย ต่อครั้ง จำนวนสูงสุด 6 ครั้ง — คุ้มครอง 18 โรคร้ายแรงระดับต้นถึงระดับปานกลาง และ 44 โรคร้ายแรงระดับรุนแรง</p></div><div class="benefit-block alt" style="background:#F5F1EA"><h4>โรคร้ายแรงระดับต้นถึงระดับปานกลาง</h4><p>รับ 40% ของจำนวนเงินเอาประกันภัย ต่อครั้ง จำนวนสูงสุด 5 ครั้ง — บริษัทจะไม่จ่ายซ้ำหากอยู่ในกลุ่มโรคเดียวกับที่เคยจ่ายผลประโยชน์ไปแล้ว</p></div><div class="benefit-block"><h4>ยกเว้นเบี้ยประกันภัย</h4><p>ยกเว้นเบี้ยประกันภัยของสัญญาเพิ่มเติมนี้ กรณีได้รับการวินิจฉัยว่าเจ็บป่วยเป็นโรคร้ายแรงระดับรุนแรง</p></div><div class="benefit-block alt" style="background:#F5F1EA"><h4>การกลับมาเป็นซ้ำของโรคร้ายแรงระดับรุนแรง (Relapsed CI)</h4><p>จ่ายเพิ่มอีก 100% ของจำนวนเงินเอาประกันภัย สูงสุดโรคละ 1 ครั้ง สำหรับ 3 กลุ่มโรคเฉพาะ (มะเร็งระยะลุกลาม, กล้ามเนื้อหัวใจตายเฉียบพลัน, หลอดเลือดสมองแตกหรืออุดตัน)</p></div><p class="detail-note">ตัวเลขและเงื่อนไขข้างต้นเป็นตัวอย่างสรุปโดยย่อ รายละเอียดความคุ้มครองฉบับเต็มระบุในกรมธรรม์ AIA Multi-Pay CI Plus</p></div></sc-if>
+</sc-if>
+</div>
+<div class="rider-row {{ hbOffClass }}"><div class="rider-head"><div class="rider-icon" style="background-color: #EB595126"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></div><div class="rider-name">AIA HB Extra</div><div class="rider-tags"><span class="rider-tag-mini">ชดเชยรายได้ระหว่างนอนรพ.</span></div><div class="switch {{ hbOnClass }}" onClick="{{ toggleHb }}"><i></i></div></div><sc-if value="{{ hbOn }}"><div class="rider-body"><div class="rider-slider-wrap"><input class="big" type="range" min="500" max="5000" step="500" value="{{ hbAmount }}" onChange="{{ setHbAmount }}"><div class="slider-ticks"><span>500</span><span>ค่าชดเชยรายวัน {{ hbAmountLabel }}</span><span>5,000</span></div></div><div class="rider-premium" style="font-size:15px;line-height:1.4">สอบถามเบี้ยกับที่ปรึกษา<span>ขึ้นอยู่กับการพิจารณารับประกันภัย</span></div></div>
+<p style="font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;margin:8px 0 0">แผนนี้ต้องขอใบเสนอราคาจากที่ปรึกษาและผ่านการพิจารณารับประกันภัยของบริษัท — แสดงไว้เพื่อให้ทราบว่ามีความคุ้มครองนี้ให้เลือก จึงยังไม่รวมในเบี้ยฯรวมด้านล่าง</p>
+<button class="detail-link" onClick="{{ toggleHbDetail }}">{{ hbDetailLabel }}</button>
+<sc-if value="{{ hbDetailOpen }}"><div class="benefit-detail"><div class="benefit-cols"><div><div class="benefit-col-head">🛏 ผู้ป่วยใน</div><div class="benefit-item"><span class="txt">ชดเชยตามจำนวนวันที่พักรักษาตัวในโรงพยาบาล (ต่อวัน รวมกรณี Day Case) กรณีพักห้อง ICU ผลประโยชน์เป็น 3 เท่า<i>รวมแล้วไม่เกิน 1,260 วัน ต่อการเข้าพักรักษาตัวครั้งใดครั้งหนึ่ง (ไม่เกิน 365 วันต่อครั้ง)</i></span><span class="amt">{{ hbAmountLabel }}</span></div><div class="benefit-item alt"><span class="txt">กรณีมีการผ่าตัด (วางยาสลบแบบทั่วไป หรือฉีดยาชาเข้าไขสันหลัง)<i>จ่ายหนึ่งครั้งต่อการเข้าพักรักษาตัวครั้งใดครั้งหนึ่ง</i></span><span class="amt">{{ hbSurgeryLabel }}</span></div><div class="benefit-item"><span class="txt">กรณีโรคร้ายแรงเฉียบพลัน 13 โรค<i>จ่ายหนึ่งครั้งต่อการเข้าพักรักษาตัวครั้งใดครั้งหนึ่ง</i></span><span class="amt">{{ hbCiLabel }}</span></div></div><div><div class="benefit-col-head">ผลประโยชน์อื่นๆ</div><div class="benefit-item"><span class="txt">ผลประโยชน์กรณีเสียชีวิต</span><span class="amt">{{ hbDeathLabel }}</span></div></div></div><p class="detail-note">ตัวเลขและเงื่อนไขข้างต้นเป็นตัวอย่างสรุปโดยย่อ รายละเอียดความคุ้มครองฉบับเต็มระบุในกรมธรรม์ AIA HB Extra</p></div></sc-if>
+</sc-if>
+</div>
+<div class="rider-row {{ paOffClass }}"><div class="rider-head"><div class="rider-icon" style="background-color: #EB59511A"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l2.5 2.5"></path></svg></div><div class="rider-name">AIA PA (อุบัติเหตุ)</div><div class="switch {{ paOnClass }}" onClick="{{ togglePa }}"><i></i></div></div><sc-if value="{{ paOn }}"><div class="rider-body"><div class="tier-chip-row"><div class="plan-tier-chip {{ paT0 }}" onClick="{{ setPaTier0 }}">PA3000</div><div class="plan-tier-chip {{ paT1 }}" onClick="{{ setPaTier1 }}">PA3800</div><div class="plan-tier-chip {{ paT2 }}" onClick="{{ setPaTier2 }}">PA4600</div><div class="plan-tier-chip {{ paT3 }}" onClick="{{ setPaTier3 }}">PA5500</div><div class="plan-tier-chip {{ paT4 }}" onClick="{{ setPaTier4 }}">PA7900</div></div><div class="rider-premium">{{ paPremiumLabel }}<span>ค่ารักษาพยาบาล {{ paAmountLabel }}</span></div></div>
+<button class="detail-link" onClick="{{ togglePaDetail }}">{{ paDetailLabel }}</button>
+<sc-if value="{{ paDetailOpen }}"><div class="benefit-detail"><div class="benefit-block"><h4>เสียชีวิต สูญเสียอวัยวะ สายตา หรือทุพพลภาพถาวรจากอุบัติเหตุ</h4><p>จ่ายตามทุนประกันของแผนที่เลือก ตามตารางผลประโยชน์การสูญเสียอวัยวะที่ระบุในกรมธรรม์</p></div><div class="benefit-block alt" style="background:#F5F1EA"><h4>ค่ารักษาพยาบาลจากอุบัติเหตุ (ต่อครั้ง)</h4><p>{{ paAmountLabel }}</p></div><p class="detail-note">แผน PA ทั้ง 5 ระดับ (PA3000/3800/4600/5500/7900) เป็นแพ็กเกจสำเร็จรูป เบี้ยฯคงที่ไม่ผันแปรตามอายุหรือเพศ — รายละเอียดความคุ้มครองฉบับเต็มระบุในกรมธรรม์ AIA PA</p></div></sc-if>
+</sc-if>
+</div>
+<div class="rider-row {{ tpdOffClass }}"><div class="rider-head"><div class="rider-icon" style="background-color: #EB595126"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="16" rx="1"></rect><rect x="14" y="4" width="7" height="16" rx="1"></rect><path d="M10 12h4"></path></svg></div><div class="rider-name">AIA TPD (ทุพพลภาพถาวรสิ้นเชิง)</div><div class="rider-tags"><span class="rider-tag-mini">คุ้มครองทุพพลภาพถาวร</span></div><div class="switch {{ tpdOnClass }}" onClick="{{ toggleTpd }}"><i></i></div></div><sc-if value="{{ tpdOn }}"><div class="rider-body"><div class="rider-slider-wrap"><input class="big" type="range" min="200000" max="5000000" step="100000" value="{{ tpdAmount }}" onChange="{{ setTpdAmount }}"><div class="slider-ticks"><span>200,000</span><span>ทุนทุพพลภาพ {{ tpdAmountLabel }}</span><span>5,000,000</span></div></div><div class="rider-premium">{{ tpdPremiumLabel }}<span>เบี้ยฯ/ปี</span></div></div>
+<button class="detail-link" onClick="{{ toggleTpdDetail }}">{{ tpdDetailLabel }}</button>
+<sc-if value="{{ tpdDetailOpen }}"><div class="benefit-detail"><div class="benefit-max"><span class="lbl">จำนวนเงินเอาประกันภัย</span><span class="val">{{ tpdAmountLabel }}</span></div><div class="benefit-block"><h4>ผลประโยชน์ทุพพลภาพถาวรสิ้นเชิง</h4><p>จ่าย 100% ของจำนวนเงินเอาประกันภัย เมื่อได้รับการวินิจฉัยว่าทุพพลภาพถาวรสิ้นเชิงตามคำนิยามในกรมธรรม์ — ไม่สามารถประกอบอาชีพประจำ หรือกิจวัตรประจำวันใดๆ เพื่อสินจ้างได้โดยสิ้นเชิง</p></div><div class="benefit-block alt" style="background:#F5F1EA"><h4>ยกเว้นเบี้ยประกันภัย</h4><p>ยกเว้นเบี้ยประกันภัยของสัญญาเพิ่มเติมนี้ หลังจากได้รับผลประโยชน์ทุพพลภาพถาวรสิ้นเชิงแล้ว</p></div><p class="detail-note">ตัวเลขและเงื่อนไขข้างต้นเป็นตัวอย่างสรุปโดยย่อ รายละเอียดความคุ้มครองฉบับเต็มระบุในกรมธรรม์ AIA TPD</p></div></sc-if>
+</sc-if>
+</div>
+</div>
+<div class="summary-bar2"><div class="summary-stat"><span class="lbl">สัญญาหลัก</span><span class="val">{{ coverageLabel }}</span></div><div class="summary-stat"><span class="lbl">เบี้ยฯหลัก</span><span class="val">{{ mainPremiumLabel }}</span></div><div class="summary-stat"><span class="lbl">เบี้ยฯสัญญาเพิ่มเติม</span><span class="val">{{ ridersPremiumLabel }}</span></div><div class="summary-stat"><span class="lbl">เบี้ยฯรวมปีแรก</span><span class="val" style="color:#EB5951;font-size:22px">{{ totalMonthlyLabel }}</span><span class="lbl" style="margin-top:2px;color:#053c5e;font-weight:600">{{ totalPremiumLabel }}/ปี</span></div></div>
+<div class="summary-table"><table><tr><th>รายการ</th><th>เบี้ยฯ/ปี</th></tr><tr><td class="name">สัญญาหลัก — {{ coverageLabel }}</td><td>{{ mainPremiumLabel }}</td></tr><sc-if value="{{ healthOn }}"><tr><td class="name">AIA Health Happy</td><td>{{ healthPremiumLabel }}</td></tr></sc-if><sc-if value="{{ ciOn }}"><tr><td class="name">AIA Multi-Pay CI Plus</td><td>{{ ciPremiumLabel }}</td></tr></sc-if><sc-if value="{{ hbOn }}"><tr><td class="name">AIA HB Extra — ค่าชดเชยรายวัน {{ hbAmountLabel }}</td><td style="color:#EB5951">สอบถามเบี้ยกับที่ปรึกษา</td></tr></sc-if><sc-if value="{{ paOn }}"><tr><td class="name">AIA PA (อุบัติเหตุ)</td><td>{{ paPremiumLabel }}</td></tr></sc-if><sc-if value="{{ tpdOn }}"><tr><td class="name">AIA TPD (ทุพพลภาพถาวรสิ้นเชิง)</td><td>{{ tpdPremiumLabel }}</td></tr></sc-if><tr class="total"><td class="name">รวมเบี้ยฯปีแรก</td><td>{{ totalPremiumLabel }}/ปี<span style="display:block;font-size:12.5px;color:#6B7280;font-weight:500">{{ totalMonthlyNote }}</span></td></tr></table></div>
+<div class="summary-cta-row" style="margin-left:0;justify-content:flex-end;margin-top:16px"><a href="Contact.html" class="btn btn-primary">ส่งแผนนี้ให้ทีมที่ปรึกษา →</a></div>
+<div class="detail-panel"><h3 class="font-d fw7 mb16" style="font-size:20px">ภาพรวมแผนของคุณ ({{ age }} ปี)</h3><div class="detail-toggle"><button class="{{ viewBenefitSel }}" onClick="{{ setViewBenefit }}">ผลประโยชน์</button><button class="{{ viewTotalSel }}" onClick="{{ setViewTotal }}">เบี้ยฯรวม</button></div>
+<sc-if value="{{ isViewBenefit }}"><div class="benefit-cards">
+<sc-if value="{{ healthOn }}"><div class="benefit-card"><div class="benefit-card-head"><div class="bc-icon" style="background:#FBEAEE"><svg class="icon" style="stroke:#EB5951;width:20px;height:20px" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg></div><div class="bc-name">AIA Health Happy</div></div><div class="bc-row"><span class="bc-lbl">ความคุ้มครอง</span><span class="bc-val">{{ healthAmountLabel }}</span><span class="bc-lbl2">เบี้ยฯ</span><span class="bc-val2">{{ healthPremiumLabel }}</span></div><div class="benefit-max"><span class="lbl">ผลประโยชน์สูงสุดต่อรอบปีกรมธรรม์</span><span class="val">{{ healthAmountLabel }}</span></div><div class="benefit-cols"><div><div class="benefit-col-head">🛏 ผู้ป่วยใน</div><div class="benefit-item"><span class="txt">ค่าห้อง ค่าอาหาร ค่าบริการในโรงพยาบาล (ต่อวัน)<i>ห้อง ICU จ่ายตามจริง — รวมแล้วไม่เกิน 365 วัน ต่อการเข้าพักรักษาครั้งใดครั้งหนึ่ง</i></span><span class="amt">{{ hhRoomLabel }}</span></div><div class="benefit-item alt"><span class="txt">ค่าห้อง ICU</span><span class="amt">จ่ายตามจริง</span></div><div class="benefit-item"><span class="txt">ค่าแพทย์ตรวจรักษา (Doctor fee ต่อวัน)<i>ค่าผ่าตัด ศัลยกรรม และหัตถการ เหมาจ่ายตามจริง</i></span><span class="amt">{{ hhDoctorLabel }}</span></div><div class="benefit-item alt"><span class="txt">ค่ายาและเวชภัณฑ์กลับบ้าน<i>ปริมาณไม่เกิน 7 วัน ต่อครั้ง</i></span><span class="amt">ไม่เกิน 20,000 บาท/ครั้ง</span></div></div><div><div class="benefit-col-head">💊 ผู้ป่วยนอก</div><div class="benefit-item"><span class="txt">ค่าตรวจก่อนและหลังนอนโรงพยาบาล<i>ภายใน 30 วัน ก่อน/หลังการเข้าพักรักษาตัว</i></span><span class="amt">จ่ายตามจริง</span></div><div class="benefit-item alt"><span class="txt">อุบัติเหตุฉุกเฉินภายใน 24 ชั่วโมง<i>ของการเกิดอุบัติเหตุต่อครั้ง</i></span><span class="amt">จ่ายตามจริง</span></div><div class="benefit-item"><span class="txt">ผ่าตัดเล็กไม่ต้องนอนโรงพยาบาล (Day surgery)</span><span class="amt">จ่ายตามจริง</span></div></div></div><div class="benefit-block" style="margin-top:12px"><h4>ผลประโยชน์อื่นๆ</h4><p>เงินช่วยเหลือกรณีเสียชีวิตจากอุบัติเหตุ — 10,000 บาท</p></div></div></sc-if>
+<sc-if value="{{ hbOn }}"><div class="benefit-card"><div class="benefit-card-head"><div class="bc-icon" style="background:#FBEAEE"><svg class="icon" style="stroke:#EB5951;width:20px;height:20px" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></div><div class="bc-name">AIA HB Extra</div></div><div class="bc-row"><span class="bc-lbl">ค่าชดเชยรายวัน</span><span class="bc-val">{{ hbAmountLabel }}</span><span class="bc-lbl2">เบี้ยฯ</span><span class="bc-val2" style="color:#EB5951;font-size:13px">สอบถามที่ปรึกษา</span></div><div class="benefit-cols"><div><div class="benefit-col-head">🛏 ผู้ป่วยใน</div><div class="benefit-item"><span class="txt">ชดเชยตามจำนวนวันที่พักรักษาตัวในโรงพยาบาล (ต่อวัน รวมกรณี Day Case) กรณีพักห้อง ICU ผลประโยชน์เป็น 3 เท่า<i>รวมแล้วไม่เกิน 1,260 วัน ต่อการเข้าพักรักษาตัวครั้งใดครั้งหนึ่ง</i></span><span class="amt">{{ hbAmountLabel }}</span></div><div class="benefit-item alt"><span class="txt">กรณีมีการผ่าตัด<i>จ่ายหนึ่งครั้งต่อการเข้าพักรักษาตัวครั้งใดครั้งหนึ่ง</i></span><span class="amt">{{ hbSurgeryLabel }}</span></div><div class="benefit-item"><span class="txt">กรณีโรคร้ายแรงเฉียบพลัน 13 โรค</span><span class="amt">{{ hbCiLabel }}</span></div></div><div><div class="benefit-col-head">ผลประโยชน์อื่นๆ</div><div class="benefit-item"><span class="txt">ผลประโยชน์กรณีเสียชีวิต</span><span class="amt">{{ hbDeathLabel }}</span></div></div></div></div></sc-if>
+<sc-if value="{{ ciOn }}"><div class="benefit-card"><div class="benefit-card-head"><div class="bc-icon" style="background:rgba(248,216,119,0.15)"><svg class="icon" style="stroke:#EB5951;width:20px;height:20px" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg></div><div class="bc-name">AIA Multi-Pay CI Plus</div></div><div class="bc-row"><span class="bc-lbl">ความคุ้มครอง</span><span class="bc-val">{{ ciAmountLabel }}</span><span class="bc-lbl2">เบี้ยฯ</span><span class="bc-val2">{{ ciPremiumLabel }}</span></div><div class="benefit-block"><h4>โรคร้ายแรงระดับรุนแรง</h4><p>รับ 100% ของจำนวนเงินเอาประกันภัย ต่อครั้ง จำนวนสูงสุด 6 ครั้ง — คุ้มครอง 18 โรคร้ายแรงระดับต้นถึงระดับปานกลาง และ 44 โรคร้ายแรงระดับรุนแรง</p></div><div class="benefit-block alt"><h4>โรคร้ายแรงระดับต้นถึงระดับปานกลาง</h4><p>รับ 40% ของจำนวนเงินเอาประกันภัย ต่อครั้ง จำนวนสูงสุด 5 ครั้ง</p></div><div class="benefit-block"><h4>ยกเว้นเบี้ยประกันภัย</h4><p>ยกเว้นเบี้ยประกันภัยของสัญญาเพิ่มเติมนี้ กรณีได้รับการวินิจฉัยว่าเจ็บป่วยเป็นโรคร้ายแรงระดับรุนแรง</p></div><div class="benefit-block alt"><h4>Relapsed CI</h4><p>จ่ายเพิ่มอีก 100% ของจำนวนเงินเอาประกันภัย สูงสุดโรคละ 1 ครั้ง สำหรับ 3 กลุ่มโรคเฉพาะ</p></div></div></sc-if>
+<sc-if value="{{ paOn }}"><div class="benefit-card"><div class="benefit-card-head"><div class="bc-icon" style="background:#FBEAEE"><svg class="icon" style="stroke:#EB5951;width:20px;height:20px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l2.5 2.5"></path></svg></div><div class="bc-name">AIA PA (อุบัติเหตุ)</div></div><div class="bc-row"><span class="bc-lbl">ค่ารักษาพยาบาล</span><span class="bc-val">{{ paAmountLabel }}</span><span class="bc-lbl2">เบี้ยฯ</span><span class="bc-val2">{{ paPremiumLabel }}</span></div><div class="benefit-block"><h4>เสียชีวิต สูญเสียอวัยวะ สายตา หรือทุพพลภาพถาวรจากอุบัติเหตุ</h4><p>จ่ายตามทุนประกันของแผนที่เลือก ตามตารางผลประโยชน์การสูญเสียอวัยวะที่ระบุในกรมธรรม์</p></div><div class="benefit-block alt"><h4>ค่ารักษาพยาบาลจากอุบัติเหตุ (ต่อครั้ง)</h4><p>{{ paAmountLabel }}</p></div></div></sc-if>
+<sc-if value="{{ tpdOn }}"><div class="benefit-card"><div class="benefit-card-head"><div class="bc-icon" style="background:rgba(248,216,119,0.15)"><svg class="icon" style="stroke:#EB5951;width:20px;height:20px" viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="16" rx="1"></rect><rect x="14" y="4" width="7" height="16" rx="1"></rect><path d="M10 12h4"></path></svg></div><div class="bc-name">AIA TPD</div></div><div class="bc-row"><span class="bc-lbl">ความคุ้มครอง</span><span class="bc-val">{{ tpdAmountLabel }}</span><span class="bc-lbl2">เบี้ยฯ</span><span class="bc-val2">{{ tpdPremiumLabel }}</span></div><div class="benefit-block"><h4>ผลประโยชน์ทุพพลภาพถาวรสิ้นเชิง</h4><p>จ่าย 100% ของจำนวนเงินเอาประกันภัย เมื่อได้รับการวินิจฉัยว่าทุพพลภาพถาวรสิ้นเชิงตามคำนิยามในกรมธรรม์</p></div><div class="benefit-block alt"><h4>ยกเว้นเบี้ยประกันภัย</h4><p>ยกเว้นเบี้ยประกันภัยของสัญญาเพิ่มเติมนี้ หลังจากได้รับผลประโยชน์ทุพพลภาพถาวรสิ้นเชิงแล้ว</p></div></div></sc-if>
+<sc-if value="{{ noRidersOn }}"><p class="detail-note">ยังไม่ได้เลือกสัญญาเพิ่มเติม — เปิดสวิตช์ด้านบนเพื่อดูรายละเอียดผลประโยชน์ที่นี่</p></sc-if>
+</div></sc-if>
+<sc-if value="{{ isViewTotal }}"><table class="detail-table"><tr><th>อายุ</th><th>เบี้ยฯหลัก</th><th>เบี้ยฯสัญญาเพิ่มเติม</th><th>เบี้ยฯรวม</th></tr><sc-for list="{{ visibleAgeRows }}" as="r" hint-placeholder-count="15"><tr><td>{{ r.age }}</td><td>{{ r.mainPremium }}</td><td>{{ r.ridersPremium }}</td><td>{{ r.total }}</td></tr></sc-for></table><sc-if value="{{ hasMoreRows }}"><button class="link-btn fx ac gap8" style="margin-top:16px" onClick="{{ showMore }}"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg>แสดงเพิ่มเติมถึงอายุ 98</button></sc-if></sc-if>
+<p class="est-disclaimer">ตัวอย่างเบี้ยประกันทั้งหมดในหน้านี้เป็นการประมาณการเท่านั้น ไม่ใช่ใบเสนอราคา — เบี้ยจริงขึ้นอยู่กับอายุ เพศ และผลการพิจารณารับประกันของ บมจ. เอไอเอ ประเทศไทย</p></div>
+</div></main>
+<footer class="site foot-navy"><div class="foot-top wrap"><h2>พร้อม<span>คุย</span>กับเราหรือยัง?</h2><a href="Contact.html" class="btn btn-primary">ติดต่อเรา</a></div><div class="wrap"><div class="foot-grid"><div><div class="logo mb16" style="color:#fff"><span style="color:#fff">pragan</span><span style="color:#EB5951">easy</span></div><p class="disclaimer" style="max-width:320px">ประกันเข้าใจง่าย สร้างเองได้ — เครื่องมือช่วยวางแผนความคุ้มครองจากตัวแทน AIA</p><div class="foot-social"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a><a href="#" aria-label="LINE"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="4"/><path d="M8 19l2-3"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div></div><div><div class="foot-h">เมนู</div><div class="foot-links"><a href="Why-Protection.html">ทำไมต้องมีประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="Build-My-Plan.html">สร้างแผนของคุณ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a><a href="Terms.html">เงื่อนไขการใช้งาน</a><a href="Privacy.html">นโยบายความเป็นส่วนตัว</a></div></div><div><div class="foot-h">ติดต่อ</div><div class="foot-contact-item"><svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="color:inherit">LINE: @praganeasy</a></div><div class="foot-contact-item"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="display:block"><img src="public/logos/praganeasy-line-chat-button-mascot.png" alt="น้องอีซี่พร้อมดูแล ทักไลน์ได้เลย @praganeasy" style="width:240px;max-width:100%;height:auto;display:block"></a></div></div></div><div class="disclaimer wrap" style="border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px"><a href="Terms.html" style="color:#F8D877;text-decoration:underline">เงื่อนไขการใช้งาน</a> · <a href="Privacy.html" style="color:#F8D877;text-decoration:underline">นโยบายความเป็นส่วนตัว</a><br>© 2026 PraganEasy. All Rights Reserved.<br>เว็บไซต์นี้ดำเนินการโดยทีมตัวแทนประกันชีวิตของ บริษัท เอไอเอ จำกัด (ประเทศไทย) เพื่อให้ข้อมูลเกี่ยวกับผลิตภัณฑ์และบริการ<br>สำหรับข้อมูลอย่างเป็นทางการ โปรดเยี่ยมชม <a href="https://www.aia.co.th" target="_blank" style="color:inherit;text-decoration:underline">www.aia.co.th</a></div></div></footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    menuOpen: false, gender: 'female', age: 43, tier: 'coverage',
+    coverage: 100000, coverageText: null,
+    healthOn: true, healthTier: 1,
+    ciOn: true, ciAmount: 800000, ciText: null,
+    hbOn: false, hbAmount: 2000,
+    paOn: false, paTier: 0,
+    tpdOn: false, tpdAmount: 1000000,
+    view: 'total', rowsExpanded: false, planId: '20paylife', planModalOpen: false, planCategory: 'all',
+    healthDetailOpen: false, ciDetailOpen: false, hbDetailOpen: false, paDetailOpen: false, tpdDetailOpen: false
+  };
+  componentDidMount() {
+    const q = new URLSearchParams(window.location.search);
+    const g = q.get('gender'); const a = Number(q.get('age'));
+    const patch = {};
+    if (g === 'male' || g === 'female') patch.gender = g;
+    if (a >= 1 && a <= 80) patch.age = a;
+    if (Object.keys(patch).length) this.setState(patch);
+  }
+  fmtBaht(n) { return Math.round(n).toLocaleString('th-TH') + ' บาท'; }
+  // Life 20 Pay (Non Par) — calibrated so age43/female/100,000 coverage = 2,539 บาท/ปี (verified against agent tool sample)
+  mainRate(age) { return 800 + Math.max(0, age - 20) * 75.6; }
+  // ICON_LIFE / ICON_SAVING / ICON_ANNUITY svg paths + all AIA main plans, grouped by category.
+  // mult = premium multiplier relative to AIA 20 Pay Life at same age/coverage/gender (calibrated against agent tool screenshots at age43/female/100,000)
+  get plansData() {
+    const ICON_SAVING = 'M19 10c0 1-1 2-2 2M3 10l2-4h9l3 4h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1l-1 5H7l-1-5H5a2 2 0 0 1-2-2z';
+    const ICON_LIFE = 'M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z';
+    const ICON_ANNUITY = 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2';
+    return [
+      { id: 'lifetimeincome999', name: 'AIA Lifetime Income 9/99 (PAR)', category: 'saving', tags: ['ตลอดชีพ', 'สะสมทรัพย์', 'เงินคืนรายงวด', 'เงินปันผล'], mult: 35.45, icon: ICON_SAVING, iconBg: 'rgba(248,216,119,0.18)', iconColor: '#E8B923' },
+      { id: 'savingsure', name: 'AIA Saving Sure (Non Par)', category: 'saving', tags: ['สะสมทรัพย์', 'เงินคืนรายงวด', 'เงินครบสัญญา'], mult: 12.46, icon: ICON_SAVING, iconBg: 'rgba(248,216,119,0.18)', iconColor: '#E8B923' },
+      { id: 'excellent', name: 'AIA Excellent (Non Par)', category: 'saving', tags: ['สะสมทรัพย์', 'เงินคืนรายงวด', 'เงินครบสัญญา'], mult: 6.10, icon: ICON_SAVING, iconBg: 'rgba(248,216,119,0.18)', iconColor: '#E8B923' },
+      { id: 'endowment1525', name: 'AIA Endowment 15/25 (Non Par)', category: 'saving', tags: ['สะสมทรัพย์', 'เงินคืนรายงวด', 'เงินครบสัญญา'], mult: 3.31, icon: ICON_SAVING, iconBg: 'rgba(248,216,119,0.18)', iconColor: '#E8B923' },
+      { id: '5pay10', name: '5PAY10 (Non Par)', category: 'saving', tags: ['สะสมทรัพย์', 'เงินคืนรายงวด', 'เงินครบสัญญา'], mult: 4.70, icon: ICON_SAVING, iconBg: 'rgba(248,216,119,0.18)', iconColor: '#E8B923' },
+      { id: 'ciprocare', name: 'AIA CI Procare (Non Par)', category: 'life', tags: ['เน้นคุ้มครองโรคร้ายแรง', 'ตลอดชีพ', 'เบี้ยคงที่ตลอด 20 ปี'], mult: 3.87, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'protection65', name: 'AIA Protection 65 (Non Par)', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 6.30, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'paylifeplus10', name: 'AIA Pay Life Plus 10Pay (Non Par)', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 2.12, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'paylifeplus15', name: 'AIA Pay Life Plus 15Pay (Non Par)', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.46, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'paylifeplus20', name: 'AIA Pay Life Plus 20Pay (Non Par)', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.08, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: '20paylife', name: 'AIA 20 Pay Life (Non Par)', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.00, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'cisupercare10', name: 'AIA CI Supercare (10/99)', category: 'life', tags: ['เน้นคุ้มครองโรคร้ายแรง', 'ชำระเบี้ยสั้น', 'ตลอดชีพ'], mult: 3.09, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'cisupercare20', name: 'AIA CI Supercare (20/99)', category: 'life', tags: ['เน้นคุ้มครองโรคร้ายแรง', 'ชำระเบี้ยสั้น', 'ตลอดชีพ'], mult: 1.82, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: '10paylife', name: 'AIA 10Pay Life (Non Par)', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.93, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: '15paylife', name: 'AIA 15Pay Life (Non Par)', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.46, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'cisupercareprestige10', name: 'AIA CI Supercare Prestige (10/99)', category: 'life', tags: ['เน้นคุ้มครองโรคร้ายแรง', 'ชำระเบี้ยสั้น', 'ตลอดชีพ'], mult: 3.09, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'cisupercareprestige20', name: 'AIA CI Supercare Prestige (20/99)', category: 'life', tags: ['เน้นคุ้มครองโรคร้ายแรง', 'ชำระเบี้ยสั้น', 'ตลอดชีพ'], mult: 1.82, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'legacyprestige10', name: 'AIA Legacy Prestige (New) 10Pay', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.67, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'legacyprestige15', name: 'AIA Legacy Prestige (New) 15Pay', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.21, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'legacyprestigeprotection5', name: 'AIA Legacy Prestige Protection (New) 5Pay', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 3.36, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'legacyprestigeplus10', name: 'AIA Legacy Prestige Plus (New) 10Pay', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.84, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'legacyprestigeplus15', name: 'AIA Legacy Prestige Plus (New) 15Pay', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.33, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'legacyprestigeplus20', name: 'AIA Legacy Prestige Plus (New) 20Pay', category: 'life', tags: ['เน้นคุ้มครอง', 'ตลอดชีพ', 'เงินครบสัญญา'], mult: 1.14, icon: ICON_LIFE, iconBg: 'rgba(31,122,140,0.12)', iconColor: '#053c5e' },
+      { id: 'annuitysure9', name: 'AIA Annuity Sure (9Pay)', category: 'annuity', tags: ['เงินบำนาญ'], mult: 11.07, icon: ICON_ANNUITY, iconBg: 'rgba(255,198,79,0.22)', iconColor: '#8a6f10' },
+      { id: 'annuitysurereg', name: 'AIA Annuity Sure (Regular Pay)', category: 'annuity', tags: ['เงินบำนาญ'], mult: 6.18, icon: ICON_ANNUITY, iconBg: 'rgba(255,198,79,0.22)', iconColor: '#8a6f10' }
+    ];
+  }
+  getPlan(id) { return this.plansData.find(p => p.id === id) || this.plansData.find(p => p.id === '20paylife'); }
+  // Health Happy tier base premiums at age43/female (5,000,000 = 27,800 บาท/ปี verified against agent tool sample), other tiers scaled by typical relative pricing
+  healthBaseAt43(tier) {
+    const bases = [18904, 27800, 31414, 33916];
+    return bases[tier];
+  }
+  ageMult(rowAge) { return Math.pow(1.035, rowAge - 43); }
+  ridersPremiumAt(rowAge, s, genderFactor) {
+    const health = s.healthOn ? Math.round(this.healthBaseAt43(s.healthTier) * this.ageMult(rowAge) * genderFactor) : 0;
+    // CI Multi-Pay CI Plus — calibrated so age43/female/800,000 coverage = 7,440 บาท/ปี (verified against agent tool sample)
+    const ciRate43 = 930;
+    const ci = s.ciOn ? Math.round((s.ciAmount / 100000) * ciRate43 * this.ageMult(rowAge) * genderFactor) : 0;
+    // AIA HB — calibrated so ค่าชดเชยรายวัน 2,000 บาท = 6,400 บาท/ปี at age43/female (verified against agent tool sample)
+    const hb = 0; // AIA HB Extra: quote-by-advisor only (underwriting-dependent) — not included in totals
+    // AIA PA — sold only as fixed packages (PA3000/3800/4600/5500/7900), flat premium regardless of age or gender
+    const paPlans = [{ premium: 3000 }, { premium: 3800 }, { premium: 4600 }, { premium: 5500 }, { premium: 7900 }];
+    const pa = s.paOn ? paPlans[s.paTier].premium : 0;
+    // AIA TPD — calibrated a modest rate, lower base than CI
+    const tpd = s.tpdOn ? Math.round((s.tpdAmount / 100000) * 150 * this.ageMult(rowAge) * genderFactor) : 0;
+    return { health, ci, hb, pa, tpd, total: health + ci + hb + pa + tpd };
+  }
+  renderVals() {
+    const s = this.state;
+    const age = Number(s.age) || 30;
+    const genderFactor = s.gender === 'female' ? 1 : 1.1;
+    const selPlan = this.getPlan(s.planId);
+    const mainPremium = Math.round((s.coverage / 100000) * this.mainRate(age) * selPlan.mult * (s.gender === 'female' ? 1 : 1.15));
+    const healthTiers = [1000000, 5000000, 15000000, 25000000];
+    const healthAmt = healthTiers[s.healthTier];
+    const r0 = this.ridersPremiumAt(age, s, genderFactor);
+    const healthPremium = r0.health, ciPremium = r0.ci, hbPremium = r0.hb, paPremium = r0.pa, tpdPremium = r0.tpd;
+    const ridersPremium = r0.total;
+    const total = mainPremium + ridersPremium;
+    const paMedical = [35000, 50000, 100000, 100000, 100000];
+    const ridersCoverage = (s.healthOn ? healthAmt : 0) + (s.ciOn ? s.ciAmount : 0) + (s.hbOn ? s.hbAmount * 30 : 0) + (s.paOn ? paMedical[s.paTier] : 0) + (s.tpdOn ? s.tpdAmount : 0);
+    const lastAge = 98;
+    const ageRows = Array.from({ length: Math.max(0, lastAge - age + 1) }, (_, i) => {
+      const rowAge = age + i;
+      const rr = this.ridersPremiumAt(rowAge, s, genderFactor);
+      return {
+        age: rowAge,
+        coverage: this.fmtBaht(s.coverage),
+        ridersCoverage: this.fmtBaht(ridersCoverage),
+        mainPremium: this.fmtBaht(mainPremium),
+        ridersPremium: this.fmtBaht(rr.total),
+        total: this.fmtBaht(mainPremium + rr.total)
+      };
+    });
+    const visibleAgeRows = s.rowsExpanded ? ageRows : ageRows.slice(0, 10);
+    return {
+      menuOpen: s.menuOpen, toggleMenu: () => this.setState(x => ({ menuOpen: !x.menuOpen })),
+      genderMaleSel: s.gender === 'male' ? 'sel' : '', genderFemaleSel: s.gender === 'female' ? 'sel' : '',
+      setMale: () => this.setState({ gender: 'male' }), setFemale: () => this.setState({ gender: 'female' }),
+      age: s.age, setAge: e => this.setState({ age: e.target.value }),
+      selPlanName: selPlan.name, selPlanTags: selPlan.tags, selPlanIconBg: selPlan.iconBg, selPlanIconColor: selPlan.iconColor, selPlanIconPath: selPlan.icon,
+      planModalOpen: s.planModalOpen, openPlanModal: () => this.setState({ planModalOpen: true }), closePlanModal: () => this.setState({ planModalOpen: false }), stopClick: e => e.stopPropagation(),
+      catAllSel: s.planCategory === 'all' ? 'sel' : '', catSavingSel: s.planCategory === 'saving' ? 'sel' : '', catLifeSel: s.planCategory === 'life' ? 'sel' : '', catAnnuitySel: s.planCategory === 'annuity' ? 'sel' : '',
+      setCatAll: () => this.setState({ planCategory: 'all' }), setCatSaving: () => this.setState({ planCategory: 'saving' }), setCatLife: () => this.setState({ planCategory: 'life' }), setCatAnnuity: () => this.setState({ planCategory: 'annuity' }),
+      filteredPlans: this.plansData.filter(p => s.planCategory === 'all' || p.category === s.planCategory).map(p => ({
+        name: p.name, tags: p.tags, iconBg: p.iconBg, iconColor: p.iconColor, iconPath: p.icon,
+        coverageLabel: this.fmtBaht(100000),
+        premiumLabel: this.fmtBaht(Math.round(this.mainRate(age) * p.mult * (s.gender === 'female' ? 1 : 1.15))),
+        select: () => this.setState({ planId: p.id, planModalOpen: false })
+      })),
+      coverage: s.coverage, coverageLabel: this.fmtBaht(s.coverage), setCoverage: e => this.setState({ coverage: Number(e.target.value), coverageText: null }),
+      coverageInputVal: s.coverageText !== null && s.coverageText !== undefined ? s.coverageText : s.coverage.toLocaleString('th-TH'),
+      typeCoverage: e => {
+        const raw = e.target.value;
+        const n = Number(raw.replace(/[^\d]/g, ''));
+        this.setState(n >= 100000 && n <= 10000000 ? { coverageText: raw, coverage: n } : { coverageText: raw });
+      },
+      commitCoverage: e => {
+        const n = Number(String(e.target.value).replace(/[^\d]/g, ''));
+        const clamped = Math.min(10000000, Math.max(100000, n || 100000));
+        this.setState({ coverage: clamped, coverageText: null });
+      },
+      mainPremiumLabel: this.fmtBaht(mainPremium) + '/ปี',
+      healthOn: s.healthOn, healthOnClass: s.healthOn ? 'on' : '', healthOffClass: s.healthOn ? '' : 'off', toggleHealth: () => this.setState(x => ({ healthOn: !x.healthOn })),
+      healthT0: s.healthTier === 0 ? 'sel' : '', healthT1: s.healthTier === 1 ? 'sel' : '', healthT2: s.healthTier === 2 ? 'sel' : '', healthT3: s.healthTier === 3 ? 'sel' : '',
+      setHealthTier0: () => this.setState({ healthTier: 0 }), setHealthTier1: () => this.setState({ healthTier: 1 }), setHealthTier2: () => this.setState({ healthTier: 2 }), setHealthTier3: () => this.setState({ healthTier: 3 }),
+      healthPremiumLabel: this.fmtBaht(healthPremium),
+      healthAmountLabel: this.fmtBaht(healthAmt),
+      hhRoomLabel: 'ไม่เกิน ' + [1500, 3000, 6000, 9000][s.healthTier].toLocaleString('th-TH') + ' บาท/วัน',
+      hhDoctorLabel: 'ไม่เกิน ' + [1000, 2000, 4000, 6000][s.healthTier].toLocaleString('th-TH') + ' บาท/วัน',
+      healthDetailOpen: s.healthDetailOpen, healthDetailLabel: s.healthDetailOpen ? 'ซ่อนรายละเอียด' : 'ดูรายละเอียด', toggleHealthDetail: () => this.setState(x => ({ healthDetailOpen: !x.healthDetailOpen })),
+      ciOn: s.ciOn, ciOnClass: s.ciOn ? 'on' : '', ciOffClass: s.ciOn ? '' : 'off', toggleCi: () => this.setState(x => ({ ciOn: !x.ciOn })),
+      ciAmount: s.ciAmount, ciAmountLabel: this.fmtBaht(s.ciAmount), setCiAmount: e => this.setState({ ciAmount: Number(e.target.value), ciText: null }),
+      ciInputVal: s.ciText !== null && s.ciText !== undefined ? s.ciText : s.ciAmount.toLocaleString('th-TH'),
+      typeCiAmount: e => {
+        const raw = e.target.value;
+        const n = Number(raw.replace(/[^\d]/g, ''));
+        this.setState(n >= 200000 && n <= 5000000 ? { ciText: raw, ciAmount: n } : { ciText: raw });
+      },
+      commitCiAmount: e => {
+        const n = Number(String(e.target.value).replace(/[^\d]/g, ''));
+        const clamped = Math.min(5000000, Math.max(200000, n || 200000));
+        this.setState({ ciAmount: clamped, ciText: null });
+      },
+      ciPremiumLabel: this.fmtBaht(ciPremium),
+      ciDetailOpen: s.ciDetailOpen, ciDetailLabel: s.ciDetailOpen ? 'ซ่อนรายละเอียด' : 'ดูรายละเอียด', toggleCiDetail: () => this.setState(x => ({ ciDetailOpen: !x.ciDetailOpen })),
+      hbOn: s.hbOn, hbOnClass: s.hbOn ? 'on' : '', hbOffClass: s.hbOn ? '' : 'off', toggleHb: () => this.setState(x => ({ hbOn: !x.hbOn })),
+      hbAmount: s.hbAmount, hbAmountLabel: this.fmtBaht(s.hbAmount), setHbAmount: e => this.setState({ hbAmount: Number(e.target.value) }),
+      hbPremiumLabel: this.fmtBaht(hbPremium),
+      hbSurgeryLabel: this.fmtBaht(s.hbAmount * 5), hbCiLabel: this.fmtBaht(s.hbAmount * 25), hbDeathLabel: this.fmtBaht(s.hbAmount * 10),
+      hbDetailOpen: s.hbDetailOpen, hbDetailLabel: s.hbDetailOpen ? 'ซ่อนรายละเอียด' : 'ดูรายละเอียด', toggleHbDetail: () => this.setState(x => ({ hbDetailOpen: !x.hbDetailOpen })),
+      paOn: s.paOn, paOnClass: s.paOn ? 'on' : '', paOffClass: s.paOn ? '' : 'off', togglePa: () => this.setState(x => ({ paOn: !x.paOn })),
+      paT0: s.paTier === 0 ? 'sel' : '', paT1: s.paTier === 1 ? 'sel' : '', paT2: s.paTier === 2 ? 'sel' : '', paT3: s.paTier === 3 ? 'sel' : '', paT4: s.paTier === 4 ? 'sel' : '',
+      setPaTier0: () => this.setState({ paTier: 0 }), setPaTier1: () => this.setState({ paTier: 1 }), setPaTier2: () => this.setState({ paTier: 2 }), setPaTier3: () => this.setState({ paTier: 3 }), setPaTier4: () => this.setState({ paTier: 4 }),
+      paAmountLabel: this.fmtBaht([35000, 50000, 100000, 100000, 100000][s.paTier]),
+      paPremiumLabel: this.fmtBaht(paPremium) + '/ปี',
+      paDetailOpen: s.paDetailOpen, paDetailLabel: s.paDetailOpen ? 'ซ่อนรายละเอียด' : 'ดูรายละเอียด', togglePaDetail: () => this.setState(x => ({ paDetailOpen: !x.paDetailOpen })),
+      tpdOn: s.tpdOn, tpdOnClass: s.tpdOn ? 'on' : '', tpdOffClass: s.tpdOn ? '' : 'off', toggleTpd: () => this.setState(x => ({ tpdOn: !x.tpdOn })),
+      tpdAmount: s.tpdAmount, tpdAmountLabel: this.fmtBaht(s.tpdAmount), setTpdAmount: e => this.setState({ tpdAmount: Number(e.target.value) }),
+      tpdPremiumLabel: this.fmtBaht(tpdPremium),
+      tpdDetailOpen: s.tpdDetailOpen, tpdDetailLabel: s.tpdDetailOpen ? 'ซ่อนรายละเอียด' : 'ดูรายละเอียด', toggleTpdDetail: () => this.setState(x => ({ tpdDetailOpen: !x.tpdDetailOpen })),
+      ridersPremiumLabel: this.fmtBaht(ridersPremium), totalPremiumLabel: this.fmtBaht(total),
+      totalMonthlyLabel: '≈' + this.fmtBaht(Math.round(total / 12)) + '/เดือน',
+      totalMonthlyNote: '(≈' + this.fmtBaht(Math.round(total / 12)) + '/เดือน)',
+      noRidersOn: !(s.healthOn || s.ciOn || s.hbOn || s.paOn || s.tpdOn),
+      viewBenefitSel: s.view === 'benefit' ? 'sel' : '', viewTotalSel: s.view === 'total' ? 'sel' : '',
+      setViewBenefit: () => this.setState({ view: 'benefit' }), setViewTotal: () => this.setState({ view: 'total' }),
+      isViewBenefit: s.view === 'benefit', isViewTotal: s.view === 'total',
+      ageRows, visibleAgeRows, hasMoreRows: !s.rowsExpanded && ageRows.length > 10,
+      showMore: () => this.setState({ rowsExpanded: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

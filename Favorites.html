@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>แผนที่ฉันถูกใจ — PraganEasy</title>
+<meta name="description" content="รวมแผนประกัน AIA ที่คุณบันทึกไว้ เปิดดูรายละเอียดหรือส่งให้เราช่วยเปรียบเทียบ">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#053c5e"/><circle cx="100" cy="100" r="45" fill="#EB5951"/><text x="100" y="108" font-family="sans-serif" font-size="34" font-weight="700" fill="#fff" text-anchor="middle">PE</text></svg></template></head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&family=Inter:wght@500;600;700&display=swap" rel="stylesheet"><style>
+body{margin:0;background:#F8FBFC;color:#374151}
+a{color:#EB5951;text-decoration:none}
+a:hover{color:#1f7a8c}
+*{box-sizing:border-box}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.logo{font-family:'Prompt',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.02em}
+.logo .e{color:#EB5951}
+.btn{font-family:'Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.03em;text-transform:uppercase;border-radius:12px;padding:13px 26px;border:none;cursor:pointer;display:inline-block}
+.btn-primary{background:#EB5951;color:#fff}
+.btn-primary:hover{background:#c94039;color:#F8D877}
+.icon{width:20px;height:20px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pagehero{background:linear-gradient(90deg,rgba(5,38,60,0.94),rgba(5,38,60,0.55) 48%,rgba(5,38,60,0.12)),url('public/images/hero/praganeasy-favorites-saved-plans-woman-phone.jpg') center 30%/cover no-repeat #053c5e;color:#F8F8F6;padding:88px 0}
+.pagehero h1{font-family:'Prompt',sans-serif;font-weight:700;font-size:36px;margin:0 0 10px}
+.pagehero p{font-family:'Sarabun',sans-serif;font-size:16px;color:#C9D8E0;margin:0}
+.midbar{background:#053c5e;padding:10px 0 0}
+.midbar-inner{display:flex;align-items:center;justify-content:space-between}
+.back-link{font-family:'Sarabun',sans-serif;font-size:14px;color:#C9D8E0;display:inline-flex;align-items:center;gap:6px}
+.back-link:hover{color:#F8D877}
+.fav-navrow{background:#053c5e;border-bottom:1px solid rgba(255,255,255,0.18);padding-top:14px}
+.fav-links{display:flex;gap:24px}
+.fav-links a{color:#fff;font-family:'Sarabun',sans-serif;font-size:14px;font-weight:500;padding-bottom:12px;border-bottom:2px solid transparent}
+.fav-links a:hover{color:#F8D877}
+@media(max-width:920px){.fav-links{display:none}.fav-navrow{padding:0}}
+main{padding:48px 0 64px}
+.fav-list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.fav-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.fav-list{grid-template-columns:1fr}}
+.fav-card{background:#fff;border:1px solid #E5E7EB;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.fav-card h4{font-family:'Prompt',sans-serif;font-weight:600;font-size:17px;color:#053c5e;margin:0}
+.fav-card .cat{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#1f7a8c;text-transform:uppercase;letter-spacing:0.05em}
+.fav-card .desc{font-family:'Sarabun',sans-serif;font-size:13.5px;color:#6B7280;line-height:1.6;margin:0;flex:1}
+.fav-card .price{font-family:'Sarabun',sans-serif;font-size:14px}
+.fav-card .price b{color:#EB5951;font-family:'Prompt',sans-serif}
+.fav-actions{display:flex;gap:10px;align-items:center}
+.rm-btn{background:none;border:1px solid #E5E7EB;border-radius:10px;padding:9px 14px;font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;cursor:pointer}
+.rm-btn:hover{border-color:#EB5951;color:#EB5951}
+.view-link{font-family:'Inter',sans-serif;font-size:13px;font-weight:600}
+.empty{background:#fff;border:1px dashed #D1D5DB;border-radius:20px;padding:60px 24px;text-align:center}
+.empty h3{font-family:'Prompt',sans-serif;font-size:20px;color:#053c5e;margin:0 0 8px}
+.empty p{font-family:'Sarabun',sans-serif;font-size:14px;color:#6B7280;margin:0 0 20px}
+footer.site{background:#053c5e;color:#F8F8F6}
+.disclaimer{font-family:'Sarabun',sans-serif;font-size:12px;color:#c3d3e0;line-height:1.7}
+
+.midbar{padding:10px 0}
+.midbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.midbar-contact{display:flex;gap:28px;flex-wrap:wrap}
+.midbar-contact-item{display:flex;align-items:center;gap:10px}
+.midbar-contact-item .mi-ico{width:34px;height:34px;border-radius:100px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.midbar-contact-item .mi-ico svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.midbar-contact-item .mi-label{font-family:'Sarabun',sans-serif;font-size:11px;color:#D8E4EA}
+.midbar-contact-item .mi-value{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;color:#fff}
+.midbar-contact-item .mi-value a{color:#fff}
+@media(max-width:900px){.midbar-contact{display:none}}
+@media(max-width:700px){.head-cta{display:none}}
+.navbar{border-bottom:1px solid rgba(255,255,255,0.18)}
+.navrow{height:52px}
+.navbar .links a{color:#fff;font-family:'Sarabun',sans-serif;font-size:14px;font-weight:500;padding:16px 0;border-bottom:2px solid transparent}
+.navbar .links a:hover{color:#F8D877}
+.navbar .links a.active{color:#EB5951;font-weight:700;border-bottom-color:#EB5951}
+
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-btn svg{width:24px;height:24px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.nav-drop{position:relative}
+.nav-drop-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.1);padding:8px;min-width:200px;z-index:60}
+.nav-drop:hover .nav-drop-menu{display:block}
+.nav-drop-menu a{display:block;padding:10px 12px;font-size:13px;border-radius:8px;white-space:nowrap;color:#374151}
+.nav-drop-menu a:hover{background:#EAF5F8;color:#EB5951}
+.navbar .links .nav-drop-menu a{color:#374151;border-bottom:none;font-weight:500}
+.navbar .links .nav-drop-menu a:hover{color:#EB5951;background:#EAF5F8}
+.fav-link{position:relative;display:flex;align-items:center;color:#fff}
+.fav-link svg{width:22px;height:22px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fav-badge{position:absolute;top:-6px;right:-8px;background:#EB5951;color:#fff;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;min-width:16px;height:16px;border-radius:100px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+.mobile-menu{position:fixed;inset:0;background:#053c5e;z-index:70;display:flex;flex-direction:column;padding:24px;overflow:auto}
+.mobile-menu a{font-family:'Prompt',sans-serif;font-size:20px;color:#F8F8F6;font-weight:600;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1)}
+.hero-photo-nav{position:relative;z-index:3}
+@media(max-width:920px){.navbar .links{display:none}.menu-btn{display:flex;color:#fff}}
+
+.foot-navy{background:#053c5e;color:#F8F8F6}
+.foot-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:32px 24px;border-bottom:1px solid rgba(255,255,255,0.12)}
+.foot-top h2{font-family:'Prompt',sans-serif;font-weight:700;font-size:26px;margin:0;color:#fff}
+.foot-top h2 span{color:#EB5951}
+@media(max-width:600px){.foot-top{flex-direction:column;align-items:flex-start}.foot-top h2{font-size:20px}}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px;padding:40px 24px}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+.foot-h{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#F8D877;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px}
+.foot-links a{display:block;font-family:'Sarabun',sans-serif;font-size:14px;margin-bottom:10px;color:#EAF5F8}
+.foot-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-family:'Sarabun',sans-serif;font-size:14px;color:#EAF5F8;line-height:1.5}
+.foot-contact-item svg{width:16px;height:16px;stroke:#EB5951;flex-shrink:0;margin-top:2px}
+.foot-social{display:flex;gap:10px;margin-top:16px}
+.foot-social a{width:34px;height:34px;border-radius:100px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.foot-social a:hover{background:#F8D877}
+.foot-social a:hover svg{stroke:#EB5951}
+.foot-social svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+</style></helmet>
+<header class="site" style="background:#053c5e"><div class="midbar"><div class="wrap midbar-inner"><div class="logo" style="color:#fff"><span>pragan</span><span class="e">easy</span></div><div class="midbar-contact"><div class="midbar-contact-item"><div class="mi-ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></div><div><div class="mi-label">LINE</div><div class="mi-value"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank">@praganeasy</a></div></div></div></div><a class="btn btn-primary head-cta" href="Build-My-Plan.html">สร้างแผนฟรี</a></div></div><div class="navbar"><div class="wrap fx ac jb navrow"><nav class="links fx ac gap24"><a href="index.html">หน้าแรก</a><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><div class="nav-drop"><a href="Plans.html">แผนประกัน ▾</a><div class="nav-drop-menu"><a href="Plans.html">ดูแผนทั้งหมด</a><a href="Plans.html#popular">แผนยอดนิยม</a><a href="Compare-Plans.html">เปรียบเทียบแผนประกัน</a><a href="Category.html#ci">แผนประกันโรคร้ายแรง</a></div></div><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></nav><div class="fx ac gap16"><a href="Favorites.html" class="fav-link" title="แผนที่ฉันถูกใจ"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg><sc-if value="{{ favCount }}"><span class="fav-badge">{{ favCount }}</span></sc-if></a><button class="menu-btn" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div></div></div></header>
+<sc-if value="{{ menuOpen }}"><div class="mobile-menu"><div class="fx jb ac mb16"><div class="logo" style="color:#fff"><span>pragan</span><span style="color:#EB5951">easy</span></div><button class="menu-btn" style="display:flex;color:#fff" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div><a href="index.html">หน้าแรก</a><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Plans.html#popular" style="padding-left:16px;font-size:16px">แผนยอดนิยม</a><a href="Compare-Plans.html" style="padding-left:16px;font-size:16px">เปรียบเทียบแผนประกัน</a><a href="Category.html#ci" style="padding-left:16px;font-size:16px">แผนประกันโรคร้ายแรง</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="Favorites.html">แผนที่ฉันถูกใจ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></div></sc-if>
+<div class="pagehero"><div class="wrap"><h1>แผนที่ฉันถูกใจ <sc-if value="{{ count }}">({{ count }})</sc-if></h1><p>แผนที่คุณกดหัวใจไว้ รวมอยู่ที่นี่ — เปิดดูรายละเอียดหรือส่งให้เราช่วยเปรียบเทียบได้เลย</p></div></div>
+<main><div class="wrap">
+<sc-if value="{{ hasFavs }}" hint-placeholder-val="{{ true }}"><div class="fav-list"><sc-for list="{{ favPlans }}" as="p" hint-placeholder-count="3"><div class="fav-card"><span class="cat">{{ p.cat }}</span><h4>{{ p.name }}</h4><p class="desc">{{ p.desc }}</p><div class="price">เบี้ยเริ่มต้น <b>{{ p.price }}</b><sc-if value="{{ p.priceSub }}"><span style="display:block;font-family:'Sarabun',sans-serif;font-size:12px;color:#6B7280;margin-top:2px">{{ p.priceSub }}</span></sc-if></div><div class="fav-actions"><a href="{{ p.link }}" class="view-link">ดูรายละเอียด →</a><button class="rm-btn" onClick="{{ p.remove }}">เอาออก</button></div></div></sc-for></div>
+<div class="fx gap12 mt24" style="margin-top:32px;flex-wrap:wrap"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" class="btn btn-primary">ส่งให้เราช่วยเปรียบเทียบทาง LINE</a><a href="Compare-Plans.html" class="btn" style="background:#053c5e;color:#fff">เปรียบเทียบ 2 แผน</a></div></sc-if>
+<sc-if value="{{ noFavs }}"><div class="empty"><h3>ยังไม่มีแผนที่ถูกใจ</h3><p>กดไอคอนหัวใจบนการ์ดแผนประกันที่สนใจ แล้วแผนจะมารวมอยู่ที่นี่</p><a href="Plans.html" class="btn btn-primary">ไปเลือกดูแผน →</a></div></sc-if>
+</div></main>
+<footer class="site foot-navy"><div class="foot-top wrap"><h2>พร้อม<span>คุย</span>กับเราหรือยัง?</h2><a href="Contact.html" class="btn btn-primary">ติดต่อเรา</a></div><div class="wrap"><div class="foot-grid"><div><div class="logo mb16" style="color:#fff"><span style="color:#fff">pragan</span><span style="color:#EB5951">easy</span></div><p class="disclaimer" style="max-width:320px">ประกันเข้าใจง่าย สร้างเองได้ — เครื่องมือช่วยวางแผนความคุ้มครองจากตัวแทน AIA</p><div class="foot-social"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a><a href="#" aria-label="LINE"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="4"/><path d="M8 19l2-3"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div></div><div><div class="foot-h">เมนู</div><div class="foot-links"><a href="Why-Protection.html">ทำไมต้องมีประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="Build-My-Plan.html">สร้างแผนของคุณ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a><a href="Terms.html">เงื่อนไขการใช้งาน</a><a href="Privacy.html">นโยบายความเป็นส่วนตัว</a></div></div><div><div class="foot-h">ติดต่อ</div><div class="foot-contact-item"><svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="color:inherit">LINE: @praganeasy</a></div><div class="foot-contact-item"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="display:block"><img src="public/logos/praganeasy-line-chat-button-mascot.png" alt="น้องอีซี่พร้อมดูแล ทักไลน์ได้เลย @praganeasy" style="width:240px;max-width:100%;height:auto;display:block"></a></div></div></div><div class="disclaimer wrap" style="border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px"><a href="Terms.html" style="color:#F8D877;text-decoration:underline">เงื่อนไขการใช้งาน</a> · <a href="Privacy.html" style="color:#F8D877;text-decoration:underline">นโยบายความเป็นส่วนตัว</a><br>© 2026 PraganEasy. All Rights Reserved.<br>เว็บไซต์นี้ดำเนินการโดยทีมตัวแทนประกันชีวิตของ บริษัท เอไอเอ จำกัด (ประเทศไทย) เพื่อให้ข้อมูลเกี่ยวกับผลิตภัณฑ์และบริการ<br>สำหรับข้อมูลอย่างเป็นทางการ โปรดเยี่ยมชม <a href="https://www.aia.co.th" target="_blank" style="color:inherit;text-decoration:underline">www.aia.co.th</a></div></div></footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { favs: [], menuOpen: false };
+  componentDidMount() {
+    try { this.setState({ favs: JSON.parse(localStorage.getItem('pe-favs') || '[]') }); } catch (e) {}
+  }
+  get catalog() {
+    const pd = 'Plan-Detail.html#';
+    return {
+      '20paylife': { name: 'AIA 20 Pay Life (Non Par)', cat: 'ประกันชีวิต', desc: 'คุ้มครองตลอดชีพ ชำระเบี้ย 20 ปี เบี้ยคงที่', price: '372 บาท/เดือน', link: pd + '20paylife' },
+      'paylifeplus': { name: 'AIA Pay Life Plus (Non Par)', cat: 'ประกันชีวิต', desc: 'เลือกชำระเบี้ย 10/15/20 ปี ทุนคุ้มครองสูง', price: '742 บาท/เดือน', link: pd + 'paylifeplus' },
+      'healthstarter': { name: 'AIA Health Starter', cat: 'ประกันสุขภาพ', desc: 'เหมาจ่ายเบี้ยเข้าถึงง่าย เลือกได้ 2 รูปแบบ', price: '3,890 บาท/ปี', link: pd + 'healthstarter' },
+      'healthsaver': { name: 'AIA Health Saver', cat: 'ประกันสุขภาพ', desc: 'เหมาจ่ายคุ้มค่า พร้อมเบิ้ลความคุ้มครองโรคร้าย', price: '7,500 บาท/ปี', link: pd + 'healthsaver' },
+      'healthhappy': { name: 'AIA Health Happy', cat: 'ประกันสุขภาพ', desc: 'เหมาจ่ายวงเงินสูง คุ้มครองถึงอายุ 85 ปี', price: '9,821 บาท/ปี', link: pd + 'healthhappy' },
+      'healthhappykids': { name: 'AIA Health Happy Kids', cat: 'ประกันสุขภาพ', desc: 'สุขภาพเด็กแรกเกิดถึง 10 ปี เลือกได้ 4 แผน', price: '4,200 บาท/ปี', link: pd + 'healthhappykids' },
+      'hbextra': { name: 'AIA HB Extra', cat: 'ประกันสุขภาพ', desc: 'ชดเชยรายได้รายวันระหว่างนอนโรงพยาบาล', price: 'สอบถามเบี้ยกับที่ปรึกษา', link: pd + 'hbextra' },
+      'multipayci': { name: 'AIA Multi-Pay CI Plus', cat: 'โรคร้ายแรง', desc: 'เคลมได้หลายครั้ง ครอบคลุมทุกระดับ', price: '1,860 บาท/ปี', link: pd + 'multipayci' },
+      'cisupercare': { name: 'AIA CI Supercare', cat: 'โรคร้ายแรง', desc: 'ชำระเบี้ยสั้น คุ้มครองตลอดชีพ', price: '1,571 บาท/ปี', link: pd + 'cisupercare' },
+      'ciplus': { name: 'AIA CI Plus', cat: 'โรคร้ายแรง', desc: 'คุ้มครอง 44 โรค จ่าย 100% ของทุน', price: '1,030 บาท/ปี', link: pd + 'ciplus' },
+      'ciprocare': { name: 'AIA CI ProCare', cat: 'โรคร้ายแรง', desc: 'ชีวิต + โรคร้ายแรงตลอดชีพ สูงสุด 800%', price: '95,440 บาท/ปี (ทุน 1 ล้าน)', link: pd + 'ciprocare' },
+      'tpd': { name: 'สัญญาเพิ่มเติม TPD', cat: 'โรคร้ายแรง', desc: 'รับ 100% ของทุนเมื่อทุพพลภาพถาวรสิ้นเชิง', price: 'เบี้ยเข้าถึงง่าย', link: pd + 'tpd' },
+      'careforcancer': { name: 'AIA Care for Cancer', cat: 'โรคร้ายแรง', desc: 'เงินก้อนเมื่อพบมะเร็งทุกระยะ', price: 'เบี้ยเข้าถึงง่าย', link: pd + 'careforcancer' },
+      'pa2500': { name: 'AIANPA2500', cat: 'อุบัติเหตุ (PA)', desc: 'แผนเริ่มต้น ทุน 500,000 บาท', price: '2,500 บาท/ปี', link: 'Plans.html#pa' },
+      'pa3000': { name: 'AIANPA3000', cat: 'อุบัติเหตุ (PA)', desc: 'ทุน 600,000 บาท ค่ารักษา 35,000 บาท/ครั้ง', price: '3,000 บาท/ปี', link: 'Plans.html#pa' },
+      'pa3800': { name: 'AIANPA3800', cat: 'อุบัติเหตุ (PA)', desc: 'ทุน 500,000 บาท ค่ารักษา 50,000 บาท/ครั้ง', price: '3,800 บาท/ปี', link: 'Plans.html#pa' },
+      'pa4600': { name: 'AIANPA4600', cat: 'อุบัติเหตุ (PA)', desc: 'ทุน 600,000 บาท ค่ารักษา 100,000 บาท/ครั้ง', price: '4,600 บาท/ปี', link: 'Plans.html#pa' },
+      'pa5500': { name: 'AIANPA5500', cat: 'อุบัติเหตุ (PA)', desc: 'ทุน 1,100,000 บาท ค่ารักษา 100,000 บาท/ครั้ง', price: '5,500 บาท/ปี', link: 'Plans.html#pa' },
+      'pa7900': { name: 'AIANPA7900', cat: 'อุบัติเหตุ (PA)', desc: 'ทุน 2,200,000 บาท (เฉพาะผู้มีรายได้)', price: '7,900 บาท/ปี', link: 'Plans.html#pa' },
+      'savingsure': { name: 'AIA Saving Sure (Non Par)', cat: 'ออมทรัพย์', desc: 'เงินคืนรวม 720% ของทุน', price: '101,508 บาท/ปี (ทุน 400,000)', link: pd + 'savingsure' },
+      'endowment1525': { name: 'AIA Endowment 15/25 (Non Par)', cat: 'ออมทรัพย์', desc: 'เบี้ย 15 ปี คุ้มครอง 25 ปี', price: '18,500 บาท/ปี', link: pd + 'endowment1525' },
+      'lifetimeincome': { name: 'AIA Lifetime Income 9/99 (PAR)', cat: 'ออมทรัพย์', desc: 'เบี้ย 9 ปี เงินคืนรายงวดตลอดชีพ', price: '90,000 บาท/ปี', link: pd + 'lifetimeincome' },
+      'smartwealth': { name: 'AIA Smart Wealth (Unit Link)', cat: 'ควบการลงทุน', desc: 'เลือกกองทุนเอง ปรับได้ตามชีวิต', price: 'ยืดหยุ่น', link: 'Contact.html' },
+      'issara': { name: 'AIA Issara Plus (Unit Link)', cat: 'ควบการลงทุน', desc: 'Unit Link เบี้ยเข้าถึงง่าย', price: 'ยืดหยุ่น', link: 'Contact.html' },
+      'annuitysure': { name: 'AIA Annuity Sure', cat: 'ลดหย่อนภาษี', desc: 'บำนาญสม่ำเสมอ ลดหย่อนหมวดบำนาญ', price: '5,000 บาท/เดือน', link: 'Contact.html' },
+      'legacyprestige': { name: 'AIA Legacy Prestige (Non Par)', cat: 'วางแผนมรดก', desc: 'ทุนสูง ส่งต่อทรัพย์สินให้ลูกหลาน', price: '450,000 บาท/ปี', link: pd + 'legacyprestige' },
+      'legacyprestigeplus': { name: 'AIA Legacy Prestige Plus (New)', cat: 'วางแผนมรดก', desc: 'ยืดหยุ่นระยะชำระเบี้ย 10/15/20 ปี', price: '280,000 บาท/ปี', link: pd + 'legacyprestigeplus' },
+      'legacyprestigeprotection': { name: 'AIA Legacy Prestige Protection (New)', cat: 'วางแผนมรดก', desc: 'ชำระเบี้ยเพียง 5 ปี ทุนคุ้มครองสูง', price: '620,000 บาท/ปี', link: pd + 'legacyprestigeprotection' }
+    };
+  }
+  renderVals() {
+    const favs = this.state.favs.filter(id => this.catalog[id]);
+    return {
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      favCount: this.state.favs.length,
+      count: favs.length || null,
+      hasFavs: favs.length > 0, noFavs: favs.length === 0,
+      favPlans: favs.map(id => {
+        const c = this.catalog[id];
+        const pm = String(c.price).match(/([\d,]+)\s*บาท\/(ปี|เดือน)/);
+        let price = c.price, priceSub = null;
+        if (pm) {
+          const n = parseInt(pm[1].replace(/,/g, ''), 10);
+          const f = x => x.toLocaleString('en-US');
+          const extra = String(c.price).replace(pm[0], '').trim();
+          const mo = pm[2] === 'เดือน' ? n : Math.round(n / 12);
+          const yr = pm[2] === 'ปี' ? n : n * 12;
+          price = (pm[2] === 'ปี' ? '≈' : '') + f(mo) + ' บาท/เดือน';
+          priceSub = '(' + f(yr) + ' บาท/ปี' + (extra ? ' ' + extra : '') + ')';
+        }
+        return { ...c, price, priceSub, remove: () => {
+          const next = this.state.favs.filter(f => f !== id);
+          this.setState({ favs: next });
+          try { localStorage.setItem('pe-favs', JSON.stringify(next)); } catch (e) {}
+        } };
+      })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

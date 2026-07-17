@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics=""><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&family=Inter:wght@500;600;700&display=swap" rel="stylesheet"><style>
+body{margin:0;background:#EAF5F8;color:#374151}
+a{color:#EB5951;text-decoration:none}
+a:hover{color:#053c5e}
+*{box-sizing:border-box}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.logo{font-family:'Prompt',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.02em;color:#fff}
+.logo .e{color:#EB5951}
+.btn{font-family:'Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.03em;border-radius:100px;padding:13px 26px;border:none;cursor:pointer;display:inline-block}
+.btn-primary{background:#EB5951;color:#fff}
+.btn-primary:hover{background:#c94039;color:#F8D877}
+.icon{width:20px;height:20px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+header.site{background:#053c5e}
+.midbar{padding:10px 0}
+.midbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;max-width:1200px;margin:0 auto;padding:0 24px}
+.midbar-contact{display:flex;gap:28px;flex-wrap:wrap}
+.midbar-contact-item{display:flex;align-items:center;gap:10px}
+.mi-ico{width:34px;height:34px;border-radius:100px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mi-ico svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mi-label{font-family:'Sarabun',sans-serif;font-size:11px;color:#D8E4EA}
+.mi-value{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;color:#fff}
+@media(max-width:900px){.midbar-contact{display:none}}
+@media(max-width:700px){.head-cta{display:none}}
+.navbar{background:#053c5e;border-bottom:1px solid rgba(255,255,255,0.18);position:sticky;top:0;z-index:50}
+.navbar-inner{display:flex;align-items:center;justify-content:space-between;height:52px;max-width:1200px;margin:0 auto;padding:0 24px}
+.links{display:flex;align-items:center;gap:24px}
+.navbar .links a{color:#fff;font-family:'Sarabun',sans-serif;font-size:14px;font-weight:500;padding:16px 0;border-bottom:2px solid transparent}
+.navbar .links a:hover{color:#F8D877}
+.navbar .links a.active{color:#EB5951;font-weight:700;border-bottom-color:#EB5951}
+@media(max-width:920px){.links{display:none}}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#fff}
+@media(max-width:920px){.menu-btn{display:flex}}
+.nav-drop{position:relative}
+.nav-drop-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.1);padding:8px;min-width:200px;z-index:60}
+.nav-drop:hover .nav-drop-menu{display:block}
+.nav-drop-menu a{display:block;padding:10px 12px;font-size:13px;border-radius:8px;white-space:nowrap}
+.navbar .links .nav-drop-menu a{color:#374151;border-bottom:none;font-weight:500}
+.navbar .links .nav-drop-menu a:hover{color:#EB5951;background:#EAF5F8}
+.mobile-menu{position:fixed;inset:0;background:#053c5e;z-index:70;display:flex;flex-direction:column;padding:24px;overflow-y:auto}
+.mobile-menu a{font-family:'Prompt',sans-serif;font-size:22px;color:#F8F8F6;font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1)}
+.legal-hero{background:linear-gradient(90deg,rgba(5,38,60,0.94),rgba(5,38,60,0.5) 50%,rgba(5,38,60,0.12)),url('public/images/hero/praganeasy-privacy-data-security-approved.jpg') center 30%/cover no-repeat #053c5e;padding:72px 0 84px}
+.legal-hero h1{font-family:'Prompt',sans-serif;font-weight:700;font-size:34px;color:#fff;margin:0;max-width:820px;margin-left:auto;margin-right:auto;padding:0 24px}
+.legal-hero p{font-family:'Sarabun',sans-serif;font-size:15px;color:#C9D0D8;margin:10px auto 0;max-width:820px;padding:0 24px}
+.legal-card{background:#fff;border-radius:20px;padding:44px;margin:-28px auto 48px;box-shadow:0 4px 18px rgba(31,122,140,0.08)}
+@media(max-width:600px){.legal-card{padding:28px}}
+.legal-card h2{font-family:'Prompt',sans-serif;font-weight:700;font-size:20px;color:#053c5e;margin:32px 0 12px}
+.legal-card h2:first-child{margin-top:0}
+.legal-card p{font-family:'Sarabun',sans-serif;font-size:15px;line-height:1.85;color:#374151;margin:0 0 14px}
+.legal-card ul{margin:0 0 14px;padding-left:22px}
+.legal-card li{font-family:'Sarabun',sans-serif;font-size:15px;line-height:1.85;color:#374151;margin-bottom:6px}
+.legal-updated{font-family:'Sarabun',sans-serif;font-size:13px;color:#9CA3AF;margin-top:28px;border-top:1px solid #F0F0F0;padding-top:20px}
+footer.site{background:#053c5e;color:#F8F8F6}
+.disclaimer{font-family:'Sarabun',sans-serif;font-size:12px;color:#c3d3e0;line-height:1.7}
+.foot-legal{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.foot-legal a{font-family:'Sarabun',sans-serif;font-size:13px;color:#F8D877}
+.foot-legal a:hover{color:#fff}
+
+.foot-navy{background:#053c5e;color:#F8F8F6}
+.foot-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:32px 24px;border-bottom:1px solid rgba(255,255,255,0.12)}
+.foot-top h2{font-family:'Prompt',sans-serif;font-weight:700;font-size:26px;margin:0;color:#fff}
+.foot-top h2 span{color:#EB5951}
+@media(max-width:600px){.foot-top{flex-direction:column;align-items:flex-start}.foot-top h2{font-size:20px}}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px;padding:40px 24px}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+.foot-h{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#F8D877;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px}
+.foot-links a{display:block;font-family:'Sarabun',sans-serif;font-size:14px;margin-bottom:10px;color:#EAF5F8}
+.foot-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-family:'Sarabun',sans-serif;font-size:14px;color:#EAF5F8;line-height:1.5}
+.foot-contact-item svg{width:16px;height:16px;stroke:#EB5951;flex-shrink:0;margin-top:2px}
+.foot-social{display:flex;gap:10px;margin-top:16px}
+.foot-social a{width:34px;height:34px;border-radius:100px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.foot-social a:hover{background:#F8D877}
+.foot-social a:hover svg{stroke:#EB5951}
+.foot-social svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+</style></helmet>
+<header class="site"><div class="midbar"><div class="midbar-inner"><div class="logo"><span>pragan</span><span class="e">easy</span></div><div class="midbar-contact"><div class="midbar-contact-item"><div class="mi-ico"><svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></div><div><div class="mi-label">LINE</div><div class="mi-value"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="color:inherit">@praganeasy</a></div></div></div></div><a class="btn btn-primary head-cta" href="Build-My-Plan.html">สร้างแผนฟรี</a></div></div><div class="navbar"><div class="navbar-inner"><nav class="links"><a href="index.html">หน้าแรก</a><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><div class="nav-drop"><a href="Plans.html">แผนประกัน ▾</a><div class="nav-drop-menu"><a href="Plans.html">ดูแผนทั้งหมด</a><a href="Plans.html#popular">แผนยอดนิยม</a><a href="Compare-Plans.html">เปรียบเทียบแผนประกัน</a><a href="Category.html#ci">แผนประกันโรคร้ายแรง</a></div></div><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></nav><button class="menu-btn" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button></div></div></header>
+<sc-if value="{{ menuOpen }}"><div class="mobile-menu"><div class="fx jb ac mb16"><div class="logo"><span>pragan</span><span style="color:#EB5951">easy</span></div><button class="menu-btn" style="display:flex" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div><a href="index.html">หน้าแรก</a><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></div></sc-if>
+<div class="legal-hero"><h1>นโยบายความเป็นส่วนตัว</h1><p>วิธีที่เราเก็บ ใช้ และคุ้มครองข้อมูลส่วนบุคคลของคุณ</p></div>
+<main><div class="wrap"><div class="legal-card">
+<p>PraganEasy ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของผู้ใช้งาน ข้อมูลที่ท่านให้ผ่านเว็บไซต์ เช่น ชื่อ เบอร์โทรศัพท์ อีเมล หรือข้อมูลที่ใช้ในการติดต่อ จะถูกเก็บและใช้อย่างระมัดระวังตามนโยบายนี้</p>
+<h2>เราใช้ข้อมูลของท่านเพื่ออะไร</h2>
+<ul><li>ติดต่อกลับตามคำขอของท่าน</li><li>ให้คำปรึกษาเกี่ยวกับผลิตภัณฑ์ประกันภัยและบริการที่เกี่ยวข้อง</li><li>จัดทำใบเสนอราคาและดำเนินการตามคำขอของท่าน</li><li>ปรับปรุงคุณภาพการให้บริการและประสบการณ์การใช้งานเว็บไซต์</li></ul>
+<h2>การเปิดเผยข้อมูล</h2>
+<p>PraganEasy จะไม่เปิดเผยข้อมูลส่วนบุคคลแก่บุคคลภายนอก เว้นแต่ได้รับความยินยอมจากท่าน หรือเป็นไปตามที่กฎหมายกำหนด</p>
+<h2>สิทธิของท่าน</h2>
+<p>ผู้ใช้งานสามารถติดต่อเพื่อสอบถาม แก้ไข หรือขอให้ลบข้อมูลส่วนบุคคลได้ผ่านช่องทางการติดต่อที่ระบุบนเว็บไซต์</p>
+<div class="legal-updated">หากมีข้อสงสัยเกี่ยวกับนโยบายความเป็นส่วนตัว หรือต้องการใช้สิทธิเกี่ยวกับข้อมูลส่วนบุคคล ติดต่อได้ที่ LINE @praganeasy หรือโทร 081-932-2539<br>085-155-0022</div>
+</div></div></main>
+<footer class="site foot-navy"><div class="foot-top wrap"><h2>พร้อม<span>คุย</span>กับเราหรือยัง?</h2><a href="Contact.html" class="btn btn-primary">ติดต่อเรา</a></div><div class="wrap"><div class="foot-grid"><div><div class="logo mb16" style="color:#fff"><span style="color:#fff">pragan</span><span style="color:#EB5951">easy</span></div><p class="disclaimer" style="max-width:320px">ประกันเข้าใจง่าย สร้างเองได้ — เครื่องมือช่วยวางแผนความคุ้มครองจากตัวแทน AIA</p><div class="foot-social"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a><a href="#" aria-label="LINE"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="4"/><path d="M8 19l2-3"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div></div><div><div class="foot-h">เมนู</div><div class="foot-links"><a href="Why-Protection.html">ทำไมต้องมีประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="Build-My-Plan.html">สร้างแผนของคุณ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a><a href="Terms.html">เงื่อนไขการใช้งาน</a><a href="Privacy.html">นโยบายความเป็นส่วนตัว</a></div></div><div><div class="foot-h">ติดต่อ</div><div class="foot-contact-item"><svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="color:inherit">LINE: @praganeasy</a></div><div class="foot-contact-item"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="display:block"><img src="public/logos/praganeasy-line-chat-button-mascot.png" alt="น้องอีซี่พร้อมดูแล ทักไลน์ได้เลย @praganeasy" style="width:240px;max-width:100%;height:auto;display:block"></a></div></div></div><div class="disclaimer wrap" style="border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px"><a href="Terms.html" style="color:#F8D877;text-decoration:underline">เงื่อนไขการใช้งาน</a> · <a href="Privacy.html" style="color:#F8D877;text-decoration:underline">นโยบายความเป็นส่วนตัว</a><br>© 2026 PraganEasy. All Rights Reserved.<br>เว็บไซต์นี้ดำเนินการโดยทีมตัวแทนประกันชีวิตของ บริษัท เอไอเอ จำกัด (ประเทศไทย) เพื่อให้ข้อมูลเกี่ยวกับผลิตภัณฑ์และบริการ<br>สำหรับข้อมูลอย่างเป็นทางการ โปรดเยี่ยมชม <a href="https://www.aia.co.th" target="_blank" style="color:inherit;text-decoration:underline">www.aia.co.th</a></div></div></footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  renderVals() {
+    return { menuOpen: this.state.menuOpen, toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })) };
+  }
+}
+</script>
+</body>
+</html>
