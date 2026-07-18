@@ -141,7 +141,7 @@ footer.site{background:#053c5e;color:#F8F8F6}
 <div><p class="tlabel">ประกอบด้วย</p><div class="plist"><sc-for list="{{ t.items }}" as="it" hint-placeholder-count="3"><div class="pitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><span><sc-if value="{{ it.link }}"><a href="{{ it.link }}">{{ it.n }}</a></sc-if><sc-if value="{{ it.noLink }}">{{ it.n }}</sc-if> <sc-if value="{{ it.note }}"><span class="opt">({{ it.note }})</span></sc-if></span></div></sc-for></div></div>
 <sc-if value="{{ t.hasGoals }}"><div><p class="tlabel">{{ t.goalLabel }}</p><div class="glist"><sc-for list="{{ t.goals }}" as="g" hint-placeholder-count="3"><div class="gitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>{{ g }}</div></sc-for></div></div></sc-if>
 <sc-if value="{{ t.note }}"><p class="tnote">{{ t.note }}</p></sc-if>
-<div class="tfoot"><a href="Build-My-Plan.html" class="btn btn-primary">สร้างแผนนี้ →</a><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" class="btn btn-line">ปรึกษาทาง LINE</a></div>
+<div class="tfoot"><a href="Build-My-Plan.html" class="btn btn-primary">สร้างแผนนี้ →</a><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" class="btn btn-line">ทักไลน์คุยกับน้องอีซี่ได้เลย!</a></div>
 </div></sc-for></div>
 <sc-if value="{{ cat.note }}"><p class="cat-note">{{ cat.note }}</p></sc-if>
 </div></section>
