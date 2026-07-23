@@ -285,8 +285,8 @@ header.site.hero-photo-nav{background:transparent}
 <sc-if value="{{ saverDetailOpen }}"><div class="benefit-detail"><div class="benefit-max"><span class="lbl">ผลประโยชน์เหมาจ่ายสูงสุดต่อการเข้าพักรักษาตัว (ผู้ป่วยใน)</span><span class="val">{{ saverAmountLabel }}</span></div><div class="benefit-cols"><div><div class="benefit-col-head">🛏 ผู้ป่วยใน</div><div class="benefit-item"><span class="txt">ค่าห้อง ค่าอาหาร ค่าบริการในโรงพยาบาล (ต่อวัน)<i>ห้อง ICU จ่าย 6 เท่า — สูงสุดไม่เกิน 365 วัน</i></span><span class="amt">{{ saverRoomLabel }}</span></div><div class="benefit-item alt"><span class="txt">ค่าแพทย์ตรวจรักษา ค่าผ่าตัด ศัลยกรรมและหัตถการ<i>ภายในวงเงินต่อการเข้าพักรักษาตัวครั้งใดครั้งหนึ่ง</i></span><span class="amt">เหมาจ่ายตามจริง</span></div><div class="benefit-item"><span class="txt">ค่ายาและเวชภัณฑ์กลับบ้าน<i>ปริมาณไม่เกิน 7 วัน ต่อครั้ง</i></span><span class="amt">ไม่เกิน 5,000 บาท/ครั้ง</span></div></div><div><div class="benefit-col-head">💊 ผู้ป่วยนอก / พิเศษ</div><div class="benefit-item"><span class="txt">อุบัติเหตุฉุกเฉิน (ผู้ป่วยนอก) ภายใน 24 ชม.<i>ต่อครั้ง</i></span><span class="amt">{{ saverEmergencyLabel }}</span></div><div class="benefit-item alt"><span class="txt">โรคร้ายแรง 6 โรค — เบิ้ลผลประโยชน์สูงสุดเป็น 2 เท่า<i>ต่อเนื่องรวม 4 ปีกรมธรรม์</i></span><span class="amt">×2 เท่า</span></div><div class="benefit-item"><span class="txt">ผลประโยชน์กรณีเสียชีวิต</span><span class="amt">{{ saverDeathLabel }}</span></div></div></div><div class="benefit-block mt16" style="margin-top:16px"><h4>เงื่อนไขการรับประกัน</h4><p>อายุรับประกันภัย 11–75 ปี ต่ออายุถึง 98 ปี คุ้มครองถึงอายุ 99 ปี — เข้าร่วมโครงการ AIA Vitality รับส่วนลดเบี้ยฯ</p></div><p class="detail-note">ตัวเลขและเงื่อนไขข้างต้นเป็นตัวอย่างสรุปโดยย่อ รายละเอียดความคุ้มครองฉบับเต็มระบุในกรมธรรม์ AIA Health Saver</p></div></sc-if>
 </sc-if>
 </div>
-<div class="rider-row {{ starterOffClass }}"><div class="rider-head"><div class="rider-icon" style="background-color: #EB595114"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg></div><div class="rider-name">AIA Health Starter</div><div class="rider-tags"><span class="rider-tag-mini">รักษาพยาบาลในรพ.</span><span class="rider-tag-mini">มีค่าใช้จ่ายร่วม</span><span class="rider-tag-mini">เบี้ยเข้าถึงได้</span></div><div class="switch {{ starterOnClass }}" onClick="{{ toggleStarter }}"><i></i></div></div><sc-if value="{{ starterOn }}"><div class="rider-body" style="align-items:flex-start"><div style="flex:1;min-width:240px"><div style="font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;margin-bottom:8px">แผนความคุ้มครอง (ค่าห้อง/วัน)</div><div class="tier-chip-row" style="margin-bottom:16px"><div class="plan-tier-chip {{ starterT0 }}" onClick="{{ setStarterTier0 }}">1500</div><div class="plan-tier-chip {{ starterT1 }}" onClick="{{ setStarterTier1 }}">2000</div><div class="plan-tier-chip {{ starterT2 }}" onClick="{{ setStarterTier2 }}">2500</div><div class="plan-tier-chip {{ starterT3 }}" onClick="{{ setStarterTier3 }}">3500</div><div class="plan-tier-chip {{ starterT4 }}" onClick="{{ setStarterTier4 }}">4500</div></div><div style="font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;margin-bottom:8px">รูปแบบค่าใช้จ่ายร่วม (Copayment)</div><div class="tier-chip-row"><div class="plan-tier-chip {{ starterModeBegin }}" onClick="{{ setStarterBegin }}">BEGIN</div><div class="plan-tier-chip {{ starterModeBalanced }}" onClick="{{ setStarterBalanced }}">BALANCED</div></div></div><div class="rider-premium" style="font-size:15px;line-height:1.4">สอบถามเบี้ยกับที่ปรึกษา<span>ขึ้นอยู่กับแผน อายุ และรูปแบบที่เลือก</span></div></div>
-<p style="font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;margin:8px 0 0">เบี้ยฯแตกต่างกันตามแผน อายุ และรูปแบบ Begin/Balanced — ขอใบเสนอราคาจากที่ปรึกษา จึงยังไม่รวมในเบี้ยฯรวมด้านล่าง</p>
+<div class="rider-row {{ starterOffClass }}"><div class="rider-head"><div class="rider-icon" style="background-color: #EB595114"><svg class="icon" style="stroke:#EB5951;width:22px;height:22px" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg></div><div class="rider-name">AIA Health Starter</div><div class="rider-tags"><span class="rider-tag-mini">รักษาพยาบาลในรพ.</span><span class="rider-tag-mini">มีค่าใช้จ่ายร่วม</span><span class="rider-tag-mini">เบี้ยเข้าถึงได้</span></div><div class="switch {{ starterOnClass }}" onClick="{{ toggleStarter }}"><i></i></div></div><sc-if value="{{ starterOn }}"><div class="rider-body" style="align-items:flex-start"><div style="flex:1;min-width:240px"><div style="font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;margin-bottom:8px">แผนความคุ้มครอง (ค่าห้อง/วัน)</div><div class="tier-chip-row" style="margin-bottom:16px"><div class="plan-tier-chip {{ starterT0 }}" onClick="{{ setStarterTier0 }}">1500</div><div class="plan-tier-chip {{ starterT1 }}" onClick="{{ setStarterTier1 }}">2000</div><div class="plan-tier-chip {{ starterT2 }}" onClick="{{ setStarterTier2 }}">2500</div><div class="plan-tier-chip {{ starterT3 }}" onClick="{{ setStarterTier3 }}">3500</div><div class="plan-tier-chip {{ starterT4 }}" onClick="{{ setStarterTier4 }}">4500</div></div><div style="font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;margin-bottom:8px">รูปแบบค่าใช้จ่ายร่วม (Copayment)</div><div class="tier-chip-row"><div class="plan-tier-chip {{ starterModeBegin }}" onClick="{{ setStarterBegin }}">BEGIN</div><div class="plan-tier-chip {{ starterModeBalanced }}" onClick="{{ setStarterBalanced }}">BALANCED</div></div></div><div class="rider-premium">{{ starterPremiumLabel }}<span>เบี้ยฯ/ปี</span></div></div>
+<p style="font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280;margin:8px 0 0">เบี้ยฯคำนวณจากตารางเบี้ยประกันภัยมาตรฐานรายปีตามแผน เพศ อายุ และรูปแบบ Begin/Balanced (รวมอยู่ในเบี้ยฯรวมด้านล่างแล้ว)</p>
 <button class="detail-link" onClick="{{ toggleStarterDetail }}">{{ starterDetailLabel }}</button>
 <sc-if value="{{ starterDetailOpen }}"><div class="benefit-detail"><div class="benefit-max"><span class="lbl">แผนที่เลือก</span><span class="val">{{ starterPlanLabel }} · {{ starterModeLabel }}</span></div><div class="benefit-cols"><div><div class="benefit-col-head">🛏 ผู้ป่วยใน</div><div class="benefit-item"><span class="txt">ค่าห้อง ค่าอาหาร ค่าบริการในโรงพยาบาล (ต่อวัน)<i>ห้อง ICU จ่าย 2 เท่า สูงสุด 30 วัน (รวมไม่เกิน 125 วัน)</i></span><span class="amt">{{ starterRoomLabel }}</span></div><div class="benefit-item alt"><span class="txt">ค่าแพทย์ (แพทย์) ตรวจรักษา (ต่อวัน)</span><span class="amt">{{ starterDoctorLabel }}</span></div><div class="benefit-item"><span class="txt">ค่าผ่าตัด ศัลยกรรม และหัตถการ<i>ภายในวงเงินของแผนที่เลือก</i></span><span class="amt">เหมาจ่ายตามจริง</span></div></div><div><div class="benefit-col-head">💊 ผู้ป่วยนอก / ค่าใช้จ่ายร่วม</div><div class="benefit-item"><span class="txt">ผู้ป่วยนอก (OPD)<i>ยกเว้นแผน 1500 ไม่มีความคุ้มครอง OPD</i></span><span class="amt">จ่ายตามจริง</span></div><div class="benefit-item alt"><span class="txt">ค่าใช้จ่ายร่วม — โรงพยาบาลในสิทธิ (AIA Smart Network)</span><span class="amt">{{ starterCopayInLabel }}</span></div><div class="benefit-item"><span class="txt">ค่าใช้จ่ายร่วม — โรงพยาบาลนอกสิทธิ</span><span class="amt">{{ starterCopayOutLabel }}</span></div></div></div><div class="benefit-block mt16" style="margin-top:16px"><h4>เงื่อนไขการรับประกัน</h4><p>{{ starterAgeLabel }} ต่ออายุถึง 98 ปี คุ้มครองถึงอายุ 99 ปี — เข้าร่วมโครงการ AIA Vitality รับส่วนลด/โบนัสเบี้ยฯ</p></div><p class="detail-note">ตัวเลขและเงื่อนไขข้างต้นเป็นตัวอย่างสรุปโดยย่อ รายละเอียดความคุ้มครองฉบับเต็มระบุในกรมธรรม์ AIA Health Starter</p></div></sc-if>
 </sc-if>
@@ -314,7 +314,7 @@ header.site.hero-photo-nav{background:transparent}
 </div>
 </div>
 <div class="summary-bar2"><div class="summary-stat"><span class="lbl">สัญญาหลัก</span><span class="val">{{ coverageLabel }}</span></div><div class="summary-stat"><span class="lbl">เบี้ยฯหลัก</span><span class="val">{{ mainPremiumLabel }}</span></div><div class="summary-stat"><span class="lbl">เบี้ยฯสัญญาเพิ่มเติม</span><span class="val">{{ ridersPremiumLabel }}</span></div><div class="summary-stat"><span class="lbl">เบี้ยฯรวมปีแรก</span><span class="val" style="color:#EB5951;font-size:22px">{{ totalMonthlyLabel }}</span><span class="lbl" style="margin-top:2px;color:#053c5e;font-weight:600">{{ totalPremiumLabel }}/ปี</span></div></div>
-<div class="summary-table"><table><tr><th>รายการ</th><th>เบี้ยฯ/ปี</th></tr><tr><td class="name">สัญญาหลัก — {{ coverageLabel }}</td><td>{{ mainPremiumLabel }}</td></tr><sc-if value="{{ healthOn }}"><tr><td class="name">AIA Health Happy</td><td>{{ healthPremiumLabel }}</td></tr></sc-if><sc-if value="{{ saverOn }}"><tr><td class="name">AIA Health Saver — {{ saverAmountLabel }}</td><td>{{ saverPremiumLabel }}</td></tr></sc-if><sc-if value="{{ starterOn }}"><tr><td class="name">AIA Health Starter — {{ starterPlanLabel }} ({{ starterModeLabel }})</td><td style="color:#EB5951">สอบถามเบี้ยกับที่ปรึกษา</td></tr></sc-if><sc-if value="{{ ciOn }}"><tr><td class="name">AIA Multi-Pay CI Plus</td><td>{{ ciPremiumLabel }}</td></tr></sc-if><sc-if value="{{ hbOn }}"><tr><td class="name">AIA HB Extra — ค่าชดเชยรายวัน {{ hbAmountLabel }}</td><td style="color:#EB5951">สอบถามเบี้ยกับที่ปรึกษา</td></tr></sc-if><sc-if value="{{ paOn }}"><tr><td class="name">AIA PA (อุบัติเหตุ)</td><td>{{ paPremiumLabel }}</td></tr></sc-if><sc-if value="{{ tpdOn }}"><tr><td class="name">AIA TPD (ทุพพลภาพถาวรสิ้นเชิง)</td><td>{{ tpdPremiumLabel }}</td></tr></sc-if><tr class="total"><td class="name">รวมเบี้ยฯปีแรก</td><td>{{ totalPremiumLabel }}/ปี<span style="display:block;font-size:12.5px;color:#6B7280;font-weight:500">{{ totalMonthlyNote }}</span></td></tr></table></div>
+<div class="summary-table"><table><tr><th>รายการ</th><th>เบี้ยฯ/ปี</th></tr><tr><td class="name">สัญญาหลัก — {{ coverageLabel }}</td><td>{{ mainPremiumLabel }}</td></tr><sc-if value="{{ healthOn }}"><tr><td class="name">AIA Health Happy</td><td>{{ healthPremiumLabel }}</td></tr></sc-if><sc-if value="{{ saverOn }}"><tr><td class="name">AIA Health Saver — {{ saverAmountLabel }}</td><td>{{ saverPremiumLabel }}</td></tr></sc-if><sc-if value="{{ starterOn }}"><tr><td class="name">AIA Health Starter — {{ starterPlanLabel }} ({{ starterModeLabel }})</td><td>{{ starterPremiumLabel }}</td></tr></sc-if><sc-if value="{{ ciOn }}"><tr><td class="name">AIA Multi-Pay CI Plus</td><td>{{ ciPremiumLabel }}</td></tr></sc-if><sc-if value="{{ hbOn }}"><tr><td class="name">AIA HB Extra — ค่าชดเชยรายวัน {{ hbAmountLabel }}</td><td style="color:#EB5951">สอบถามเบี้ยกับที่ปรึกษา</td></tr></sc-if><sc-if value="{{ paOn }}"><tr><td class="name">AIA PA (อุบัติเหตุ)</td><td>{{ paPremiumLabel }}</td></tr></sc-if><sc-if value="{{ tpdOn }}"><tr><td class="name">AIA TPD (ทุพพลภาพถาวรสิ้นเชิง)</td><td>{{ tpdPremiumLabel }}</td></tr></sc-if><tr class="total"><td class="name">รวมเบี้ยฯปีแรก</td><td>{{ totalPremiumLabel }}/ปี<span style="display:block;font-size:12.5px;color:#6B7280;font-weight:500">{{ totalMonthlyNote }}</span></td></tr></table></div>
 <div class="summary-cta-row" style="margin-left:0;justify-content:flex-end;margin-top:16px"><a href="Contact.html" class="btn btn-primary">ส่งแผนนี้ให้ทีมที่ปรึกษา →</a></div>
 <div class="detail-panel"><h3 class="font-d fw7 mb16" style="font-size:20px">ภาพรวมแผนของคุณ ({{ age }} ปี)</h3><div class="detail-toggle"><button class="{{ viewBenefitSel }}" onClick="{{ setViewBenefit }}">ผลประโยชน์</button><button class="{{ viewTotalSel }}" onClick="{{ setViewTotal }}">เบี้ยฯรวม</button></div>
 <sc-if value="{{ isViewBenefit }}"><div class="benefit-cards">
@@ -415,6 +415,60 @@ class Component extends DCLogic {
     ];
     return (gender === 'female' ? F : M)[tier][this.saverBandIndex(age)];
   }
+  starterBandIndex(age, mode) {
+    const hi = mode === 'begin'
+      ? [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,98]
+      : [15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,98];
+    for (let i = 0; i < hi.length; i++) if (age <= hi[i]) return i;
+    return hi.length - 1;
+  }
+  get starterTables() {
+    return {
+      begin: {
+        male: [
+          [32700,46200,55600,70500,86700],[17200,25100,28900,36400,43700],[8500,12900,15300,19300,23000],
+          [3700,6300,7600,9800,11600],[3800,6400,7800,9900,11700],[4100,7000,8600,11100,13100],
+          [4300,7300,9000,11700,13700],[4500,7700,9400,12100,14300],[4900,8200,10100,13000,15300],
+          [5100,8600,10500,13500,15900],[7100,11900,14500,18700,22000],[9500,15600,19000,24400,28900],
+          [13700,20900,25600,33000,39000],[19800,28700,35000,45300,55700],[29700,41100,50200,65200,77300],
+          [44600,59700,72900,95000,112600],[66800,87700,107000,139800,165700],[73500,96200,117200,153200,181700],
+          [80900,105300,128500,168000,199100],[89000,115500,140900,184200,218400]
+        ],
+        female: [
+          [32600,45900,53600,68000,83700],[16200,23700,27400,34300,41300],[7700,11900,14000,17600,21500],
+          [3900,7100,8100,11000,13400],[4200,7700,9000,11900,14500],[4300,8200,9400,12400,15000],
+          [4800,8300,10100,13400,15700],[5100,8600,10500,13700,16200],[5500,9200,11400,15000,17600],
+          [5700,10000,12300,16200,19700],[7700,13000,16000,20700,24500],[10400,16700,20500,26700,31600],
+          [15000,22500,27700,36200,42900],[21600,30900,38000,50000,59300],[32400,44600,54700,72200,85700],
+          [48600,64900,79700,105600,125300],[72900,95500,117100,155700,184800],[80200,104700,128400,170700,202600],
+          [88300,114900,140800,187200,222300],[97200,126000,154400,205300,243900]
+        ]
+      },
+      balanced: {
+        male: [
+          [9400,14300,17000,21400,25500],[4100,7000,8400,10800,12800],[4200,7100,8600,11000,13000],
+          [4500,7700,9500,12300,14500],[4700,8100,10000,12900,15200],[5000,8500,10400,13400,15800],
+          [5400,9100,11200,14400,17000],[5600,9500,11600,14900,17600],[7800,13200,16100,20700,24400],
+          [10500,17300,21100,27100,32100],[15200,23200,28400,36600,43300],[22000,31800,38800,50300,61800],
+          [33000,45600,55700,72400,85800],[49500,66300,80900,105500,125100],[74200,97400,118800,155300,184100],
+          [81600,106800,130200,170200,201800],[89800,117000,142700,186600,221200],[98800,128300,156500,204600,242600]
+        ],
+        female: [
+          [8500,13200,15500,19500,23800],[4300,7800,9000,12200,14800],[4600,8500,10000,13200,16100],
+          [4700,9100,10400,13700,16600],[5300,9200,11200,14800,17400],[5600,9500,11600,15200,18000],
+          [6100,10200,12600,16600,19500],[6200,11100,13600,18000,21800],[8500,14400,17700,23000,27200],
+          [11500,18500,22700,29600,35100],[16600,25000,30700,40200,47600],[24000,34300,42200,55500,65800],
+          [36000,49500,60700,80200,95200],[54000,72100,88500,117300,139200],[81000,106100,130100,172900,205300],
+          [89100,116300,142600,189600,225100],[98100,127600,156400,207900,246900],[107900,139900,171500,228100,270900]
+        ]
+      }
+    };
+  }
+  starterPremium(age, gender, mode, tier) {
+    const g = gender === 'female' ? 'female' : 'male';
+    const table = this.starterTables[mode === 'begin' ? 'begin' : 'balanced'][g];
+    return table[this.starterBandIndex(age, mode)][tier];
+  }
   healthBaseAt43(tier) {
     const bases = [18904, 27800, 31414, 33916];
     return bases[tier];
@@ -423,6 +477,7 @@ class Component extends DCLogic {
   ridersPremiumAt(rowAge, s, genderFactor) {
     const health = s.healthOn ? Math.round(this.healthBaseAt43(s.healthTier) * this.ageMult(rowAge) * genderFactor) : 0;
     const saver = s.saverOn ? this.saverPremium(rowAge, s.gender, s.saverTier) : 0;
+    const starter = s.starterOn ? this.starterPremium(rowAge, s.gender, s.starterMode, s.starterTier) : 0;
     // CI Multi-Pay CI Plus — calibrated so age43/female/800,000 coverage = 7,440 บาท/ปี (verified against agent tool sample)
     const ciRate43 = 930;
     const ci = s.ciOn ? Math.round((s.ciAmount / 100000) * ciRate43 * this.ageMult(rowAge) * genderFactor) : 0;
@@ -433,7 +488,7 @@ class Component extends DCLogic {
     const pa = s.paOn ? paPlans[s.paTier].premium : 0;
     // AIA TPD — calibrated a modest rate, lower base than CI
     const tpd = s.tpdOn ? Math.round((s.tpdAmount / 100000) * 150 * this.ageMult(rowAge) * genderFactor) : 0;
-    return { health, saver, ci, hb, pa, tpd, total: health + saver + ci + hb + pa + tpd };
+    return { health, saver, starter, ci, hb, pa, tpd, total: health + saver + starter + ci + hb + pa + tpd };
   }
   renderVals() {
     const s = this.state;
@@ -446,6 +501,7 @@ class Component extends DCLogic {
     const r0 = this.ridersPremiumAt(age, s, genderFactor);
     const healthPremium = r0.health, ciPremium = r0.ci, hbPremium = r0.hb, paPremium = r0.pa, tpdPremium = r0.tpd;
     const saverPremium = r0.saver;
+    const starterPremium = r0.starter;
     const saverAmt = [200000, 300000, 400000, 500000][s.saverTier];
     const ridersPremium = r0.total;
     const total = mainPremium + ridersPremium;
@@ -517,6 +573,7 @@ class Component extends DCLogic {
       setStarterTier0: () => this.setState({ starterTier: 0 }), setStarterTier1: () => this.setState({ starterTier: 1 }), setStarterTier2: () => this.setState({ starterTier: 2 }), setStarterTier3: () => this.setState({ starterTier: 3 }), setStarterTier4: () => this.setState({ starterTier: 4 }),
       starterModeBegin: s.starterMode === 'begin' ? 'sel' : '', starterModeBalanced: s.starterMode === 'balanced' ? 'sel' : '',
       setStarterBegin: () => this.setState({ starterMode: 'begin' }), setStarterBalanced: () => this.setState({ starterMode: 'balanced' }),
+      starterPremiumLabel: this.fmtBaht(starterPremium),
       starterPlanLabel: 'แผน ' + [1500, 2000, 2500, 3500, 4500][s.starterTier].toLocaleString('th-TH'),
       starterModeLabel: s.starterMode === 'begin' ? 'แบบ Begin' : 'แบบ Balanced',
       starterRoomLabel: [1500, 2000, 2500, 3500, 4500][s.starterTier].toLocaleString('th-TH') + ' บาท/วัน',
