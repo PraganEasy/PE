@@ -175,6 +175,27 @@ header.site.hero-photo-nav{background:transparent}
 .hero-feat-icon{width:34px;height:34px;border-radius:8px;background:#FDEDEE;display:flex;align-items:center;justify-content:center}
 .hero-feat-card h4{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;margin:0;color:#053c5e}
 .hero-feat-card p{font-family:'Sarabun',sans-serif;font-size:12.5px;color:#6B7280;line-height:1.5;margin:0}
+
+.preclaim-grid{}
+@media(max-width:640px){.preclaim-grid{grid-template-columns:1fr !important}}
+
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.article-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.article-grid{grid-template-columns:1fr}}
+.art-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
+.art-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(5,60,94,0.12)}
+.art-thumb{position:relative;aspect-ratio:16/10;background:#EAF5F8}
+.art-thumb image-slot{position:absolute;inset:0;display:block;width:100%;height:100%}
+.art-badge{position:absolute;left:14px;top:14px;background:#EB5951;color:#fff;font-family:'Sarabun',sans-serif;font-size:12px;font-weight:600;padding:5px 12px;border-radius:100px}
+.art-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.art-body h3{font-family:'Prompt',sans-serif;font-weight:600;font-size:19px;color:#053c5e;margin:0;line-height:1.45}
+.art-body p{font-family:'Sarabun',sans-serif;font-size:14.5px;color:#6B7280;line-height:1.65;margin:0;flex:1}
+.art-foot{display:flex;align-items:center;justify-content:space-between;margin-top:6px;font-family:'Sarabun',sans-serif;font-size:13px;color:#9CA3AF}
+.art-read{color:#EB5951;font-weight:600}
+.kh-eyebrow{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#EB5951;margin-bottom:12px}
+.reader-back{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #D5E1E8;border-radius:100px;padding:9px 18px;font-family:'Sarabun',sans-serif;font-size:14px;font-weight:600;color:#053c5e;cursor:pointer;margin-bottom:24px}
+.reader-back:hover{border-color:#EB5951;color:#EB5951}
+.reader-badge{display:inline-block;background:#EB5951;color:#fff;font-family:'Sarabun',sans-serif;font-size:12px;font-weight:600;padding:5px 13px;border-radius:100px}
 </style></helmet>
 <div class="hero-photo-section"><div class="hero-photo-bg"><image-slot id="why-hero-photo" shape="rect" placeholder="ลากรูปภาพหลักของหน้านี้มาวางที่นี่" src="public/images/hero/praganeasy-why-protection-hero-mascot-advisor-tablet.jpg"></image-slot></div><div class="hero-photo-overlay"></div>
 <header class="site hero-photo-nav"><div class="midbar"><div class="wrap midbar-inner"><div class="logo"><span>pragan</span><span class="e">easy</span></div><div class="midbar-contact"><div class="midbar-contact-item"><div class="mi-ico"><svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></div><div><div class="mi-label">LINE</div><div class="mi-value"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="color:inherit">@praganeasy</a></div></div></div></div><a class="btn btn-primary head-cta" href="Build-My-Plan.html">ให้น้องอีซี่ช่วยเลือกแผน</a></div></div><div class="navbar"><div class="wrap fx ac jb navrow"><nav class="links fx ac gap24"><a href="index.html">หน้าแรก</a><a href="Why-Protection.html" class="active">ทำไมต้องมีประกัน</a><div class="nav-drop"><a href="Plans.html">แผนประกัน ▾</a><div class="nav-drop-menu"><a href="Plans.html">ดูแผนทั้งหมด</a><a href="Popular.html">แผนยอดนิยม</a><a href="Compare-Plans.html">เปรียบเทียบแผนประกัน</a><a href="Category.html#ci">แผนประกันโรคร้ายแรง</a></div></div><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></nav><button class="menu-btn" onClick="{{ toggleMenu }}"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div></div></header>
@@ -185,16 +206,91 @@ header.site.hero-photo-nav{background:transparent}
 <section><div class="wrap"><h2 class="section-title mb12">ค่ารักษาพยาบาลในไทย วันนี้แพงแค่ไหน</h2><p class="lead" style="margin-bottom:40px">ตัวเลขเหล่านี้คือค่าใช้จ่ายเฉลี่ยที่คนไทยต้องเจอ หากไม่มีความคุ้มครองรองรับ</p><div class="stat-grid"><div class="stat-card"><div class="stat-num">350,000+</div><div class="stat-label">บาท/ครั้ง คือค่าใช้จ่ายเฉลี่ยการผ่าตัดใหญ่ในโรงพยาบาลเอกชน</div></div><div class="stat-card"><div class="stat-num">1.2 ล้าน+</div><div class="stat-label">บาท คือค่าใช้จ่ายเฉลี่ยตลอดการรักษาโรคมะเร็ง</div></div><div class="stat-card"><div class="stat-num">15,000+</div><div class="stat-label">บาท/คืน ค่าห้อง ICU ในโรงพยาบาลเอกชนชั้นนำ</div></div></div></div></section>
 <section style="background:#EAF5F8"><div class="wrap"><h2 class="section-title mb12">4 ความเสี่ยงที่ทุกคนต้องเจอ</h2><p class="lead" style="margin-bottom:40px">ไม่มีใครรู้ว่าจะเกิดอะไรขึ้นเมื่อไหร่ — แต่เตรียมพร้อมได้เสมอ</p><div class="risk-grid"><div class="risk-card"><div class="risk-icon"><svg class="icon" style="stroke:#EB5951" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg></div><h3>เจ็บป่วย</h3><p>ค่ารักษาที่ไม่คาดคิด อาจกระทบเงินเก็บทั้งชีวิต</p></div><div class="risk-card"><div class="risk-icon"><svg class="icon" style="stroke:#EB5951" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></div><h3>ทุพพลภาพ</h3><p>ขาดรายได้ทันทีหากทำงานไม่ได้ชั่วคราวหรือถาวร</p></div><div class="risk-card"><div class="risk-icon"><svg class="icon" style="stroke:#EB5951" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"></circle><path d="M2 21v-1a7 7 0 0 1 14 0v1"></path></svg></div><h3>เสียชีวิต</h3><p>ครอบครัวยังต้องมีชีวิตต่อไปได้โดยไม่กระทบฐานะการเงิน</p></div><div class="risk-card"><div class="risk-icon"><svg class="icon" style="stroke:#6B7280" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg></div><h3>อายุยืน</h3><p>เงินเก็บต้องพอใช้ แม้จะมีอายุยืนกว่าที่คาด</p></div></div></div></section>
 <section><div class="wrap"><h2 class="section-title mb12">ความเข้าใจผิดที่พบบ่อย</h2><p class="lead" style="margin-bottom:40px">เรามาเคลียร์กันให้ชัดเจน ก่อนที่คุณจะตัดสินใจ</p><div class="col gap16"><div class="myth"><div class="myth-x">✕</div><div><div class="myth-title">"ผมยังหนุ่ม ยังแข็งแรง ไม่จำเป็นต้องมีประกัน"</div><div class="myth-desc">ยิ่งเริ่มเร็ว เบี้ยยิ่งถูก และคุ้มครองได้นานกว่า — ไม่มีใครรู้ล่วงหน้าว่าจะป่วยเมื่อไหร่</div></div></div><div class="myth"><div class="myth-x">✕</div><div><div class="myth-title">"ประกันสังคม/สวัสดิการบริษัทคุ้มครองพอแล้ว"</div><div class="myth-desc">ส่วนใหญ่ครอบคลุมค่ารักษาขั้นพื้นฐานเท่านั้น ไม่รวมโรงพยาบาลเอกชนหรือโรคร้ายแรง</div></div></div><div class="myth"><div class="myth-x">✕</div><div><div class="myth-title">"เบี้ยประกันแพง ไม่คุ้มค่า"</div><div class="myth-desc">มีแผนหลายระดับให้เลือกตามงบ เริ่มต้นได้ตั้งแต่หลักร้อยต่อเดือน</div></div></div></div></div></section>
-<section style="background:#EAF5F8"><div class="wrap"><h2 class="section-title mb12">ภาพรวมผลิตภัณฑ์ AIA</h2><p class="lead" style="margin-bottom:40px">แต่ละหมวดตอบโจทย์ความกังวลที่แตกต่างกัน</p><div class="overview-grid"><div class="overview-card" style="background:#EB5951"><h3>ประกันสุขภาพ</h3><p>ค่ารักษาพยาบาล ค่าห้อง ค่าผ่าตัด แบบเหมาจ่ายหรือแยกตามรายการ</p><a href="Plans.html#health" style="color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600">ดูรายละเอียด →</a></div><div class="overview-card" style="background:#053c5e"><h3>ประกันชีวิต</h3><p>คุ้มครองชีวิต ทุนประกันสูง เพื่อคนที่คุณรัก</p><a href="Plans.html#life" style="color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600">ดูรายละเอียด →</a></div><div class="overview-card" style="background-color: #EB5951"><h3>โรคร้ายแรง</h3><p>รับเงินก้อนทันทีเมื่อตรวจพบโรคร้ายแรง ช่วยลดภาระค่าใช้จ่าย</p><a href="Plans.html#ci" style="color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600">ดูรายละเอียด →</a></div><div class="overview-card" style="background-color: #053c5e"><h3>ลดหย่อนภาษี</h3><p>ประกันชีวิต สุขภาพ และบำนาญ ที่ใช้สิทธิ์ลดหย่อนภาษีได้</p><a href="Plans.html#tax" style="color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600">ดูรายละเอียด →</a></div></div></div></section>
+<sc-if value="{{ showHub }}"><section id="knowledge-hub" style="background:#EAF5F8">
+<div class="wrap">
+<div style="max-width:660px;margin-bottom:32px"><div class="kh-eyebrow">บทความและความรู้</div><h2 class="section-title mb12">เรื่องน่ารู้ก่อนตัดสินใจทำประกัน</h2><p class="lead">รวมบทความอธิบายเรื่องประกันแบบเข้าใจง่าย จัดเป็นหมวดหมู่ให้ค้นหาเรื่องที่คุณสนใจได้เร็วขึ้น</p></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px"><sc-for list="{{ chips }}" as="chip" hint-placeholder-count="6"><button style="{{ chip.style }}" onClick="{{ chip.onClick }}">{{ chip.label }}</button></sc-for></div>
+<sc-if value="{{ emptyState }}"><div style="background:#fff;border:1px dashed #C3D3DE;border-radius:16px;padding:56px 24px;text-align:center;font-family:'Sarabun',sans-serif;font-size:16px;color:#6B7280">ยังไม่มีบทความในหมวดนี้ — เร็วๆ นี้</div></sc-if>
+<div class="article-grid"><sc-for list="{{ cards }}" as="art" hint-placeholder-count="3"><article class="art-card" onClick="{{ art.onClick }}"><div class="art-thumb"><image-slot id="{{ art.slotId }}" shape="rect" placeholder="ภาพปกบทความ" src="{{ art.slot }}"></image-slot><span class="art-badge">{{ art.catLabel }}</span></div><div class="art-body"><h3>{{ art.title }}</h3><p>{{ art.excerpt }}</p><div class="art-foot"><span>{{ art.meta }}</span><span class="art-read">อ่านบทความ →</span></div></div></article></sc-for></div>
+</div></section></sc-if>
+<sc-if value="{{ showReader }}"><section id="knowledge-reader"><div class="wrap" style="max-width:820px">
+<button class="reader-back" onClick="{{ closeReader }}">← กลับไปหน้าบทความ</button>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px"><span class="reader-badge">{{ readerCat }}</span><span style="font-family:'Sarabun',sans-serif;font-size:13px;color:#9CA3AF">{{ readerMeta }}</span></div>
+<h2 class="section-title" style="margin:0 0 24px;line-height:1.3">{{ readerTitle }}</h2>
+<div class="art-thumb" style="border-radius:16px;overflow:hidden;margin-bottom:32px;aspect-ratio:16/7"><image-slot id="fax-claim-hero" shape="rect" placeholder="ภาพประกอบบทความ" src="public/images/health/praganeasy-article-fax-claim-cover.jpg"></image-slot></div>
+<p class="font-b" style="font-size:17px;line-height:1.85;color:#4B5563;margin:0 0 20px">หลายคนอาจสงสัยว่า เมื่อมีประกันสุขภาพแล้ว เวลาเข้ารักษาที่โรงพยาบาลจะสามารถใช้สิทธิ์แบบไม่ต้องสำรองจ่ายได้ทุกครั้งหรือไม่</p>
+<div style="background:#053c5e;color:#fff;border-radius:16px;padding:24px 28px;margin:0 0 32px"><div style="font-family:'Prompt',sans-serif;font-weight:600;font-size:18px;margin-bottom:6px">คำตอบคือ ไม่จำเป็นต้องได้ทุกกรณี</div><p class="font-b" style="font-size:15px;line-height:1.8;color:#C9D6DF;margin:0">การใช้สิทธิ์แบบไม่ต้องสำรองจ่าย หรือที่เรียกกันว่า “แฟกซ์เคลม” ขึ้นอยู่กับเงื่อนไขกรมธรรม์ โรงพยาบาลคู่สัญญา ข้อมูลทางการแพทย์ และผลการพิจารณาของบริษัทประกันในแต่ละครั้ง</p></div>
+<h3 style="font-family:'Prompt',sans-serif;font-weight:600;font-size:23px;color:#053c5e;margin:0 0 12px">ระยะเวลารอคอย 120 วัน คืออะไร?</h3>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 16px">ประกันสุขภาพโดยทั่วไปจะมีระยะเวลารอคอยสำหรับการเจ็บป่วยบางกลุ่ม โดยอาจกำหนดไว้ไม่เกิน 120 วัน นับจากวันที่ความคุ้มครองเริ่มมีผล เช่น</p>
+<div style="background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:22px 26px;margin:0 0 16px"><ul class="font-b" style="font-size:16px;line-height:1.9;color:#374151;margin:0;padding-left:22px"><li>ต้อเนื้อหรือต้อกระจก</li><li>การตัดต่อมทอนซิลหรือต่อมอะดีนอยด์</li><li>โรคไส้เลื่อนทุกชนิด</li><li>เยื่อบุโพรงมดลูกเจริญผิดที่</li></ul></div>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 12px">หากอาการหรือโรคดังกล่าวเกิดขึ้นภายในระยะเวลารอคอย บริษัทจะยังไม่จ่ายผลประโยชน์ตามเงื่อนไขที่กำหนดไว้ในกรมธรรม์</p>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 32px">โรคและระยะเวลารอคอยอาจแตกต่างกันในแต่ละแบบประกัน จึงควรตรวจสอบจากกรมธรรม์ของตนเองทุกครั้ง</p>
+<h3 style="font-family:'Prompt',sans-serif;font-weight:600;font-size:23px;color:#053c5e;margin:0 0 12px">พ้น 120 วันแล้ว ใช้แฟกซ์เคลมได้ทันทีหรือไม่?</h3>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 16px">เมื่อพ้นระยะเวลารอคอยแล้ว ไม่ได้หมายความว่าจะได้รับอนุมัติแฟกซ์เคลมโดยอัตโนมัติทุกครั้ง โดยเฉพาะกรมธรรม์ที่เพิ่งเริ่มคุ้มครอง บริษัทอาจต้องขอตรวจสอบเพิ่มเติมว่า</p>
+<div style="background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:22px 26px;margin:0 0 16px"><ul class="font-b" style="font-size:16px;line-height:1.9;color:#374151;margin:0;padding-left:22px"><li>อาการเริ่มเกิดขึ้นเมื่อใด</li><li>เคยพบแพทย์หรือตรวจรักษาอาการเดียวกันมาก่อนหรือไม่</li><li>มีประวัติสุขภาพก่อนวันเริ่มทำประกันหรือไม่</li><li>ข้อมูลสุขภาพที่แจ้งในใบคำขอครบถ้วนหรือไม่</li><li>การรักษาครั้งนี้เป็นไปตามข้อกำหนดของกรมธรรม์หรือไม่</li></ul></div>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 16px">หากโรงพยาบาลหรือบริษัทประกันยังไม่สามารถยืนยันสิทธิ์ได้ ผู้เอาประกันอาจต้องสำรองจ่ายค่ารักษาไปก่อน แล้วนำใบเสร็จ ใบรับรองแพทย์ และเอกสารทางการแพทย์มายื่นขอเบิกภายหลัง</p>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 32px"><strong style="color:#053c5e">การสำรองจ่ายไม่ได้หมายความว่าเคลมไม่ได้</strong> แต่หมายถึงบริษัทยังต้องพิจารณาข้อมูลและเอกสารให้ครบถ้วนก่อนอนุมัติสินไหม</p>
+<h3 style="font-family:'Prompt',sans-serif;font-weight:600;font-size:23px;color:#053c5e;margin:0 0 12px">วางแผนก่อนเข้ารักษาด้วย “Pre-Claim”</h3>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 16px">หากการรักษาไม่ใช่กรณีฉุกเฉิน เช่น การผ่าตัดที่สามารถนัดหมายล่วงหน้าได้ ควรแจ้งตัวแทนหรือบริษัทประกันก่อนเข้ารับการรักษา ตัวแทนสามารถช่วยประสานงานให้โรงพยาบาลส่งข้อมูลเพื่อขอพิจารณาสิทธิ์ล่วงหน้า หรือที่เรียกว่า Pre-Claim / Pre-Authorization</p>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 20px">ผลการพิจารณาเบื้องต้นอาจเป็นได้สองกรณี</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0 0 32px" class="preclaim-grid"><div style="background:#EAF5F8;border-left:4px solid #1F7A8C;border-radius:12px;padding:22px 24px"><div style="font-family:'Prompt',sans-serif;font-weight:600;font-size:17px;color:#053c5e;margin-bottom:8px">กรณีที่ 1: บริษัทอนุมัติใช้สิทธิ์ตามวงเงิน</div><p class="font-b" style="font-size:15px;line-height:1.8;color:#4B5563;margin:0 0 10px">ผู้เอาประกันสามารถเข้ารับการรักษาได้อย่างมั่นใจมากขึ้น โดยบริษัทจะรับผิดชอบค่าใช้จ่ายตามสิทธิ์และเงื่อนไขของกรมธรรม์</p><p class="font-b" style="font-size:14px;line-height:1.7;color:#6B7280;margin:0">ค่าใช้จ่ายที่เกินวงเงินหรือไม่อยู่ในความคุ้มครอง ผู้เอาประกันยังต้องรับผิดชอบเอง</p></div><div style="background:#FDEDEE;border-left:4px solid #EB5951;border-radius:12px;padding:22px 24px"><div style="font-family:'Prompt',sans-serif;font-weight:600;font-size:17px;color:#053c5e;margin-bottom:8px">กรณีที่ 2: ยังไม่สามารถอนุมัติแฟกซ์เคลมได้</div><p class="font-b" style="font-size:15px;line-height:1.8;color:#4B5563;margin:0 0 10px">ผู้เอาประกันอาจต้องสำรองจ่ายก่อน หรือส่งเอกสารและประวัติสุขภาพเพิ่มเติมเพื่อให้บริษัทพิจารณา</p><p class="font-b" style="font-size:14px;line-height:1.7;color:#6B7280;margin:0">การทราบผลล่วงหน้าจะช่วยให้วางแผนเรื่องค่าใช้จ่าย เลือกโรงพยาบาล หรือพิจารณาแนวทางการรักษาได้เหมาะสมขึ้น</p></div></div>
+<h3 style="font-family:'Prompt',sans-serif;font-weight:600;font-size:23px;color:#053c5e;margin:0 0 12px">ทำไมควรทำประกันตั้งแต่วันที่ยังแข็งแรง?</h3>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 16px">ประกันสุขภาพไม่ได้มีไว้ทำในวันที่เรารู้แล้วว่ากำลังป่วย แต่ควรเริ่มวางแผนในวันที่สุขภาพยังดี สามารถให้ข้อมูลสุขภาพได้ครบถ้วน และยังมีทางเลือกในการสมัครประกัน</p>
+<p class="font-b" style="font-size:16px;line-height:1.85;color:#4B5563;margin:0 0 24px">เมื่อถือกรมธรรม์อย่างต่อเนื่อง มีประวัติการเปิดเผยข้อมูลสุขภาพอย่างถูกต้อง และปฏิบัติตามเงื่อนไขของกรมธรรม์ การใช้สิทธิ์รักษาในอนาคตก็จะมีความชัดเจนและอุ่นใจมากขึ้น</p>
+<div style="background:#053c5e;border-radius:16px;padding:28px 32px;margin:0 0 28px"><p style="font-family:'Prompt',sans-serif;font-weight:600;font-size:20px;line-height:1.6;color:#fff;margin:0 0 8px">อย่ารอให้ถึงวันที่ต้องเข้ารักษา แล้วจึงเริ่มคิดว่าอยากมีประกันสุขภาพ</p><p class="font-b" style="font-size:16px;line-height:1.8;color:#F8D877;margin:0">เพราะวันที่เราอยากมีประกันมากที่สุด อาจไม่ใช่วันที่สมัครได้ง่ายที่สุด</p></div>
+<div style="display:flex;gap:14px;flex-wrap:wrap;margin:0 0 28px"><a class="btn btn-primary" href="Contact.html">น้องอีซี่ช่วยเลือกให้ไหม?</a><a class="btn" href="Build-My-Plan.html" style="background:#EAF5F8;color:#053c5e">ให้น้องอีซี่ช่วยเลือกแผน</a></div>
+<p class="font-b" style="font-size:13px;line-height:1.75;color:#9CA3AF;border-top:1px solid #E5E7EB;padding-top:18px;margin:0"><strong>หมายเหตุ:</strong> รายละเอียดระยะเวลารอคอย การพิจารณาสินไหม การสำรองจ่าย และการใช้บริการแฟกซ์เคลม อาจแตกต่างกันตามแบบประกัน บริษัทประกัน โรงพยาบาล และข้อเท็จจริงของแต่ละกรณี ผู้เอาประกันควรตรวจสอบเงื่อนไขจากกรมธรรม์และขอคำแนะนำจากบริษัทหรือตัวแทนผู้ดูแลก่อนเข้ารับการรักษา</p>
+</div></section></sc-if>
+
 <footer class="site foot-navy"><div class="foot-top wrap"><h2>พร้อม<span>คุย</span>กับน้องอีซี่หรือยัง?</h2><a href="Contact.html" class="btn btn-primary">น้องอีซี่ช่วยเลือกให้ไหม?</a></div><div class="wrap"><div class="foot-grid"><div><div class="logo mb16" style="color:#fff"><span style="color:#fff">pragan</span><span style="color:#EB5951">easy</span></div><p class="disclaimer" style="max-width:320px">ประกันเข้าใจง่าย สร้างเองได้ — เครื่องมือช่วยวางแผนความคุ้มครองจากตัวแทน AIA</p><div class="foot-social"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a><a href="#" aria-label="LINE"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="4"/><path d="M8 19l2-3"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div></div><div><div class="foot-h">เมนู</div><div class="foot-links"><a href="Why-Protection.html">ความรู้เกี่ยวกับประกัน</a><a href="Plans.html">แผนประกัน</a><a href="Fact-Finding.html">ตรวจสอบความต้องการ</a><a href="Build-My-Plan.html">สร้างแผนของคุณ</a><a href="About.html">เกี่ยวกับเรา</a><a href="Become-Agent.html">สมัครตัวแทน</a><a href="Contact.html">ติดต่อ</a></div></div><div><div class="foot-h">ติดต่อ</div><div class="foot-contact-item"><svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="color:inherit">LINE: @praganeasy</a></div><div class="foot-contact-item"><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="display:block"><img src="public/logos/praganeasy-line-chat-button-mascot.png" alt="น้องอีซี่พร้อมดูแล ทักไลน์ได้เลย @praganeasy" style="width:240px;max-width:100%;height:auto;display:block"></a></div></div></div><div class="disclaimer wrap" style="border-top:1px solid rgba(255,255,255,0.1);padding:20px 24px"><a href="Terms.html" style="color:#F8D877;text-decoration:underline">เงื่อนไขการใช้งาน</a> · <a href="Privacy.html" style="color:#F8D877;text-decoration:underline">นโยบายความเป็นส่วนตัว</a><br>© 2026 PraganEasy. All Rights Reserved.<br>เว็บไซต์นี้ดำเนินการโดยทีมตัวแทนประกันชีวิตของ บริษัท เอไอเอ จำกัด (ประเทศไทย) เพื่อให้ข้อมูลเกี่ยวกับผลิตภัณฑ์และบริการ<br>สำหรับข้อมูลอย่างเป็นทางการ โปรดเยี่ยมชม <a href="https://www.aia.co.th" target="_blank" style="color:inherit;text-decoration:underline">www.aia.co.th</a></div></div></footer>
 </div>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { menuOpen: false };
+  state = { menuOpen: false, activeCat: 'all', reader: null };
+  get cats() {
+    return [
+      { key: 'all', label: 'ทั้งหมด' },
+      { key: 'health', label: 'ประกันสุขภาพ' },
+      { key: 'claims', label: 'การเคลมและสินไหม' },
+      { key: 'life', label: 'ประกันชีวิต' },
+      { key: 'tax', label: 'วางแผนภาษี' },
+      { key: 'finance', label: 'วางแผนการเงิน' }
+    ];
+  }
+  get articles() {
+    return [
+      { id: 'fax-claim', cat: 'claims', catLabel: 'การเคลมและสินไหม',
+        title: 'ทำประกันสุขภาพแล้ว ทำไมบางครั้งยังต้องสำรองจ่ายก่อน?',
+        excerpt: 'ทำความเข้าใจระยะเวลารอคอย 120 วัน การใช้แฟกซ์เคลม และการวางแผนก่อนเข้ารักษาด้วย Pre-Claim',
+        meta: 'อ่าน 5 นาที', slotId: 'art-fax-claim-cover',
+        slot: 'public/images/health/praganeasy-article-fax-claim-cover.jpg' }
+    ];
+  }
   renderVals() {
-    return { menuOpen: this.state.menuOpen, toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })) };
+    const s = this.state;
+    const chips = this.cats.map(c => {
+      const active = s.activeCat === c.key;
+      return {
+        label: c.label,
+        style: "font-family:'Sarabun',sans-serif;font-size:14px;font-weight:600;padding:9px 18px;border-radius:100px;border:1px solid " + (active ? '#EB5951' : '#D5E1E8') + ";background:" + (active ? '#EB5951' : '#fff') + ";color:" + (active ? '#fff' : '#053c5e') + ";cursor:pointer;white-space:nowrap",
+        onClick: () => this.setState({ activeCat: c.key })
+      };
+    });
+    const visible = s.activeCat === 'all' ? this.articles : this.articles.filter(a => a.cat === s.activeCat);
+    const cards = visible.map(a => ({ ...a, onClick: () => this.setState({ reader: a.id }) }));
+    const readerArt = this.articles.find(a => a.id === s.reader) || null;
+    return {
+      menuOpen: s.menuOpen,
+      toggleMenu: () => this.setState(x => ({ menuOpen: !x.menuOpen })),
+      chips, cards, emptyState: cards.length === 0,
+      showHub: !s.reader, showReader: !!s.reader,
+      readerTitle: readerArt ? readerArt.title : '',
+      readerCat: readerArt ? readerArt.catLabel : '',
+      readerMeta: readerArt ? readerArt.meta : '',
+      closeReader: () => this.setState({ reader: null })
+    };
   }
 }
 </script>
