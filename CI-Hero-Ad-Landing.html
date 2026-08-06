@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics=""><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700;800&family=Sarabun:wght@400;500;600;700&family=Inter:wght@600;700&display=swap" rel="stylesheet"><script src="./image-slot.js"></script><style>
+body{margin:0;background:#EAF5F8;color:#374151}
+*{box-sizing:border-box}
+a{color:#EB5951;text-decoration:none}
+a:hover{color:#053c5e}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.wide{max-width:960px;margin:0 auto;padding:0 20px}
+.font-d{font-family:'Prompt',sans-serif}
+.btn{font-family:'Inter',sans-serif;font-weight:700;font-size:16px;border-radius:100px;padding:16px 30px;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-cta{background:#EB5951;color:#fff;box-shadow:0 8px 24px rgba(235,89,81,0.35)}
+.btn-cta:hover{background:#c94039}
+.pulse{animation:pulseGlow 2.2s ease-in-out infinite}
+@keyframes pulseGlow{0%,100%{box-shadow:0 8px 24px rgba(235,89,81,0.35)}50%{box-shadow:0 8px 34px rgba(235,89,81,0.6)}}
+header.topbar{background:#053c5e;padding:14px 0}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Prompt',sans-serif;font-weight:700;font-size:20px;color:#fff}
+.logo .e{color:#EB5951}
+.topbar-call{display:flex;align-items:center;gap:8px;color:#fff;font-family:'Sarabun',sans-serif;font-size:13px}
+.topbar-call svg{width:16px;height:16px;stroke:#F8D877;stroke-width:2;fill:none}
+.hero{background:linear-gradient(180deg,#053c5e 0%,#0a5a86 100%);padding:0 0 36px;color:#fff}
+.hero-img-full{width:100%;line-height:0}
+.hero-img-full img{width:100%;display:block;object-fit:cover}
+.hero-note{font-family:'Sarabun',sans-serif;font-size:13px;color:#D8E4EA;margin-top:12px;text-align:center}
+.stat-bar{background:#fff;margin-top:-1px;padding:22px 0;box-shadow:0 4px 18px rgba(31,122,140,0.08)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center}
+@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-num{font-family:'Prompt',sans-serif;font-weight:800;font-size:22px;color:#EB5951}
+.stat-lbl{font-family:'Sarabun',sans-serif;font-size:12px;color:#6B7280;margin-top:4px}
+section.sec{padding:44px 0}
+h2.sec-title{font-family:'Prompt',sans-serif;font-weight:700;font-size:24px;color:#053c5e;margin:0 0 10px;text-align:center}
+p.sec-sub{font-family:'Sarabun',sans-serif;font-size:15px;color:#6B7280;text-align:center;margin:0 0 30px;line-height:1.7}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.compare-grid{grid-template-columns:1fr}}
+.compare-card{border-radius:18px;padding:24px}
+.compare-bad{background:#fff;border:1.5px dashed #E5A5A0}
+.compare-good{background:#053c5e;color:#fff}
+.compare-card .cc-h{font-family:'Prompt',sans-serif;font-weight:700;font-size:16px;margin:0 0 14px}
+.compare-bad .cc-h{color:#B03A2E}
+.compare-good .cc-h{color:#F8D877}
+.compare-card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.compare-card li{font-family:'Sarabun',sans-serif;font-size:14px;line-height:1.6;display:flex;gap:8px}
+.compare-bad li{color:#374151}
+.compare-good li{color:#EAF5F8}
+.case-card{background:#fff;border-radius:22px;padding:0;overflow:hidden;box-shadow:0 8px 28px rgba(31,122,140,0.1)}
+.case-img{height:340px}
+@media(max-width:640px){.case-img{height:240px}}
+.case-body{padding:26px}
+.case-tag{display:inline-flex;background:rgba(235,89,81,0.1);color:#EB5951;font-family:'Inter',sans-serif;font-weight:700;font-size:11px;padding:5px 12px;border-radius:8px;margin-bottom:12px}
+.case-body h3{font-family:'Prompt',sans-serif;font-weight:700;font-size:18px;color:#053c5e;margin:0 0 10px}
+.case-body p{font-family:'Sarabun',sans-serif;font-size:14px;line-height:1.75;color:#374151;margin:0 0 18px}
+.case-nums{display:flex;gap:16px;flex-wrap:wrap;border-top:1px solid #F0F0F0;padding-top:16px}
+.case-num-item .cn-lbl{font-family:'Sarabun',sans-serif;font-size:12px;color:#6B7280}
+.case-num-item .cn-val{font-family:'Prompt',sans-serif;font-weight:700;font-size:19px;color:#053c5e}
+.case-num-item.pay .cn-val{color:#2E7D32}
+.cov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:760px){.cov-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.cov-grid{grid-template-columns:1fr}}
+.cov-card{background:#fff;border-radius:16px;padding:22px 18px}
+.cov-ico{width:38px;height:38px;border-radius:100px;background:rgba(235,89,81,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.cov-ico svg{width:19px;height:19px;stroke:#EB5951;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cov-card h4{font-family:'Prompt',sans-serif;font-weight:600;font-size:15px;color:#053c5e;margin:0 0 6px}
+.cov-card p{font-family:'Sarabun',sans-serif;font-size:13.5px;color:#6B7280;line-height:1.6;margin:0}
+.ci-group-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.ci-group-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.ci-group-grid{grid-template-columns:1fr}}
+.ci-group-card{background:#fff;border-radius:16px;padding:20px 18px}
+.cig-num{display:inline-flex;background:rgba(5,60,94,0.08);color:#053c5e;font-family:'Inter',sans-serif;font-weight:700;font-size:11px;padding:4px 10px;border-radius:8px;margin-bottom:10px}
+.cig-name{font-family:'Prompt',sans-serif;font-weight:600;font-size:14.5px;color:#053c5e;margin-bottom:8px;line-height:1.4}
+.cig-flag{font-family:'Sarabun',sans-serif;font-size:13px;color:#374151;margin-bottom:10px;line-height:1.5}
+.cig-count{font-family:'Sarabun',sans-serif;font-size:12px;color:#EB5951;font-weight:700}
+.pd-disc{font-family:'Sarabun',sans-serif;font-size:12px;color:#9CA3AF;line-height:1.7;margin:22px 0 0;text-align:center}
+.prem-table-wrap{max-width:420px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(31,122,140,0.08)}
+.prem-table{width:100%;border-collapse:collapse;background:#fff;font-family:'Sarabun',sans-serif;font-size:14.5px}
+.prem-table th{background:#053c5e;color:#fff;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:700;padding:12px 16px;text-align:left}
+.prem-table td{padding:11px 16px;border-top:1px solid #F0F0F0;color:#374151}
+.prem-table td:last-child{text-align:right;font-weight:600;color:#053c5e}
+.prem-table td.hl{background:rgba(248,216,119,0.28);font-weight:700;color:#053c5e}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:760px){.plan-grid{grid-template-columns:1fr}}
+.plan-card{background:#fff;border-radius:20px;padding:26px;text-align:center;border:2px solid transparent}
+.plan-card.feat{border-color:#EB5951;position:relative}
+.plan-card .pf-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#EB5951;color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:4px 12px;border-radius:100px}
+.plan-card .pc-amt{font-family:'Prompt',sans-serif;font-weight:800;font-size:20px;color:#053c5e;margin:8px 0}
+.plan-card .pc-lbl{font-family:'Sarabun',sans-serif;font-size:13px;color:#6B7280}
+.plan-card .pc-price{font-family:'Prompt',sans-serif;font-weight:700;font-size:26px;color:#EB5951;margin:14px 0 2px}
+.plan-card .pc-price-lbl{font-family:'Sarabun',sans-serif;font-size:12px;color:#9CA3AF}
+#lead-form{background:#053c5e;padding:48px 0 56px}
+.form-box{background:#fff;border-radius:22px;padding:32px;max-width:520px;margin:0 auto}
+.form-box h2{font-family:'Prompt',sans-serif;font-weight:700;font-size:21px;color:#053c5e;margin:0 0 6px;text-align:center}
+.form-box p.fh{font-family:'Sarabun',sans-serif;font-size:13.5px;color:#6B7280;text-align:center;margin:0 0 22px}
+.field{margin-bottom:14px}
+.field label{display:block;font-family:'Sarabun',sans-serif;font-size:13px;font-weight:600;color:#053c5e;margin-bottom:6px}
+.field input,.field select{width:100%;font-family:'Sarabun',sans-serif;font-size:15px;padding:12px 14px;border-radius:12px;border:1.5px solid #E5E7EB;background:#F8F8F6}
+.field input:focus,.field select:focus{outline:none;border-color:#EB5951}
+.radio-row{display:flex;gap:8px;flex-wrap:wrap}
+.radio-chip{flex:1;min-width:90px;text-align:center;font-family:'Sarabun',sans-serif;font-size:13px;padding:10px 8px;border-radius:10px;border:1.5px solid #E5E7EB;cursor:pointer;background:#F8F8F6;color:#374151}
+.radio-chip.sel{border-color:#EB5951;background:rgba(235,89,81,0.08);color:#EB5951;font-weight:700}
+.form-submit{width:100%;margin-top:6px}
+.form-disclaimer{font-family:'Sarabun',sans-serif;font-size:11px;color:#9CA3AF;line-height:1.6;margin-top:14px;text-align:center}
+.thanks{text-align:center;padding:20px 0}
+.thanks .tk-ico{width:64px;height:64px;border-radius:100px;background:rgba(46,125,50,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.thanks .tk-ico svg{width:30px;height:30px;stroke:#2E7D32;stroke-width:2.5;fill:none}
+.thanks h3{font-family:'Prompt',sans-serif;font-weight:700;font-size:19px;color:#053c5e;margin:0 0 8px}
+.thanks p{font-family:'Sarabun',sans-serif;font-size:14px;color:#6B7280;line-height:1.7;margin:0 0 18px}
+footer.ad-foot{background:#03293f;padding:26px 0 96px;text-align:center}
+footer.ad-foot p{font-family:'Sarabun',sans-serif;font-size:11.5px;color:#7C93A3;line-height:1.7;max-width:640px;margin:0 auto}
+footer.ad-foot a{color:#F8D877}
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -6px 20px rgba(0,0,0,0.12);padding:12px 16px;display:flex;gap:10px;z-index:80}
+.sticky-cta .btn{flex:1;font-size:14px;padding:13px 10px}
+.sticky-line{background:#06C755;color:#fff}
+@media(min-width:760px){.sticky-cta{display:none}}
+</style></helmet>
+<header class="topbar"><div class="wide topbar-inner"><a href="Home.html" class="logo"><span>pragan</span><span class="e">easy</span></a><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" class="topbar-call"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>LINE: @praganeasy</a></div></header>
+<section class="hero"><div class="hero-img-full"><img src="public/images/health/praganeasy-cihero-hero-banner-family-stats.png" alt="AIA Health CI Hero — คุ้มครองสูงสุด 12 ล้านบาทต่อปี ครอบคลุม 62 โรคร้ายแรง เริ่มต้นวันละ 19 บาท"></div><div class="wrap" style="text-align:center;padding-top:24px"><a href="#lead-form" class="btn btn-cta pulse">ให้น้องอีซี่แนะนำแผนที่ใช่ ฟรี →</a><p class="hero-note">*เบี้ยฯ รายปี เพศชาย อายุ 35 ปี แบบ Begin แผน 2 ล้านบาท ไม่มีข้อผูกมัด ปรึกษาได้ก่อนตัดสินใจ</p></div></section>
+<div class="stat-bar"><div class="wide stat-grid"><div><div class="stat-num">12 ล้าน</div><div class="stat-lbl">คุ้มครองสูงสุดต่อปี (บาท)</div></div><div><div class="stat-num">62 โรค</div><div class="stat-lbl">โรคร้ายแรงที่คุ้มครอง</div></div><div><div class="stat-num">99 ปี</div><div class="stat-lbl">คุ้มครองยาวถึงอายุ</div></div><div><div class="stat-num">19 บาท</div><div class="stat-lbl">เริ่มต้นต่อวัน*</div></div></div></div>
+<section class="sec"><div class="wide"><h2 class="sec-title">สวัสดิการที่มีอยู่ อาจไม่พอ</h2><p class="sec-sub">วงเงินค่ารักษาเบื้องต้น (ประกันสังคม ประกันกลุม หรือแผนสุขภาพวงเงินจำกัด) มักไม่พอเมื่อต้องเจอโรคร้ายแรงที่มีค่าใช้จ่ายสูงและต้องตรวจติดตามต่อเนื่อง</p><div class="compare-grid"><div class="compare-card compare-bad"><div class="cc-h">มีแค่สวัสดิการทั่วไป</div><ul><li>✕ วงเงินจำกัด อาจไม่พอค่ารักษาโรคร้ายแรง</li><li>✕ ต้องควักเงินเก็บจ่ายส่วนต่างเอง</li><li>✕ ไม่ครอบคลุมการดูแลต่อเนื่องระยะยาว</li></ul></div><div class="compare-card compare-good"><div class="cc-h">มี AIA Health CI Hero เสริม</div><ul><li>✓ เหมาจ่ายตามจริง สูงสุด 12 ล้านบาท/ปี</li><li>✓ ดูแลค่ารักษาต่อเนื่อง หลังพบโรคร้ายแรงครั้งแรก</li><li>✓ คุ้มครองทุกเจ็บป่วยเมื่ออายุ 81 ปีขึ้นไป แม้ไม่เคยป่วยโรคร้าย</li></ul></div></div></div></section>
+<section class="sec" style="background:#fff"><div class="wrap"><h2 class="sec-title">ตัวอย่างจากเคสจริง</h2><p class="sec-sub">ชายวัย 35 ปี พนักงานบริษัทเอกชน เลือกแผน 6 ล้านบาท แบบ Balanced</p><div class="case-card"><div class="case-img"><image-slot id="cihero-ad-case" shape="rect" placeholder="ภาพผู้ป่วยในโรงพยาบาล" src="public/images/health/praganeasy-cihero-mascot-family-tablet-protection.png"></image-slot></div><div class="case-body"><span class="case-tag">โรคมะเร็งลำไส้ระยะลุกลาม</span><h3>เบี้ยปีแรกเพียง 10,200 บาท</h3><p>อายุ 50 ปี ตรวจพบโรคมะเร็งลำไส้ระยะลุกลาม เข้าพักรักษาตัวเป็นผู้ป่วยใน ที่โรงพยาบาลในเครือ AIA Smart Network — แบบ Balanced ไม่มีค่าใช้จ่ายร่วมเมื่อรักษาในโรงพยาบาลในสิทธิ</p><div class="case-nums"><div class="case-num-item"><div class="cn-lbl">ค่ารักษาทั้งหมด</div><div class="cn-val">664,500 บาท</div></div><div class="case-num-item pay"><div class="cn-lbl">AIA จ่ายให้เต็มจำนวน</div><div class="cn-val">664,500 บาท</div></div></div></div></div></div></section>
+<section class="sec"><div class="wide"><h2 class="sec-title">ความคุ้มครองที่ได้</h2><div class="cov-grid"><div class="cov-card"><div class="cov-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h4>เหมาจ่ายสูงสุด 12 ล้าน/ปี</h4><p>เลือกแผน 2 / 6 / 12 ล้านบาท ตามความคุ้มครองที่ต้องการ</p></div><div class="cov-card"><div class="cov-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h4>ครอบคลุม 62 โรคร้ายแรง</h4><p>ตั้งแต่ระยะเริ่มต้นถึงระยะรุนแรง เช่น มะเร็ง หัวใจ หลอดเลือดสมอง</p></div><div class="cov-card"><div class="cov-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h4>ดูแลต่อเนื่องหลังพบโรค</h4><p>ค่ารักษาทุกการบาดเจ็บหรือเจ็บป่วยหลังพบโรคร้ายแรงครั้งแรก</p></div><div class="cov-card"><div class="cov-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h4>คุ้มครองยาวถึงอายุ 99 ปี</h4><p>รับประกันภัยตั้งแต่ 15 วัน – 65 ปี ต่ออายุได้ต่อเนื่อง</p></div><div class="cov-card"><div class="cov-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h4>เลือกค่าใช้จ่ายร่วมได้</h4><p>แบบ Begin หรือ Balanced ปรับเบี้ยให้เหมาะกับงบประมาณ</p></div><div class="cov-card"><div class="cov-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h4>ดูแลผู้ป่วยรายบุคคล</h4><p>สิทธิบริการจัดการดูแลผู้ป่วยรายบุคคลสำหรับความคุ้มครองทุกแผน</p></div></div></div></section>
+<section class="sec"><div class="wide"><h2 class="sec-title">คุ้มครอง 62 โรคร้ายแรง ใน 6 กลุ่มโรค</h2><p class="sec-sub">ตัวอย่างโรคเด่นในแต่ละกลุ่ม — ครอบคลุมตั้งแต่ระยะเริ่มต้นถึงระยะรุนแรง</p><div class="ci-group-grid">
+<div class="ci-group-card"><div class="cig-num">กลุ่ม 1</div><div class="cig-name">มะเร็ง และเนื้องอก</div><div class="cig-flag">เช่น โรคมะเร็งระยะลุกลาม</div><div class="cig-count">4 โรค/การรักษา</div></div>
+<div class="ci-group-card"><div class="cig-num">กลุ่ม 2</div><div class="cig-name">หัวใจ การหายใจ และหลอดเลือด</div><div class="cig-flag">เช่น กล้ามเนื้อหัวใจตายเฉียบพลัน</div><div class="cig-count">13 โรค/การรักษา</div></div>
+<div class="ci-group-card"><div class="cig-num">กลุ่ม 3</div><div class="cig-name">หลอดเลือดสมอง ระบบประสาท และกล้ามเนื้อ</div><div class="cig-flag">เช่น โรคหลอดเลือดสมองแตกหรืออุดตัน</div><div class="cig-count">17 โรค/การรักษา</div></div>
+<div class="ci-group-card"><div class="cig-num">กลุ่ม 4</div><div class="cig-name">อวัยวะและระบบสำคัญของร่างกาย</div><div class="cig-flag">เช่น ไตวายเรื้อรัง</div><div class="cig-count">11 โรค/การรักษา</div></div>
+<div class="ci-group-card"><div class="cig-num">กลุ่ม 5</div><div class="cig-name">ภาวะติดเชื้อ การบาดเจ็บรุนแรง และทุพพลภาพ</div><div class="cig-flag">เช่น การทุพพลภาพถาวรสิ้นเชิง</div><div class="cig-count">13 โรค/การรักษา</div></div>
+<div class="ci-group-card"><div class="cig-num">กลุ่ม 6</div><div class="cig-name">โรคร้ายแรงสำหรับผู้เยาว์</div><div class="cig-flag">เช่น โรคเบาหวานชนิดที่ 1</div><div class="cig-count">4 โรค/การรักษา</div></div>
+</div><p class="pd-disc">ดูรายชื่อโรคร้ายแรงฉบับเต็มทั้ง 62 โรค ได้ในเอกสารเสนอขาย (ลิงก์ท้ายหน้า)</p></div></section>
+<section class="sec" style="background:#fff"><div class="wide"><h2 class="sec-title">ตัวอย่างเบี้ยประกันภัยรายปี</h2><p class="sec-sub">เพศชาย แบบ Begin แผน 2,000,000 บาท — อายุ 15 วัน ถึง 50 ปี</p><div class="prem-table-wrap"><table class="prem-table"><tr><th>ช่วงอายุ (ปี)</th><th>เบี้ยฯ ต่อปี (บาท)</th></tr>
+<tr><td>15 วัน – 5</td><td>14,700</td></tr>
+<tr><td>6 – 10</td><td>5,700</td></tr>
+<tr><td>11 – 15</td><td>4,800</td></tr>
+<tr><td>16 – 20</td><td>3,300</td></tr>
+<tr><td>21 – 25</td><td>4,200</td></tr>
+<tr><td>26 – 30</td><td>5,700</td></tr>
+<tr><td class="hl">31 – 35</td><td class="hl">6,900</td></tr>
+<tr><td>36 – 40</td><td>9,300</td></tr>
+<tr><td>41 – 45</td><td>12,300</td></tr>
+<tr><td>46 – 50</td><td>17,100</td></tr>
+</table></div><p class="pd-disc">เบี้ยฯ ตัวอย่างสำหรับแผน 2 ล้านบาทเท่านั้น เบี้ยของแผน 6 และ 12 ล้านบาท และเพศหญิง อาจแตกต่างกัน — ให้น้องอีซี่ช่วยคำนวณเบี้ยที่แน่นอนสำหรับคุณได้ฟรี</p></div></section>
+<section class="sec" style="background:#fff"><div class="wide"><h2 class="sec-title">เลือกแผนที่ใช่สำหรับคุณ</h2><p class="sec-sub">ตัวอย่างเบี้ยฯ รายปี เพศชาย อายุ 35 ปี แบบ Begin</p><div class="plan-grid"><div class="plan-card"><div class="pc-lbl">แผนความคุ้มครอง</div><div class="pc-amt">2,000,000 บาท</div><div class="pc-price">6,900 บาท</div><div class="pc-price-lbl">ต่อปี</div></div><div class="plan-card feat"><span class="pf-badge">แนะนำ</span><div class="pc-lbl">แผนความคุ้มครอง</div><div class="pc-amt">6,000,000 บาท</div><div class="pc-price">9,300 บาท</div><div class="pc-price-lbl">ต่อปี</div></div><div class="plan-card"><div class="pc-lbl">แผนความคุ้มครอง</div><div class="pc-amt">12,000,000 บาท</div><div class="pc-price">12,300 บาท</div><div class="pc-price-lbl">ต่อปี</div></div></div></div></section>
+<section id="lead-form"><div class="wrap"><div class="form-box">
+<sc-if value="{{ !submitted }}" hint-placeholder-val="{{ true }}">
+<h2>ให้น้องอีซี่ช่วยแนะนำแผนที่เหมาะกับคุณ</h2><p class="fh">กรอกข้อมูล ทีมของเราจะติดต่อกลับภายใน 24 ชั่วโมง ไม่มีค่าใช้จ่าย</p>
+<div class="field"><label>ชื่อ-นามสกุล</label><input type="text" placeholder="ชื่อของคุณ" value="{{ name }}" onChange="{{ onName }}"></div>
+<div class="field"><label>เบอร์โทรศัพท์</label><input type="tel" placeholder="08x-xxx-xxxx" value="{{ phone }}" onChange="{{ onPhone }}"></div>
+<div class="field"><label>LINE ID (ถ้ามี)</label><input type="text" placeholder="@lineid" value="{{ line }}" onChange="{{ onLine }}"></div>
+<div class="field"><label>ช่วงอายุ</label><select value="{{ ageBand }}" onChange="{{ onAgeBand }}"><option value="">เลือกช่วงอายุ</option><option value="18-30">18-30 ปี</option><option value="31-40">31-40 ปี</option><option value="41-50">41-50 ปี</option><option value="51-60">51-60 ปี</option><option value="60+">60 ปีขึ้นไป</option></select></div>
+<div class="field"><label>แผนที่สนใจ</label><div class="radio-row"><div class="{{ chip2m }}" onClick="{{ selPlan2m }}">2 ล้าน</div><div class="{{ chip6m }}" onClick="{{ selPlan6m }}">6 ล้าน</div><div class="{{ chip12m }}" onClick="{{ selPlan12m }}">12 ล้าน</div><div class="{{ chipUnsure }}" onClick="{{ selPlanUnsure }}">ไม่แน่ใจ</div></div></div>
+<button class="btn form-submit" style="background:#06C755;color:#fff" onClick="{{ onSubmit }}">ส่งข้อมูล ให้น้องอีซี่ติดต่อกลับ →</button>
+<p class="form-disclaimer">การกดส่งถือว่ายินยอมให้ทีมงานติดต่อกลับเพื่อให้ข้อมูลประกันภัยเท่านั้น ข้อมูลของคุณจะถูกเก็บเป็นความลับ</p>
+</sc-if>
+<sc-if value="{{ submitted }}"><div class="thanks"><div class="tk-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>ได้รับข้อมูลของคุณแล้ว!</h3><p>ทีมน้องอีซี่จะติดต่อกลับภายใน 24 ชั่วโมง หรือทักไลน์คุยได้เลยตอนนี้</p><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="display:block"><img src="public/icons/praganeasy-line-cta-button-mascot.png" alt="ทักไลน์ @praganeasy" style="width:100%;display:block"></a></div></sc-if>
+</div></div></section>
+<footer class="ad-foot"><p>AIA Health CI Hero เป็นสัญญาเพิ่มเติมของ บมจ. เอไอเอ ประเทศไทย ผู้ขอเอาประกันภัยควรศึกษาและทำความเข้าใจในเอกสารเสนอขายก่อนตัดสินใจทำประกันภัย เบี้ยประกันภัยที่แสดงเป็นเบี้ยมาตรฐานตัวอย่าง อาจเปลี่ยนแปลงตามอายุ เพศ อาชีพ และผลการพิจารณารับประกัน ดูรายละเอียดฉบับเต็มที่ <a href="public/brochures/AIA-Health-CI-Hero-Brochure.pdf" target="_blank">เอกสารเสนอขาย AIA Health CI Hero (PDF)</a></p></footer>
+<div class="sticky-cta"><a href="#lead-form" class="btn btn-cta">รับคำแนะนำฟรี</a><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" class="btn sticky-line">LINE</a></div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { name: '', phone: '', line: '', ageBand: '', planPref: '', submitted: false };
+  renderVals() {
+    const s = this.state;
+    const chip = id => 'radio-chip' + (s.planPref === id ? ' sel' : '');
+    return {
+      name: s.name, phone: s.phone, line: s.line, ageBand: s.ageBand, submitted: s.submitted,
+      onName: e => this.setState({ name: e.target.value }),
+      onPhone: e => this.setState({ phone: e.target.value }),
+      onLine: e => this.setState({ line: e.target.value }),
+      onAgeBand: e => this.setState({ ageBand: e.target.value }),
+      chip2m: chip('2m'), chip6m: chip('6m'), chip12m: chip('12m'), chipUnsure: chip('unsure'),
+      selPlan2m: () => this.setState({ planPref: '2m' }),
+      selPlan6m: () => this.setState({ planPref: '6m' }),
+      selPlan12m: () => this.setState({ planPref: '12m' }),
+      selPlanUnsure: () => this.setState({ planPref: 'unsure' }),
+      onSubmit: () => {
+        if (!s.name || !s.phone) { alert('กรุณากรอกชื่อและเบอร์โทรศัพท์'); return; }
+        const fd = new FormData();
+        fd.append('_subject', 'ลูกค้าสนใจ AIA Health CI Hero — ' + s.name);
+        fd.append('ชื่อ', s.name);
+        fd.append('เบอร์โทร', s.phone);
+        fd.append('LINE ID', s.line || '-');
+        fd.append('ช่วงอายุ', s.ageBand || '-');
+        fd.append('แผนที่สนใจ', s.planPref || '-');
+        fetch('https://formsubmit.co/praganeasy@gmail.com', { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).catch(() => {});
+        this.setState({ submitted: true });
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
