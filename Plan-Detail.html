@@ -169,7 +169,7 @@ footer.site p{font-family:'Sarabun',sans-serif;font-size:12px;color:#c3d3e0;line
 <section class="pd"><h2 class="pd-title">ความคุ้มครองหลัก</h2><div class="cover-list"><sc-for list="{{ plan.covers }}" as="c" hint-placeholder-count="4"><div class="cover-item"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p>{{ c }}</p></div></sc-for></div></section>
 <section class="pd"><h2 class="pd-title">เหมาะกับใคร</h2><div class="persona-box"><p>{{ plan.persona }}</p></div></section>
 <sc-if value="{{ showEstPremium }}" hint-placeholder-val="{{ true }}"><section class="pd"><h2 class="pd-title">ตัวอย่างเบี้ยประกันตามช่วงอายุ</h2><table class="benefit-table" style="margin-bottom:28px"><tr><th>ช่วงอายุ</th><th>เบี้ยฯ ทุนประกัน 200,000 บาท</th></tr><sc-for list="{{ plan.premiumRows }}" as="r" hint-placeholder-count="4"><tr><td class="item">{{ r.age }}</td><td>{{ r.premium200k }}</td></tr></sc-for></table></section></sc-if>
-<sc-if value="{{ hasRateTable }}"><section class="pd"><h2 class="pd-title">เบี้ยมาตรฐานรายปี แยกตามทุนประกัน</h2><p style="font-family:'Sarabun',sans-serif;font-size:14px;color:#6B7280;margin:0 0 16px">เลือกทุนที่เหมาะกับคุณ — ตารางเลื่อนดูได้ในแนวนอน (บาท/ปี)</p><div class="ci-rate-wrap"><table class="ci-rate"><tr><th class="age-h" rowspan="2">อายุ (ปี)</th><sc-for list="{{ rateGroups }}" as="g" hint-placeholder-count="4"><th class="tier-h" colspan="2" style="{{ g.style }}">{{ g.label }}</th></sc-for></tr><tr><sc-for list="{{ rateGenderCols }}" as="gc" hint-placeholder-count="8"><th class="gender-h">{{ gc.label }}</th></sc-for></tr><sc-for list="{{ rateRows }}" as="r" hint-placeholder-count="6"><tr><td class="age">{{ r.age }}</td><sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="8"><td>{{ c.v }}</td></sc-for></tr></sc-for></table></div><p class="pd-disclaimer" style="margin-top:0">เบี้ยประกันภัยข้างต้นเป็นเบี้ยมาตรฐานรายปีของสัญญาเพิ่มเติม AIA CI Plus ผู้เอาประกันภัยต้องมีกรมธรรม์หลักก่อนจึงจะซื้อสัญญาเพิ่มเติมได้ บริษัทขอสงวนสิทธิ์ปรับเบี้ยตามอายุ ขั้นอาชีพ และเงื่อนไขที่ได้รับความเห็นชอบจากนายทะเบียน</p></section></sc-if>
+<sc-if value="{{ hasRateTable }}"><section class="pd"><h2 class="pd-title">เบี้ยมาตรฐานรายปี แยกตามแผนความคุ้มครอง</h2><p style="font-family:'Sarabun',sans-serif;font-size:14px;color:#6B7280;margin:0 0 16px">เลือกทุนที่เหมาะกับคุณ — ตารางเลื่อนดูได้ในแนวนอน (บาท/ปี)</p><div class="ci-rate-wrap"><table class="ci-rate"><tr><th class="age-h" rowspan="2">อายุ (ปี)</th><sc-for list="{{ rateGroups }}" as="g" hint-placeholder-count="4"><th class="tier-h" colspan="2" style="{{ g.style }}">{{ g.label }}</th></sc-for></tr><tr><sc-for list="{{ rateGenderCols }}" as="gc" hint-placeholder-count="8"><th class="gender-h">{{ gc.label }}</th></sc-for></tr><sc-for list="{{ rateRows }}" as="r" hint-placeholder-count="6"><tr><td class="age">{{ r.age }}</td><sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="8"><td>{{ c.v }}</td></sc-for></tr></sc-for></table></div><p class="pd-disclaimer" style="margin-top:0">เบี้ยประกันภัยข้างต้นเป็นเบี้ยมาตรฐานรายปีของสัญญาเพิ่มเติม {{ plan.name }} ผู้เอาประกันภัยต้องมีกรมธรรม์หลักก่อนจึงจะซื้อสัญญาเพิ่มเติมได้ บริษัทขอสงวนสิทธิ์ปรับเบี้ยตามอายุ ขั้นอาชีพ และเงื่อนไขที่ได้รับความเห็นชอบจากนายทะเบียน</p></section></sc-if>
 <section class="pd"><h2 class="pd-title">รายละเอียดผลประโยชน์</h2><sc-if value="{{ hasSml }}"><table class="benefit-table sml"><tr><th>ความคุ้มครอง</th><th>แผน S</th><th>แผน M</th><th>แผน L</th></tr><sc-for list="{{ plan.smlRows }}" as="b" hint-placeholder-count="4"><tr><td class="item">{{ b.name }}</td><td>{{ b.s }}</td><td>{{ b.m }}</td><td>{{ b.l }}</td></tr></sc-for></table></sc-if><sc-if value="{{ noSml }}" hint-placeholder-val="{{ true }}"><table class="benefit-table"><tr><th>ผลประโยชน์</th><th>รายละเอียด</th></tr><sc-for list="{{ plan.benefits }}" as="b" hint-placeholder-count="4"><tr><td class="item">{{ b.name }}</td><td>{{ b.desc }}</td></tr></sc-for></table></sc-if><p class="pd-disclaimer">ตัวเลขและเงื่อนไขข้างต้นเป็นตัวอย่างสรุปโดยย่อเพื่อความเข้าใจเบื้องต้น รายละเอียดความคุ้มครองฉบับเต็ม เงื่อนไขการรับประกัน และข้อยกเว้น เป็นไปตามกรมธรรม์ของ บมจ. เอไอเอ ประเทศไทย ตัวอย่างเบี้ยประกันเป็นการประมาณการเท่านั้น อาจเปลี่ยนแปลงตามอายุ เพศ และผลการพิจารณารับประกัน</p></section>
 <sc-if value="{{ plan.caseStudies }}"><section class="pd"><h2 class="pd-title">ตัวอย่างจากชีวิตจริง</h2><div class="cs-grid"><sc-for list="{{ plan.caseStudies }}" as="cs" hint-placeholder-count="2"><div class="cs-card"><span class="cs-tag">{{ cs.tag }}</span><div class="cs-name">{{ cs.name }}</div><p class="cs-desc">{{ cs.desc }}</p><div class="cs-row"><div class="cs-item"><span class="cs-lbl">ทุนประกันที่ซื้อ</span><span class="cs-val">{{ cs.sumInsured }}</span></div><div class="cs-item"><span class="cs-lbl">ค่ารักษาพยาบาลโดยประมาณ</span><span class="cs-val" style="color:#374151">{{ cs.cost }}</span></div><div class="cs-item"><span class="cs-lbl">รับเงินชดเชย</span><span class="cs-val" style="color:#2E7D32">{{ cs.payout }}</span></div></div></div></sc-for></div><p class="pd-disclaimer">กรณีตัวอย่างข้างต้นเป็นเพียงตัวอย่างประกอบความเข้าใจจากเอกสารเสนอขาย AIA CI Plus ไม่ใช่การรับประกันผลประโยชน์หรือค่าใช้จ่ายที่จะเกิดขึ้นจริง</p></section></sc-if>
 <div class="pd-cta"><h3>อยากรู้ว่าแผนนี้เหมาะกับคุณแค่ไหน?</h3><div class="plan-btn-row" style="justify-content:center"><a href="Build-My-Plan.html" class="btn" style="background:#fff;color:#053c5e">สร้างแผนของคุณ →</a><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" class="btn" style="background:#06C755;color:#fff">ทักไลน์คุยกับน้องอีซี่ได้เลย!</a></div></div>
@@ -399,7 +399,29 @@ class Component extends DCLogic {
           { name: 'ดูแลยาว เมื่ออายุ 81 ปี', desc: 'หากไม่เคยเจ็บป่วยเป็นโรคร้ายแรง คุ้มครองค่ารักษาจากทุกการบาดเจ็บหรือเจ็บป่วยตั้งแต่วันครบรอบปีกรมธรรม์หลังอายุครบ 81 ปี' },
           { name: 'ค่าใช้จ่ายร่วม 2 แบบ', desc: 'Begin: รพ.ในสิทธิ 10% (ไม่เกิน 10,000 บาท) / รพ.นอกสิทธิ 30% (ไม่เกิน 90,000 บาท) — Balanced: รพ.ในสิทธิไม่มีค่าใช้จ่ายร่วม / รพ.นอกสิทธิ 20% (ไม่เกิน 60,000 บาท)' },
           { name: 'ตัวอย่างเบี้ยประกัน', desc: 'เริ่มต้นวันละ 19 บาท (เพศชาย อายุ 35 ปี แบบ Begin แผน 2 ล้านบาท) — ระยะเวลารอคอย 60 วันสำหรับโรคร้ายแรง และ 120 วันสำหรับ 4 กลุ่มโรคที่กำหนด' }
-        ]
+        ],
+        rateTable: {
+          groups: [
+            { label: 'แผน 2 ล้าน (Begin)', color: '#1F7A8C', note: 'เหมาจ่ายสูงสุด 2 ล้านบาท/ปี' },
+            { label: 'แผน 6 ล้าน (Begin)', color: '#C9992A', note: 'เหมาจ่ายสูงสุด 6 ล้านบาท/ปี' },
+            { label: 'แผน 12 ล้าน (Begin)', color: '#B03A2E', note: 'เหมาจ่ายสูงสุด 12 ล้านบาท/ปี' }
+          ],
+          rows: [
+            { age: '15 วัน - 5', vals: [14700, 12300, 18000, 14400, 20700, 16200] },
+            { age: '6 - 10', vals: [5700, 5100, 6600, 6000, 7800, 6300] },
+            { age: '11 - 15', vals: [4800, 3600, 6300, 4800, 6900, 5700] },
+            { age: '16 - 20', vals: [3300, 3600, 4200, 4800, 5100, 5400] },
+            { age: '21 - 25', vals: [4200, 4500, 5100, 5700, 6000, 6900] },
+            { age: '26 - 30', vals: [5700, 6600, 7200, 8100, 8400, 10200] },
+            { age: '31 - 35', vals: [6900, 7800, 8700, 9300, 9900, 12000] },
+            { age: '36 - 40', vals: [9300, 10800, 12600, 13800, 14400, 16500] },
+            { age: '41 - 45', vals: [12300, 13200, 14400, 17100, 17400, 21000] },
+            { age: '46 - 50', vals: [17100, 18600, 21600, 23100, 26400, 28800] },
+            { age: '51 - 55', vals: [21300, 22500, 28200, 29400, 32700, 33000] },
+            { age: '56 - 60', vals: [29100, 30600, 37200, 37800, 45600, 46800] },
+            { age: '61 - 65', vals: [40800, 41100, 49800, 51600, 55800, 58500] }
+          ]
+        }
       },
       'endowment1525': {
         name: 'AIA Endowment 15/25 (Non Par)', catLabel: 'ออมทรัพย์', price: '18,500', priceUnit: ' บาท/ปี', sampleCoverage: '200,000 บาท', maxCoverage: '10,000,000 บาท',
