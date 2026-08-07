@@ -251,7 +251,7 @@ footer.ad-foot a{color:#F8D877}
 <button class="btn form-submit" style="background:#06C755;color:#fff" onClick="{{ onSubmit }}">ส่งข้อมูล ให้น้องอีซี่ติดต่อกลับ →</button>
 <p class="form-disclaimer">การกดส่งถือว่ายินยอมให้ทีมงานติดต่อกลับเพื่อให้ข้อมูลประกันภัยเท่านั้น ข้อมูลของคุณจะถูกเก็บเป็นความลับ</p>
 </sc-if>
-<sc-if value="{{ submitted }}"><div class="thanks"><div class="tk-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>ได้รับข้อมูลของคุณแล้ว!</h3><p>ทีมน้องอีซี่จะติดต่อกลับภายใน 24 ชั่วโมง หรือทักไลน์คุยได้เลยตอนนี้</p><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="display:block"><img src="public/icons/praganeasy-line-cta-button-mascot.png" alt="ทักไลน์ @praganeasy" style="width:100%;display:block"></a></div></sc-if>
+<sc-if value="{{ submitted }}"><div class="thanks"><div class="tk-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>ได้รับข้อมูลของคุณแล้ว!</h3><p>ทีมน้องอีซี่จะติดต่อกลับให้เร็วที่สุด หรือทักไลน์คุยได้เลยตอนนี้</p><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" style="display:block"><img src="public/icons/praganeasy-line-cta-button-mascot.png" alt="ทักไลน์ @praganeasy" style="width:100%;display:block"></a></div></sc-if>
 </div></div></section>
 <footer class="ad-foot"><p>AIA Health CI Hero เป็นสัญญาเพิ่มเติมของ บมจ. เอไอเอ ประเทศไทย ผู้ขอเอาประกันภัยควรศึกษาและทำความเข้าใจในเอกสารเสนอขายก่อนตัดสินใจทำประกันภัย เบี้ยประกันภัยที่แสดงเป็นเบี้ยมาตรฐานตัวอย่าง อาจเปลี่ยนแปลงตามอายุ เพศ อาชีพ และผลการพิจารณารับประกัน ดูรายละเอียดฉบับเต็มที่ <a href="public/brochures/AIA-Health-CI-Hero-Brochure.pdf" target="_blank">เอกสารเสนอขาย AIA Health CI Hero (PDF)</a></p></footer>
 <div class="sticky-cta"><a href="#lead-form" class="btn btn-cta">รับคำแนะนำฟรี</a><a href="https://line.me/R/ti/p/@praganeasy" target="_blank" class="btn sticky-line">LINE</a></div>
@@ -283,7 +283,9 @@ class Component extends DCLogic {
         fd.append('LINE ID', s.line || '-');
         fd.append('ช่วงอายุ', s.ageBand || '-');
         fd.append('แผนที่สนใจ', s.planPref || '-');
-        fetch('https://formsubmit.co/praganeasy@gmail.com', { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).catch(() => {});
+        fd.append('_captcha', 'false');
+        fd.append('_template', 'table');
+        fetch('https://formsubmit.co/ajax/praganeasy@gmail.com', { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).catch(() => {});
         this.setState({ submitted: true });
       }
     };
